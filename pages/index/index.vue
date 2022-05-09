@@ -69,7 +69,7 @@
         justify="center"
       >
         <p class="black--text send">
-          Spreading
+          Spreading Love
           <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
           <small class="d-block text--center"
               ><img
@@ -79,7 +79,7 @@
             /></small> 
             love
           </span>-->
-          anywhere, anytime with food.
+          anywhere, anytime with Food.
         </p>
         <p class="share">
           Satisfy the food of your loved ones, anytime and anywhere.
