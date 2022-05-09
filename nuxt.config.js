@@ -102,5 +102,10 @@ export default {
   env: {
     FLUTTER_WAVE_SECRETE_KEY: "FLWSECK_TEST-de54ccfe7881e43fd9a90568b3d3ce87-X",
     BASE_URL: 'https://firanse-functions.herokuapp.com/api'
+  },
+  server: {
+    port: process.env.PORT || 3000,
+    host: "0.0.0.0",
+    timing: false
   }
 }
