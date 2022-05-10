@@ -79,7 +79,7 @@
             /></small> 
             love
           </span>-->
-          anywhere, anytime with Food.
+          anywhere, anytime with Food 🥘🥘🥘.
         </p>
         <p class="share">
           Satisfy the food of your loved ones, anytime and anywhere.
