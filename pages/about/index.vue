@@ -127,13 +127,13 @@
            <span>
                 <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
              </span>
-            <p class="black--text pro-commitment mr-10 pr-10">
+            <p class="black--text pro-commitment">
             Meet our eclectic team of humans dedicated to creating happiness and beautiful memories for you.
           </p>
         </v-col>
-        <v-row justify="center">
+        <v-row justify="space-around">
             <v-col cols="3" align="center">
-                <img class="grid-image2 mr-10" src="~assets/images/team1.png" alt="" />
+                <img class="grid-image2" src="~assets/images/team1.png" alt="" />
                 <p class="mt-n2 font-weight-bold name" >Chidike Nwandu</p>
                 <p class="mt-n10 role">CEO</p>
             </v-col>
@@ -150,9 +150,9 @@
             </v-col>
         </v-row>
 
-        <v-row justify="center">
+        <v-row justify="space-around">
             <v-col cols="3" align="center">
-                <img class="grid-image2 mr-10" src="~assets/images/team2.png" alt="" />
+                <img class="grid-image2" src="~assets/images/team2.png" alt="" />
                 <p class="mt-n2 font-weight-bold name" >Okoye-Nobert C</p>
                 <p class="mt-n10 role">Software Engineer</p>
             </v-col>
@@ -496,19 +496,18 @@ address {
 }
 // -------------------------------------------------------------------
 .grid-image2 {
-  width: 102% !important;
+  width: 110% !important;
 }
 
 .name{
-    font-size: 6px;
-    margin-top: -30% !important;
+    font-size: 7px;
+    margin-top: -20% !important;
 }
 
 .role{
-    font-size: 6px;
-    margin-top: -75% !important;
+    font-size: 7px;
+    margin-top: -45% !important;
 }
-
 
 // -----------------------------------
 .partners {
@@ -652,8 +651,7 @@ svg {
 .header-button1 {
   width: 100% !important;
 }
-
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 416px) {
   .vcard {
     /* height: 335px !important; */
   }
@@ -676,13 +674,46 @@ svg {
     width: 100% !important;
   }
   .name{
-    font-size: 15px;
-    margin-top: -4% !important;
+    font-size: 0.5rem;
+    margin-top: -30% !important;
 }
 
   .role{
-    font-size: 15px;
-    margin-top: -40% !important;
+    font-size: 0.5rem;
+    margin-top: -65% !important;
+}
+//   ---------------------------------
+}
+@media only screen and (max-width: 390px) {
+  .vcard {
+    /* height: 335px !important; */
+  }
+  .subcribe-newsletter {
+    font-size: 24px;
+  }
+  .download-icon {
+    font-size: 25px !important;
+    margin-left: 2px !important;
+  }
+  .mdi-36px {
+    font-size: 15px !important;
+  }
+    .grid-image2 {
+    width: 100% !important;
+  }
+
+  //   ---------------------------------
+  .grid-image2 {
+    width: 100% !important;
+  }
+  .name{
+    font-size: 0.4rem;
+    margin-top: -30% !important;
+}
+
+  .role{
+    font-size: 0.4rem;
+    margin-top: -75% !important;
 }
 //   ---------------------------------
 }
@@ -775,13 +806,13 @@ svg {
     width: 100% !important;
   }
   .name{
-    font-size: 10px;
-    margin-top: -4% !important;
+    font-size: 12px;
+    margin-top: -8% !important;
 }
 
   .role{
-    font-size: 10px;
-    margin-top: -25% !important;
+    font-size: 12px;
+    margin-top: -20% !important;
 }
 //   ---------------------------------
 
@@ -1040,7 +1071,6 @@ svg {
 
   .pro-commitment {
     font-size: 17px;
-    margin-right: 45px;
   }
 
   .aboutus-image {
