@@ -77,87 +77,10 @@
           </div>
         </div>
       </v-navigation-drawer>
-
-      <v-col
-        cols="11"
-        md="5"
-        class="first-head ml-sm-7 ml-sm-8"
-        justify="center"
-      >
-        <p class="black--text send">
-          Spreading Love ❤️❤️❤️ 
-          <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
-          <small class="d-block text--center"
-              ><img
-                class="love mx-n14"
-                src="~assets/images/transparent-valentine.png"
-                alt=""
-            /></small> 
-            love
-          </span>-->
-          anywhere, anytime with Food 🥘.
-        </p>
-        <p class="share">
-          Satisfy the food of your loved ones, anytime and anywhere.
-        </p>
-        <p class="share">
-          Enter your friend's <span class="cravetag">firanse_cravetag</span>
-          to view their food cravings.
-        </p>
-        <div class="custom-search">
-          <input
-            type="text"
-            class="custom-search-input"
-            placeholder="Enter Firanse Tag or Phone Number"
-            v-model="cravetag"
-            @keyup.enter="getvalue"
-          />
-          <button class="custom-search-botton" type="submit" @click="getvalue">
-            <v-icon large color="white">mdi-arrow-right</v-icon>
-          </button>
-        </div>
-        <p class="error--text" v-if="nonexistent">This user does not exist!</p>
-        <v-row class="mt-2">
-          <v-col cols="6" align="center">
-            <Applebutton class="header-button" />
-          </v-col>
-          <v-col cols="6" align="center">
-            <Googlebutton class="header-button" />
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="12" md="5" class="my-8" align="center">
-        <img class="maindish" src="~assets/images/maindish.png" alt="" />
-      </v-col>
     </v-row>
-    <!-------------------------------------- How it works -------------------------------------------->
-    <v-row
-      dense
-      no-gutters
-      align="center"
-      justify="center"
-      class="process px-sm-10 py-11"
-    >
-      <v-col cols="12" sm="6" align="center">
-        <img
-          class="girl-image"
-          align="center"
-          src="~assets/images/girlimage.png"
-          alt=""
-        />
-      </v-col>
-      <v-col cols="12" sm="6" align="center">
-        <p class="white--text how-it-works mt-10">How it works</p>
-        <img class="grid-image1" src="~assets/images/process.png" alt="" />
-      </v-col>
-    </v-row>
-
-    <!-------------------------------------- About Us -------------------------------------------->
+    <!--------------------------------------- About Us ----------------------------------------------->
     <div class="aboutus">
       <v-row dense no-gutters align="center" justify="center">
-        <v-col cols="12">
-          <h3 class="aboutus3">About Us</h3>
-        </v-col>
         <v-col cols="12" sm="6" justify="center">
           <p class="black--text commitment">
             Our commitment is to the love we share and the food you eat.
@@ -183,39 +106,102 @@
         </v-col>
       </v-row>
     </div>
-
-    <!-------------------------------------- Partners -------------------------------------------->
-    <v-row
-      dense
-      no-gutters
-      align="center"
-      justify="space-around"
-      class="partners"
-    >
-      <v-col cols="12">
-        <p class="white--text text-center favorite">
-          Your Favourite Restaurants Partner with us
-        </p>
-      </v-col>
-      <v-row justify="center">
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/Dominos.png" alt="" />
+    <!-------------------------------------- Our Story -------------------------------------------->
+    <div class="ourstory">
+      <v-row dense no-gutters align="center" justify="center">
+        <v-col cols="12">
+          <h3 class="aboutus3">Our Story
+          </h3>
+           <span>
+                <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
+             </span>
         </v-col>
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/burgerking.png" alt="" />
-        </v-col>
+        
+      </v-row>
 
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/pizzahut.png" alt="" />
+      <!-------------------------------------- Our Team -------------------------------------------->
+      <v-row dense no-gutters align="center" justify="center" class="mt-10">
+        <v-col cols="12">
+          <h3 class="aboutus3">Our Team
+          </h3>
+           <span>
+                <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
+             </span>
+            <p class="black--text pro-commitment mr-10 pr-10">
+            Meet our eclectic team of humans dedicated to creating happiness and beautiful memories for you.
+          </p>
         </v-col>
+        <v-row justify="center">
+            <v-col cols="3" align="center">
+                <img class="grid-image2 mr-10" src="~assets/images/team1.png" alt="" />
+                <p class="mt-n2 font-weight-bold name" >Chidike Nwandu</p>
+                <p class="mt-n10 role">CEO</p>
+            </v-col>
+            <v-col cols="3" align="center">
+                <img class="grid-image2" src="~assets/images/team1.png" alt="" />
+                <p class="mt-n2 font-weight-bold name" >Amarachi Eche</p>
+                <p class="mt-n10 role">Product Manager</p>
+            </v-col>
 
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/kfc.png" alt="" />
+            <v-col cols="3" align="center">
+                <img class="grid-image2" src="~assets/images/team3.png" alt="" />
+                <p class="mt-n2 font-weight-bold name"> j</p>
+                <p class="mt-n10 role">Product Manager</p>
+            </v-col>
+        </v-row>
+
+        <v-row justify="center">
+            <v-col cols="3" align="center">
+                <img class="grid-image2 mr-10" src="~assets/images/team2.png" alt="" />
+                <p class="mt-n2 font-weight-bold name" >Okoye-Nobert C</p>
+                <p class="mt-n10 role">Software Engineer</p>
+            </v-col>
+            <v-col cols="3" align="center">
+                <img class="grid-image2" src="~assets/images/team4.png" alt="" />
+                <p class="mt-n2 font-weight-bold name" >Kosi Uzoegwu</p>
+                <p class="mt-n10 role">Comms Manager</p>
+            </v-col>
+
+            <v-col cols="3" align="center">
+                <img class="grid-image2" src="~assets/images/team3.png" alt="" />
+                <p class="mt-n2 font-weight-bold name"> j</p>
+                <p class="mt-n10 role">Product Manager</p>
+            </v-col>
+        </v-row>
+
+
+        <v-row justify="center">
+            <v-col cols="3" align="center">
+                <img class="grid-image2 mr-10" src="~assets/images/team2.png" alt="" />
+                <p class="mt-n2 font-weight-bold name">Samuel Dike</p>
+                <p class="mt-n10 role">Role</p>
+            </v-col>
+        </v-row>
+        
+      </v-row>
+
+
+     <!-------------------------------------- Join our Team -------------------------------------------->
+      <v-row dense no-gutters align="center" justify="center" class="mt-10">
+        <v-col cols="12">
+          <h3 class="aboutus3">Join our Team
+          </h3>
+           <span>
+                <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
+             </span>
+            <p class="black--text pro-commitment">
+            Would you love to part of our team? Check out available roles 
+            <span>
+                <nuxt-link to="/">
+                    here
+                </nuxt-link>
+            </span> 
+          </p>
         </v-col>
       </v-row>
-    </v-row>
+    </div>
 
-    <!----------------------------------Download card--------------------------------------------------------------->
+     <!----------------------------------Download card--------------------------------------------------------------->
     <div class="card">
       <div class="drinkspill" align="right">
         <img
@@ -262,38 +248,7 @@
       <img class="cheese-img" src="~assets/images/cheese.png" alt="" />
     </div>
 
-    <!-----------------------------------Subcribe Card ----------------------------------------------------->
-    <div class="subscribe-card-container">
-      <v-card elevation="4" class="mx-auto subscribe-card">
-        <v-card-text align="center">
-          <v-row dense no-gutters align="center" justify="center">
-            <v-col cols="12">
-              <v-card-text>
-                <p class="white--text subcribe-newsletter">
-                  Subscribe to Our Newsletter
-                </p>
-                <p class="black--text subscribe-text">
-                  To get more information about Firanse Food, enter your email
-                  to subscribe to our newsletter.
-                </p>
-              </v-card-text>
-            </v-col>
-            <v-col cols="12" align="center">
-              <div class="custom-search">
-                <input
-                  type="text"
-                  class="custom-search-input"
-                  placeholder="Enter your email"
-                />
-                <button class="custom-search-botton" type="submit">
-                  <v-icon large color="white">mdi-arrow-right</v-icon>
-                </button>
-              </div>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-    </div>
+    <!------------------------------------ Footer ------------------------------------------>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#342301"
@@ -452,28 +407,11 @@ ul {
     color: $primary !important;
 }
 
-// .navbar-nav>.active>a {
-//   background-color: #C0C0C0;
-//   color: green;
-// }
+
 p {
   line-height: 45px;
 }
-.maindish {
-  width: 90%;
-  object-fit: fill;
-}
-.girl-image {
-  width: 90%;
-}
 
-.grid-image1 {
-  width: 65% !important;
-}
-
-.grid-image2 {
-  width: 90% !important;
-}
 
 .process {
   background-color: #ffe580;
@@ -489,74 +427,17 @@ address {
   }
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  -webkit-appearance: none;
-}
-input {
-  background-color: white;
-  height: 60px;
-  width: 100%;
-  border-radius: 10px;
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  display: inline;
-  border: 1px solid black;
-}
 
-.send {
-  font-family: Balsamiq Sans !important;
-  font-size: 35px;
-  line-height: 36px;
-  font-weight: 500;
-  color: #342301 !important;
-}
-.share {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: none;
-  color: #342301 !important;
-  font-family: 'Poppins' !important;
-  letter-spacing: 1px;
-}
-.cravetag {
-  /* font-style: italic; */
-  font-weight: 600;
-  font-size: 17px;
-  font-family: 'Poppins' !important;
-  letter-spacing: 1px;
-  color: #431d01;
-}
 
-.favorite {
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  margin: 2.5% 0;
-  margin-bottom: 10%;
-  color: #342301 !important;
-}
-
-.love {
-  width: 95px;
-  margin-bottom: -40px;
-}
-
-.how-it-works {
-  font-size: 25px !important;
-  font-weight: 900 !important;
-  color: #342301 !important;
-  letter-spacing: 4px;
-}
 
 // ----------------About Us-----------------
 
 .aboutus {
   position: relative;
   margin: 20px;
+  background-image: url("~/assets/images/emojis.png");
+  background-size: cover;
+
 }
 
 .aboutus-image {
@@ -580,6 +461,8 @@ input {
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
+  background-image: url("~/assets/images/emojis.png");
+  position: relative;
 }
 
 .commitment {
@@ -600,7 +483,34 @@ input {
 }
 
 // -------------------------------------------------------------------
+.ourstory {
+  padding: 20px;
+  background-color: #ffe580;
+}
 
+.loveimage{
+    width: 20%;
+    z-index: -1;
+    margin-top: -1000px;
+    margin-left: 100px;
+}
+// -------------------------------------------------------------------
+.grid-image2 {
+  width: 102% !important;
+}
+
+.name{
+    font-size: 6px;
+    margin-top: -30% !important;
+}
+
+.role{
+    font-size: 6px;
+    margin-top: -75% !important;
+}
+
+
+// -----------------------------------
 .partners {
   background-color: #ffe580;
   padding: 30px;
@@ -757,6 +667,24 @@ svg {
   .mdi-36px {
     font-size: 15px !important;
   }
+    .grid-image2 {
+    width: 100% !important;
+  }
+
+  //   ---------------------------------
+  .grid-image2 {
+    width: 100% !important;
+  }
+  .name{
+    font-size: 15px;
+    margin-top: -4% !important;
+}
+
+  .role{
+    font-size: 15px;
+    margin-top: -40% !important;
+}
+//   ---------------------------------
 }
 
 /*sm*/
@@ -764,44 +692,10 @@ svg {
   header {
     margin-bottom: 8%;
   }
-  input {
-    width: 70%;
-    height: 85px;
-    font-size: 25px;
-  }
   .button {
     padding: 35px 20px;
     margin-left: -15%;
     width: 75px;
-  }
-
-  .subscribe-card {
-    max-width: 65%;
-  }
-
-  .subcribe-newsletter {
-    font-size: 25px;
-  }
-
-  .download {
-    background-color: black;
-    border-radius: 10px;
-    width: 250px;
-  }
-  .grid-image {
-    height: 250px;
-  }
-  .send {
-    font-size: 65px;
-    line-height: 62px;
-  }
-  .share {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-  .cravetag {
-    font-size: 20px;
   }
 
   .vcard {
@@ -820,11 +714,6 @@ svg {
 
   .download-text6 {
     font-size: 30px;
-  }
-
-  .download-text4 {
-    font-size: 15px;
-    font-weight: 400;
   }
 
   .download-icon {
@@ -852,6 +741,17 @@ svg {
     margin-right: 25px;
   }
 
+  .ourstory{
+    padding: 40px;
+  }
+
+  .loveimage{
+    width: 10%;
+    z-index: -1;
+    margin-top: -1000px;
+    margin-left: 130px;
+}
+
   .commitment {
     font-size: 14px;
     line-height: 19px;
@@ -870,9 +770,20 @@ svg {
     margin-bottom: 5%;
     letter-spacing: 1px;
   }
+  //   ---------------------------------
   .grid-image2 {
-    width: 40% !important;
+    width: 100% !important;
   }
+  .name{
+    font-size: 10px;
+    margin-top: -4% !important;
+}
+
+  .role{
+    font-size: 10px;
+    margin-top: -25% !important;
+}
+//   ---------------------------------
 
   .cheese-img {
     width: 33% !important;
@@ -882,9 +793,7 @@ svg {
   .drinkspill-img {
     width: 35%;
   }
-  //  .header-button{
-  //   width: 100% !important;
-  // }
+
   .header-button1 {
     width: 70% !important;
   }
@@ -894,19 +803,21 @@ svg {
   header {
     background-color: white;
   }
-  input {
-    height: 90px;
-    width: 600px;
-    font-size: 25px;
+
+//   ---------------------------------
+  .grid-image2 {
+    width: 100% !important;
   }
-  .button {
-    padding: 40px 20px;
-    margin-left: -22%;
-    width: 95px;
-  }
-  .subcribe-newsletter {
-    font-size: 35px;
-  }
+  .name{
+    font-size: 15px;
+    margin-top: -4% !important;
+}
+
+  .role{
+    font-size: 15px;
+    margin-top: -17% !important;
+}
+//   ---------------------------------
 
   .download {
     width: 200px;
@@ -975,6 +886,26 @@ svg {
     margin-right: 25px;
   }
 
+  .ourstory{
+    padding: 50px 80px;
+  }
+  .loveimage{
+    width: 10%;
+    z-index: -1;
+    margin-top: -1000px;
+    margin-left: 130px;
+}
+
+    .cheese-img {
+    width: 27% !important;
+    margin-top: -40px;
+  }
+
+  .drinkspill-img {
+    width: 33%;
+    margin-top: -13%;
+  }
+  
   .commitment {
     font-size: 19px;
     line-height: 35px;
@@ -986,26 +917,6 @@ svg {
     margin-right: 39px;
   }
 
-  .favorite {
-    font-size: 40px;
-    margin: 4% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
-  .grid-image2 {
-    width: 45% !important;
-  }
-
-  .cheese-img {
-    width: 27% !important;
-    margin-top: -40px;
-  }
-
-  .drinkspill-img {
-    width: 33%;
-    margin-top: -13%;
-  }
 
   .header-button {
     width: 90% !important;
@@ -1019,15 +930,25 @@ svg {
   header {
     background-color: white;
   }
-  .grid-image {
-    width: 100%;
-    border-radius: 10px;
-    width: 250px;
-    height: 200px;
-    margin: 5px;
-  }
+
+//   ---------------------------------
   .grid-image2 {
-    width: 50% !important;
+    width: 100% !important;
+  }
+  .name{
+    font-size: 15px;
+    margin-top: -4% !important;
+}
+
+  .role{
+    font-size: 15px;
+    margin-top: -17% !important;
+}
+//   ---------------------------------
+
+  .col-3{
+    margin-right: 5% !important;
+
   }
 
   .first-head {
@@ -1097,7 +1018,12 @@ svg {
   }
 
   .aboutus {
-    margin: 100px 200px;
+    padding: 100px 200px;
+  }
+
+  .ourstory{
+    padding: 100px 200px;
+
   }
 
   .aboutus3 {
@@ -1106,9 +1032,10 @@ svg {
   }
 
   .commitment {
-    font-size: 25px;
-    line-height: 35px;
-    margin-right: 29px;
+    font-size: 35px;
+    line-height: 45px;
+    margin-right: 23px;
+    margin-top: -10%;
   }
 
   .pro-commitment {
@@ -1118,9 +1045,10 @@ svg {
 
   .aboutus-image {
     width: 100%;
+    margin-top: -20% !important;
   }
 
-  .cheese-img {
+    .cheese-img {
     width: 30% !important;
     margin-top: -120px;
   }
@@ -1153,5 +1081,11 @@ svg {
   .header-button1 {
     width: 60% !important;
   }
+
+  .loveimage{
+    width: 10%;
+    margin-top: -1000px;
+    margin-left: 120px;
+}
 }
 </style>
