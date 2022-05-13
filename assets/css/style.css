@@ -1,0 +1,58 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+
+@font-face {
+    font-family: "Balsamiq Sans";
+    src: local("Balsamiq Sans"),     
+    url(~assets/fonts/BalsamiqSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"),     
+    url(~assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+/* :root {
+  --filter-width: 20%;
+  --side-nav-width:80px;
+  --desktop-app-bar-height:65px;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --border-radius: 4px;
+} */
+
+
+* {
+    margin:0;
+    padding: 0;
+    font-size:1rem;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans' !important;
+    /* color: white; */
+}
+body {
+    margin:0;
+    padding: 0;
+    font-size:1rem;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans' !important;
+}
+
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
