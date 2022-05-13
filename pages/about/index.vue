@@ -85,16 +85,18 @@
           <p class="black--text commitment">
             Our commitment is to the love we share and the food you eat.
           </p>
-          <p class="black--text pro-commitment">
-            At Firanshe foods,we are commited to spreading love around the world
-            and the way we see it, gifting food to our loved ones is one of the
-            ways to do so.At Firanshe foods,we are commited to spreading love
-            around the world and the way we see it, gifting food to our loved
-            ones is one of the ways to do so.
+          <p class="black--text pro-commitment" v-if="!readMore">
+                {{this.text.substring(0, 200) + "..."}}
+          </p>
+          <p class="black--text pro-commitment" v-if="readMore">
+                {{this.text}}
           </p>
 
-          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
             View More</v-btn
+          >
+          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+            View Less</v-btn
           >
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
@@ -116,11 +118,10 @@
                 <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
              </span>
         </v-col>
-        
       </v-row>
 
       <!-------------------------------------- Our Team -------------------------------------------->
-      <v-row dense no-gutters align="center" justify="center" class="mt-10">
+      <!-- <v-row dense no-gutters align="center" justify="center" class="mt-10">
         <v-col cols="12">
           <h3 class="aboutus3">Our Team
           </h3>
@@ -179,7 +180,7 @@
         </v-row>
         
       </v-row>
-
+ -->
 
      <!-------------------------------------- Join our Team -------------------------------------------->
       <v-row dense no-gutters align="center" justify="center" class="mt-10">
@@ -314,6 +315,12 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
+      text: "At Firanshe foods,we are commited to spreading love around the world"+
+            " and the way we see it, gifting food to our loved ones is one of the"+
+            " ways to do so. At Firanshefoods,we are commited to spreading love"+
+            " around the world and the way we see it, gifting food to our loved"+
+            " ones is one of the ways to do so.",
+        readMore: false,
     }
   },
   props: {
@@ -351,6 +358,12 @@ export default {
     },
     gotoDashboard() {
       window.open('https://dashboard.firansefood.com')
+    },
+    showMore() {
+        this.readMore = true;
+    },
+    showLess() {
+        this.readMore = false;
     },
   },
 }
