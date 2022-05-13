@@ -1,82 +1,7 @@
 <template>
   <div class="body">
-    <header class="d-flex justify-space-between align-center mx-auto">
-      <div class="d-flex align-center my-3 ml-sm-16 ml-4">
-        <img src="~/assets/images/firansee.png" class="logo" />
-        <!-- <img src="~/assets/images/whitelogo.png" class="logo__text ml-2" /> -->
-      </div>
-      <div class="d-md-flex mr-4">
-        <nav class="d-none d-md-block">
-          <ul class="d-flex align-center">
-            <li class="mx-10">
-              <nuxt-link to="/" exact class="nuxtlink">
-               Home
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/about" exact class="nuxtlink">
-               About
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/blog" exact class="nuxtlink">
-               Blog
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/contact" exact  class="nuxtlink">
-               Contact
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <v-btn
-                color="#FFA800"
-                elevation="4"
-                class="white--text text-none"
-                target="blank"
-                @click="gotoDashboard"
-                >Create a Resturant</v-btn
-              >
-            </li>
-          </ul>
-        </nav>
-        <v-btn
-          class="ml-2 text-none d-md-none"
-          color="primary"
-          icon
-          @click="drawer = true"
-          ><v-icon>mdi-menu</v-icon></v-btn
-        >
-      </div>
-    </header>
+    <Nav/>
     <v-row dense no-gutters align="center" justify="space-around">
-      <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
-        <v-btn color="#FFA800" icon class="float-right" @click="drawer = false"
-          ><v-icon>mdi-close</v-icon></v-btn
-        >
-        <div class="d-flex flex-column justify-center align-center full">
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Food Blog</v-btn
-            >
-          </div>
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Meet the Team</v-btn
-            >
-          </div>
-          <div>
-            <v-btn
-              color="#FFA800"
-              elevation="4"
-              class="white--text text-none"
-              target="blank"
-              @click="gotoDashboard"
-              >Create a Resturant</v-btn
-            >
-          </div>
-        </div>
-      </v-navigation-drawer>
 
       <v-col
         cols="11"
@@ -85,7 +10,7 @@
         justify="center"
       >
         <p class="black--text send">
-          Spreading Love ❤️❤️❤️ 
+          Contact ❤️❤️❤️ 
           <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
           <small class="d-block text--center"
               ><img
@@ -95,42 +20,14 @@
             /></small> 
             love
           </span>-->
-          anywhere, anytime with Food 🥘.
+          coming soon 🥘.
         </p>
-        <p class="share">
-          Satisfy the food of your loved ones, anytime and anywhere.
-        </p>
-        <p class="share">
-          Enter your friend's <span class="cravetag">firanse_cravetag</span>
-          to view their food cravings.
-        </p>
-        <div class="custom-search">
-          <input
-            type="text"
-            class="custom-search-input"
-            placeholder="Enter Firanse Tag or Phone Number"
-            v-model="cravetag"
-            @keyup.enter="getvalue"
-          />
-          <button class="custom-search-botton" type="submit" @click="getvalue">
-            <v-icon large color="white">mdi-arrow-right</v-icon>
-          </button>
-        </div>
-        <p class="error--text" v-if="nonexistent">This user does not exist!</p>
-        <v-row class="mt-2">
-          <v-col cols="6" align="center">
-            <Applebutton class="header-button" />
-          </v-col>
-          <v-col cols="6" align="center">
-            <Googlebutton class="header-button" />
-          </v-col>
-        </v-row>
+        
       </v-col>
       <v-col cols="12" md="5" class="my-8" align="center">
         <img class="maindish" src="~assets/images/maindish.png" alt="" />
       </v-col>
     </v-row>
-    <!-------------------------------------- How it works -------------------------------------------->
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
@@ -189,6 +86,7 @@
 <script>
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
+import Nav from '~/components/Nav.vue'
 import { UserController } from '@/modules/user'
 export default {
   name: 'index',
@@ -214,6 +112,7 @@ export default {
   components: {
     Applebutton,
     Googlebutton,
+    Nav,
   },
 
   methods: {
@@ -282,12 +181,12 @@ ul {
     }
   }
 }
-// .nuxtlink:hover {
-//   color: $primary;
-// }
+.nuxtlink:hover {
+  color: $primary;
+}
 
 .nuxt-link-exact-active {
-    color: #ffa800 !important;
+    color: $primary !important;
 }
 
 // .navbar-nav>.active>a {

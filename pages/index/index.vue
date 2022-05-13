@@ -1,83 +1,7 @@
 <template>
   <div class="body">
-    <header class="d-flex justify-space-between align-center mx-auto">
-      <div class="d-flex align-center my-3 ml-sm-16 ml-4">
-        <img src="~/assets/images/firansee.png" class="logo" />
-        <!-- <img src="~/assets/images/whitelogo.png" class="logo__text ml-2" /> -->
-      </div>
-      <div class="d-md-flex mr-4">
-        <nav class="d-none d-md-block">
-          <ul class="d-flex align-center">
-            <li class="mx-10">
-              <nuxt-link to="/" exact class="nuxtlink">
-               Home
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/about" exact class="nuxtlink">
-               About
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/blog" exact class="nuxtlink">
-               Blog
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/contact" exact  class="nuxtlink">
-               Contact
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <v-btn
-                color="#FFA800"
-                elevation="4"
-                class="white--text text-none"
-                target="blank"
-                @click="gotoDashboard"
-                >Create a Resturant</v-btn
-              >
-            </li>
-          </ul>
-        </nav>
-        <v-btn
-          class="ml-2 text-none d-md-none"
-          color="primary"
-          icon
-          @click="drawer = true"
-          ><v-icon>mdi-menu</v-icon></v-btn
-        >
-      </div>
-    </header>
+    <Nav/>
     <v-row dense no-gutters align="center" justify="space-around">
-      <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
-        <v-btn color="#FFA800" icon class="float-right" @click="drawer = false"
-          ><v-icon>mdi-close</v-icon></v-btn
-        >
-        <div class="d-flex flex-column justify-center align-center full">
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Food Blog</v-btn
-            >
-          </div>
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Meet the Team</v-btn
-            >
-          </div>
-          <div>
-            <v-btn
-              color="#FFA800"
-              elevation="4"
-              class="white--text text-none"
-              target="blank"
-              @click="gotoDashboard"
-              >Create a Resturant</v-btn
-            >
-          </div>
-        </div>
-      </v-navigation-drawer>
-
       <v-col
         cols="11"
         md="5"
@@ -155,23 +79,22 @@
     <!-------------------------------------- About Us -------------------------------------------->
     <div class="aboutus">
       <v-row dense no-gutters align="center" justify="center">
-        <v-col cols="12">
-          <h3 class="aboutus3">About Us</h3>
-        </v-col>
         <v-col cols="12" sm="6" justify="center">
           <p class="black--text commitment">
             Our commitment is to the love we share and the food you eat.
           </p>
-          <p class="black--text pro-commitment">
-            At Firanshe foods,we are commited to spreading love around the world
-            and the way we see it, gifting food to our loved ones is one of the
-            ways to do so.At Firanshe foods,we are commited to spreading love
-            around the world and the way we see it, gifting food to our loved
-            ones is one of the ways to do so.
+          <p class="black--text pro-commitment" v-if="!readMore">
+                {{this.text.substring(0, 200) + "..."}}
+          </p>
+          <p class="black--text pro-commitment" v-if="readMore">
+                {{this.text}}
           </p>
 
-          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
             View More</v-btn
+          >
+          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+            View Less</v-btn
           >
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
@@ -351,6 +274,7 @@
 <script>
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
+import Nav from '~/components/Nav.vue'
 import { UserController } from '@/modules/user'
 export default {
   name: 'index',
@@ -359,6 +283,12 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
+      text: "At Firanshe foods,we are commited to spreading love around the world"+
+            " and the way we see it, gifting food to our loved ones is one of the"+
+            " ways to do so. At Firanshefoods,we are commited to spreading love"+
+            " around the world and the way we see it, gifting food to our loved"+
+            " ones is one of the ways to do so.",
+      readMore: false,
     }
   },
   props: {
@@ -376,6 +306,7 @@ export default {
   components: {
     Applebutton,
     Googlebutton,
+    Nav,
   },
 
   methods: {
@@ -396,6 +327,12 @@ export default {
     },
     gotoDashboard() {
       window.open('https://dashboard.firansefood.com')
+    },
+    showMore() {
+        this.readMore = true;
+    },
+    showLess() {
+        this.readMore = false;
     },
   },
 }
@@ -452,10 +389,7 @@ ul {
     color: $primary !important;
 }
 
-// .navbar-nav>.active>a {
-//   background-color: #C0C0C0;
-//   color: green;
-// }
+
 p {
   line-height: 45px;
 }

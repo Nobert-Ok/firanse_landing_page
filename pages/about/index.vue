@@ -1,83 +1,6 @@
 <template>
   <div class="body">
-    <header class="d-flex justify-space-between align-center mx-auto">
-      <div class="d-flex align-center my-3 ml-sm-16 ml-4">
-        <img src="~/assets/images/firansee.png" class="logo" />
-        <!-- <img src="~/assets/images/whitelogo.png" class="logo__text ml-2" /> -->
-      </div>
-      <div class="d-md-flex mr-4">
-        <nav class="d-none d-md-block">
-          <ul class="d-flex align-center">
-            <li class="mx-10">
-              <nuxt-link to="/" exact class="nuxtlink">
-               Home
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/about" exact class="nuxtlink">
-               About
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/blog" exact class="nuxtlink">
-               Blog
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <nuxt-link to="/contact" exact  class="nuxtlink">
-               Contact
-              </nuxt-link>
-            </li>
-            <li class="mx-10">
-              <v-btn
-                color="#FFA800"
-                elevation="4"
-                class="white--text text-none"
-                target="blank"
-                @click="gotoDashboard"
-                >Create a Resturant</v-btn
-              >
-            </li>
-          </ul>
-        </nav>
-        <v-btn
-          class="ml-2 text-none d-md-none"
-          color="primary"
-          icon
-          @click="drawer = true"
-          ><v-icon>mdi-menu</v-icon></v-btn
-        >
-      </div>
-    </header>
-    <v-row dense no-gutters align="center" justify="space-around">
-      <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
-        <v-btn color="#FFA800" icon class="float-right" @click="drawer = false"
-          ><v-icon>mdi-close</v-icon></v-btn
-        >
-        <div class="d-flex flex-column justify-center align-center full">
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Food Blog</v-btn
-            >
-          </div>
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Meet the Team</v-btn
-            >
-          </div>
-          <div>
-            <v-btn
-              color="#FFA800"
-              elevation="4"
-              class="white--text text-none"
-              target="blank"
-              @click="gotoDashboard"
-              >Create a Resturant</v-btn
-            >
-          </div>
-        </div>
-      </v-navigation-drawer>
-    </v-row>
+    <Nav/>
     <!--------------------------------------- About Us ----------------------------------------------->
     <div class="aboutus">
       <v-row dense no-gutters align="center" justify="center">
@@ -308,6 +231,8 @@
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import { UserController } from '@/modules/user'
+import Nav from '~/components/Nav.vue'
+
 export default {
   name: 'index',
   data() {
@@ -338,6 +263,7 @@ export default {
   components: {
     Applebutton,
     Googlebutton,
+    Nav,
   },
 
   methods: {
