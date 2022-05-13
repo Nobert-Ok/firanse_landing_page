@@ -10,7 +10,7 @@
         justify="center"
       >
         <p class="black--text send">
-          Blog ❤️❤️❤️ 
+          Blog 
           <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
           <small class="d-block text--center"
               ><img
