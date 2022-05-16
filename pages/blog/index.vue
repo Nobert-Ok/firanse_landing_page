@@ -18,7 +18,7 @@
         <img class="maindish" src="~assets/images/maindish.png" alt="" />
       </v-col>
     </v-row>
-      <!-- {{this.featuredpost.thumbnail}} -->
+    
     <v-row v-if="this.featuredpost">
       <v-col cols="12" sm="6">
           <v-card class="mx-auto blogcard" max-width="500">
@@ -26,10 +26,12 @@
               <v-card-title>{{this.featuredpost.title}}</v-card-title>
               <v-card-text class="text--primary">
                 <div>
-                  <p>{{trimdetails(this.featuredpost.description)}}</p>
+                  <!-- <p>{{trimdetails(this.featuredpost.description)}}</p> -->
+                  <p>{{this.trimmeddetails.substring(0,200)+"..."}}</p>
                 </div>
                 <p>{{getHumanDate(this.featuredpost.pubDate)}}</p>
               </v-card-text>
+
 
               <v-card-actions>
                 <a :href="this.featuredpost.link">
@@ -46,7 +48,7 @@
       <v-progress-circular
       indeterminate
       color="amber"
-    ></v-progress-circular>
+    ></v-progress-circular> 
     </div>
     <v-row v-if="this.blogInfo && this.blogInfo.length > 0">
       <v-col cols="12" sm="6" v-for="item in this.blogInfo" :key="item.guid">
@@ -153,7 +155,8 @@ export default {
       nonexistent: false,
       avtar: '',
       blogInfo:[],
-      featuredpost:[]
+      featuredpost:[],
+      trimmeddetails:'',
     }
   },
     props: {
@@ -173,8 +176,9 @@ export default {
       this.blogInfo = res.data.items;
       this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]]
       this.avtar = res.data.feed.image
+      this.trimmeddetails = this.trimdetails(this.featuredpost.description)
       console.log(this.featuredpost)
-      console.log(this.featuredpost.length)
+      console.log(this.trimmeddetails)
 
     } catch (e) {
       console.error(e);
