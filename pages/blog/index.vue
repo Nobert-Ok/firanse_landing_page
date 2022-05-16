@@ -10,17 +10,7 @@
         justify="center"
       >
         <p class="black--text send">
-          Blog 
-          <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
-          <small class="d-block text--center"
-              ><img
-                class="love mx-n14"
-                src="~assets/images/transparent-valentine.png"
-                alt=""
-            /></small> 
-            love
-          </span>-->
-          coming soon 🥘.
+          Blog coming soon 🥘.
         </p>
         
       </v-col>
@@ -28,6 +18,70 @@
         <img class="maindish" src="~assets/images/maindish.png" alt="" />
       </v-col>
     </v-row>
+      <!-- {{this.featuredpost.thumbnail}} -->
+    <v-row v-if="this.featuredpost">
+      <v-col cols="12" sm="6">
+          <v-card class="mx-auto blogcard" max-width="500">
+              <v-img class="white--text" :src="this.featuredpost.thumbnail"></v-img>
+              <v-card-title>{{this.featuredpost.title}}</v-card-title>
+              <v-card-text class="text--primary">
+                <div>
+                  <p>{{trimdetails(this.featuredpost.description)}}</p>
+                </div>
+                <p>{{getHumanDate(this.featuredpost.pubDate)}}</p>
+              </v-card-text>
+
+              <v-card-actions>
+                <a :href="this.featuredpost.link">
+                  <v-btn color="orange">
+                  Read More
+                </v-btn>
+                </a>
+                
+              </v-card-actions>
+          </v-card>
+      </v-col>
+    </v-row>
+     <div v-else class="mx-auto">
+      <v-progress-circular
+      indeterminate
+      color="amber"
+    ></v-progress-circular>
+    </div>
+    <v-row v-if="this.blogInfo && this.blogInfo.length > 0">
+      <v-col cols="12" sm="6" v-for="item in this.blogInfo" :key="item.guid">
+            <!-- <p>{{trimdetails(item.description)}}</p>
+            <img :src="item.thumbnail" alt="">
+            <p>{{getHumanDate(item.pubDate)}}</p> -->
+
+          <v-card class="mx-auto blogcard" max-width="500">
+              <v-img class="white--text" :src="item.thumbnail"></v-img>
+              <v-card-title>{{item.title}}</v-card-title>
+              <v-card-text class="text--primary">
+                <div>
+                  <p>{{trimdetails(item.description.substring(0,300)+"....")}}</p>
+                </div>
+                <p>{{getHumanDate(item.pubDate)}}</p>
+              </v-card-text>
+
+              <v-card-actions>
+                <a :href="item.link">
+                  <v-btn color="orange">
+                  Read More
+                </v-btn>
+                </a>
+              </v-card-actions>
+          </v-card>
+      </v-col>
+    </v-row>
+    <div v-else class="mx-auto">
+      <v-progress-circular
+      indeterminate
+      color="amber"
+    ></v-progress-circular>
+    </div>
+    <!----------------------------Card ----------------------------------->
+
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
@@ -84,10 +138,12 @@
 
 
 <script>
+import axios from "axios";
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import Nav from '~/components/Nav.vue'
-import { UserController } from '@/modules/user'
+import moment from 'moment'
+
 export default {
   name: 'index',
   data() {
@@ -95,9 +151,12 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
+      avtar: '',
+      blogInfo:[],
+      featuredpost:[]
     }
   },
-  props: {
+    props: {
     value: {
       type: String,
       default: '',
@@ -108,7 +167,19 @@ export default {
       this.$emit('input', currentValue)
     },
   },
+  async created() {
+    try {
+      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoye10`);
+      this.blogInfo = res.data.items;
+      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]]
+      this.avtar = res.data.feed.image
+      console.log(this.featuredpost)
+      console.log(this.featuredpost.length)
 
+    } catch (e) {
+      console.error(e);
+    }
+  },
   components: {
     Applebutton,
     Googlebutton,
@@ -116,52 +187,22 @@ export default {
   },
 
   methods: {
-    getvalue() {
-      this.cravetag = this.cravetag.toLowerCase()
-      UserController.getUserByTagPhone({ search: this.cravetag })
-        .then((data) => {
-          if (!data) {
-            this.nonexistent = true
-            return
-          }
-          this.nonexistent = false
-          this.$router.push('/user/' + data.user.firanse_tag)
-        })
-        .catch((err) => {
-          console.error(err)
-        })
-    },
     gotoDashboard() {
       window.open('https://dashboard.firansefood.com')
     },
+    trimdetails(node){
+      let tag = document.createElement("div");
+      tag.innerHTML = node;
+      node = tag.innerText;
+      return node;
+    },
+    getHumanDate(date) {
+      return moment(date, 'YYYY-MM-DD').format("MMM DD, YYYY");
+    }
   },
 }
 </script>
 <style lang="scss" scoped>
-.logo {
-  width: 180px;
-  height: 100%;
-  display: inline;
-  border-radius: 0;
-  cursor: pointer;
-}
-.first-head {
-  margin-top: 50px;
-}
-header {
-  width: 100%;
-}
-
-.body {
-  position: relative;
-  overflow: hidden;
-}
-.full {
-  height: 100vh;
-}
-h1 {
-  font-size: 3rem;
-}
 h6 {
   margin: 10px 0;
   font-size: 25px;
@@ -216,79 +257,6 @@ p {
   background-color: #ffe580;
 }
 
-address {
-  font-style: normal;
-}
-.logo {
-  /* width: 50%; */
-  &__text {
-    width: 55%;
-  }
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  -webkit-appearance: none;
-}
-input {
-  background-color: white;
-  height: 60px;
-  width: 100%;
-  border-radius: 10px;
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  display: inline;
-  border: 1px solid black;
-}
-
-.send {
-  font-family: Balsamiq Sans !important;
-  font-size: 35px;
-  line-height: 36px;
-  font-weight: 500;
-  color: #342301 !important;
-}
-.share {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: none;
-  color: #342301 !important;
-  font-family: 'Poppins' !important;
-  letter-spacing: 1px;
-}
-.cravetag {
-  /* font-style: italic; */
-  font-weight: 600;
-  font-size: 17px;
-  font-family: 'Poppins' !important;
-  letter-spacing: 1px;
-  color: #431d01;
-}
-
-.favorite {
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  margin: 2.5% 0;
-  margin-bottom: 10%;
-  color: #342301 !important;
-}
-
-.love {
-  width: 95px;
-  margin-bottom: -40px;
-}
-
-.how-it-works {
-  font-size: 25px !important;
-  font-weight: 900 !important;
-  color: #342301 !important;
-  letter-spacing: 4px;
-}
-
 // ----------------About Us-----------------
 
 .aboutus {
@@ -336,45 +304,10 @@ input {
   color: #342301 !important;
 }
 
-// -------------------------------------------------------------------
-
-.partners {
-  background-color: #ffe580;
-  padding: 30px;
-}
-.card {
-  padding: 50px 0;
-  // height: 600px !important;
-}
-
-.vcard {
-  max-width: 90%;
-  height: 300px !important;
-  margin-top: -35%;
-  border-radius: 20px !important;
-}
-
-.subscribe-card {
-  max-width: 90%;
-  background-color: #ffe580 !important;
-  border-radius: 20px !important;
-  padding: 15px;
-  margin-top: 10%;
-}
-
-.subcribe-newsletter {
-  font-family: Balsamiq Sans !important;
-  color: #342301 !important;
-  font-size: 26px;
-  line-height: 35px;
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-.subscribe-text {
-  font-size: 14.5px;
-  line-height: 15px;
-  font-family: 'Poppins' !important;
+// ----------------Blog Card-----------------
+.blogcard{
+  background-color: #FFA80033;
+;
 }
 
 // ----------------Download Card-----------------
@@ -424,6 +357,8 @@ input {
   width: 50%;
   margin-top: -120px;
 }
+
+// ------------Footer--------------------------
 
 footer {
   background: #342301;
