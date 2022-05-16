@@ -51,17 +51,17 @@
     ></v-progress-circular> 
     </div>
     <v-row v-if="this.blogInfo && this.blogInfo.length > 0">
-      <v-col cols="12" sm="6" v-for="item in this.blogInfo" :key="item.guid">
+      <v-col cols="6" sm="6" v-for="item in this.blogInfo" :key="item.guid">
             <!-- <p>{{trimdetails(item.description)}}</p>
             <img :src="item.thumbnail" alt="">
             <p>{{getHumanDate(item.pubDate)}}</p> -->
 
-          <v-card class="mx-auto blogcard" max-width="500">
+          <v-card class="mx-auto blogcard" max-width="700">
               <v-img class="white--text" :src="item.thumbnail"></v-img>
               <v-card-title>{{item.title}}</v-card-title>
               <v-card-text class="text--primary">
                 <div>
-                  <p>{{trimdetails(item.description.substring(0,300)+"....")}}</p>
+                  <p>{{trimdetails(item.description.substring(0,250)+"....")}}</p>
                 </div>
                 <p>{{getHumanDate(item.pubDate)}}</p>
               </v-card-text>
@@ -172,7 +172,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoye10`);
+      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`);
       this.blogInfo = res.data.items;
       this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]]
       this.avtar = res.data.feed.image
@@ -207,6 +207,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.body {
+  position: relative;
+  overflow: hidden;
+}
 h6 {
   margin: 10px 0;
   font-size: 25px;
