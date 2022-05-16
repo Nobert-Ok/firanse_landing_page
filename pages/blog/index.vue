@@ -18,8 +18,8 @@
         <img class="maindish" src="~assets/images/maindish.png" alt="" />
       </v-col>
     </v-row>
-    
-    <v-row v-if="this.featuredpost">
+    {{this.featuredpost.thumbnail}}
+    <v-row v-if="this.featuredpost" class="m-5">
       <v-col cols="12" sm="6">
           <v-card class="mx-auto blogcard" max-width="500">
               <v-img class="white--text" :src="this.featuredpost.thumbnail"></v-img>
@@ -39,7 +39,6 @@
                   Read More
                 </v-btn>
                 </a>
-                
               </v-card-actions>
           </v-card>
       </v-col>
@@ -56,7 +55,7 @@
             <img :src="item.thumbnail" alt="">
             <p>{{getHumanDate(item.pubDate)}}</p> -->
 
-          <v-card class="mx-auto blogcard" max-width="700">
+          <v-card class="mx-auto blogcard" max-width="500">
               <v-img class="white--text" :src="item.thumbnail"></v-img>
               <v-card-title>{{item.title}}</v-card-title>
               <v-card-text class="text--primary">
