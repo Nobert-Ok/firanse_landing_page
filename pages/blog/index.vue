@@ -1,6 +1,11 @@
 <template>
   <div class="body">
     <Nav/>
+    <v-row>
+      <v-col col="3">
+        <img class="foodbowl" src="~assets/images/foodbowl.png" alt="">
+      </v-col>
+    </v-row>
     <v-row dense no-gutters align="center" justify="space-around">
 
       <v-col
@@ -18,16 +23,16 @@
         <img class="maindish" src="~assets/images/maindish.png" alt="" />
       </v-col>
     </v-row>
-    <v-img class="white--text" :src="this.featuredpost.thumbnail"></v-img>
     <v-row v-if="this.featuredpost" class="m-5">
       <v-col cols="12" sm="6">
-          <v-card class="mx-auto blogcard" max-width="500">
+        <p class="aboutus3"> Featured Post</p>
+          <v-card class="mx-auto blogcard" max-width="250">
               <v-img class="white--text" :src="this.featuredpost.thumbnail"></v-img>
-              <v-card-title>{{this.featuredpost.title}}</v-card-title>
+              <v-card-title class="title">{{this.featuredpost.title}}</v-card-title>
               <v-card-text class="text--primary">
                 <div>
                   <!-- <p>{{trimdetails(this.featuredpost.description)}}</p> -->
-                  <p>{{this.trimmeddetails.substring(0,200)+"..."}}</p>
+                  <p class="trimmeddetails">{{this.trimmeddetails.substring(0,200)+"..."}}</p>
                 </div>
                 <p>{{getHumanDate(this.featuredpost.pubDate)}}</p>
               </v-card-text>
@@ -49,18 +54,18 @@
       color="amber"
     ></v-progress-circular> 
     </div>
+    <p class="aboutus3"> Latest Post</p>
     <v-row v-if="this.blogInfo && this.blogInfo.length > 0">
       <v-col cols="6" sm="6" v-for="item in this.blogInfo" :key="item.guid">
             <!-- <p>{{trimdetails(item.description)}}</p>
             <img :src="item.thumbnail" alt="">
             <p>{{getHumanDate(item.pubDate)}}</p> -->
-
           <v-card class="mx-auto blogcard" max-width="500">
               <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
-              <v-card-title>{{item.title}}</v-card-title>
+              <v-card-title class="title">{{item.title}}</v-card-title>
               <v-card-text class="text--primary">
                 <div>
-                  <p>{{trimdetails(item.description.substring(0,250)+"....")}}</p>
+                  <p class="trimmeddetails">{{trimdetails(item.description.substring(0,250)+"....")}}</p>
                 </div>
                 <p>{{getHumanDate(item.pubDate)}}</p>
               </v-card-text>
@@ -292,6 +297,7 @@ p {
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
+  margin-right: 3rem;
 }
 
 .commitment {
@@ -314,9 +320,21 @@ p {
 // ----------------Blog Card-----------------
 .blogcard{
   background-color: #FFA80033;
-;
+}
+.trimmeddetails{
+  line-height: 15px !important;
+  font-size: 9px;
+}
+.title{
+  font-size: 12.5px !important;
+  margin-bottom: -20px !important;
+  margin-top: -10px !important;
 }
 
+.foodbowl{
+  width: 100% !important;
+  // object-fit: contain !important;
+}
 // ----------------Download Card-----------------
 
 .download-button-card {
