@@ -6,32 +6,14 @@
         <img class="foodbowl" src="~assets/images/foodbowl.png" alt="">
       </v-col>
     </v-row>
-    <v-row dense no-gutters align="center" justify="space-around">
-
-      <v-col
-        cols="11"
-        md="5"
-        class="first-head ml-sm-7 ml-sm-8"
-        justify="center"
-      >
-        <p class="black--text send">
-          Blog coming soon 🥘.
-        </p>
-        
-      </v-col>
-      <v-col cols="12" md="5" class="my-8" align="center">
-        <img class="maindish" src="~assets/images/maindish.png" alt="" />
-      </v-col>
-    </v-row>
-    <v-row v-if="this.featuredpost" class="m-5">
+    <!-- <v-row v-if="this.featuredpost" class="m-5">
       <v-col cols="12" sm="6">
         <p class="aboutus3"> Featured Post</p>
-          <v-card class="mx-auto blogcard" max-width="250">
+          <v-card class="mx-auto blogcard" max-width="300">
               <v-img class="white--text" :src="this.featuredpost.thumbnail"></v-img>
               <v-card-title class="title">{{this.featuredpost.title}}</v-card-title>
               <v-card-text class="text--primary">
                 <div>
-                  <!-- <p>{{trimdetails(this.featuredpost.description)}}</p> -->
                   <p class="trimmeddetails">{{this.trimmeddetails.substring(0,200)+"..."}}</p>
                 </div>
                 <p>{{getHumanDate(this.featuredpost.pubDate)}}</p>
@@ -47,32 +29,32 @@
               </v-card-actions>
           </v-card>
       </v-col>
-    </v-row>
-     <div v-else class="mx-auto">
+    </v-row> -->
+     <!-- <div v-else class="mx-auto">
       <v-progress-circular
       indeterminate
       color="amber"
     ></v-progress-circular> 
-    </div>
+    </div> -->
     <p class="aboutus3"> Latest Post</p>
-    <v-row v-if="this.blogInfo && this.blogInfo.length > 0">
-      <v-col cols="6" sm="6" v-for="item in this.blogInfo" :key="item.guid">
+    <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
+      <v-col cols="12" sm="3" v-for="item in this.blogInfo" :key="item.guid" >
             <!-- <p>{{trimdetails(item.description)}}</p>
             <img :src="item.thumbnail" alt="">
             <p>{{getHumanDate(item.pubDate)}}</p> -->
-          <v-card class="mx-auto blogcard" max-width="500">
+          <v-card class="mx-auto blogcard">
               <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
               <v-card-title class="title">{{item.title}}</v-card-title>
               <v-card-text class="text--primary">
                 <div>
                   <p class="trimmeddetails">{{trimdetails(item.description.substring(0,250)+"....")}}</p>
                 </div>
-                <p>{{getHumanDate(item.pubDate)}}</p>
+                <p class="date">{{getHumanDate(item.pubDate)}}</p>
               </v-card-text>
 
               <v-card-actions>
                 <a :href="item.link">
-                  <v-btn color="orange">
+                  <v-btn color="orange" class="readmore-button">
                   Read More
                 </v-btn>
                 </a>
@@ -178,11 +160,11 @@ export default {
     try {
       const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`);
       this.blogInfo = res.data.items;
-      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]]
-      this.avtar = res.data.feed.image
-      this.trimmeddetails = this.trimdetails(this.featuredpost.description)
-      console.log(this.featuredpost)
-      console.log(this.trimmeddetails)
+      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]];
+      this.avtar = res.data.feed.image;
+      this.trimmeddetails = this.trimdetails(this.featuredpost.description);
+      console.log(this.blogInfo);
+      console.log(this.trimmeddetails);
 
     } catch (e) {
       console.error(e);
@@ -297,7 +279,7 @@ p {
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
-  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .commitment {
@@ -318,22 +300,48 @@ p {
 }
 
 // ----------------Blog Card-----------------
+.aboutus3 {
+  color: #342301 !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 2.2rem;
+  margin-bottom: 0px !important;
+}
+
 .blogcard{
   background-color: #FFA80033;
+  max-width: 300px;
+  max-height: 700px;
 }
 .trimmeddetails{
   line-height: 15px !important;
-  font-size: 9px;
+  font-size: 12.5px;
+  margin-bottom: 0px !important;
 }
+
 .title{
-  font-size: 12.5px !important;
-  margin-bottom: -20px !important;
+  font-size: 14.5px !important;
+  line-height: 15px;
+  margin-bottom: -10px !important;
   margin-top: -10px !important;
+  font-weight: bolder;
 }
 
 .foodbowl{
   width: 100% !important;
-  // object-fit: contain !important;
+}
+
+.readmore-button{
+  color: white;
+  text-transform: capitalize;
+}
+
+.date{
+  font-size: 10px;
+  font-style: italic;
+}
+a{
+  text-decoration: none;
 }
 // ----------------Download Card-----------------
 
@@ -850,5 +858,43 @@ svg {
   .header-button1 {
     width: 60% !important;
   }
+  // ----------------Blog Card-----------------
+.aboutus3 {
+  color: #342301 !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 2.2rem;
+  margin-bottom: 0px !important;
+}
+
+.blogcard{
+  background-color: #FFA80033;
+  max-width: 1000px !important;
+  max-height: 700px;
+}
+.trimmeddetails{
+  line-height: 25px !important;
+  font-size: 15px;
+  margin-bottom: 0px !important;
+}
+
+.title{
+  font-size: 20px !important;
+  line-height: 25px;
+  margin-bottom: -10px !important;
+  margin-top: -10px !important;
+  font-weight: bolder;
+  overflow-wrap: break-word;
+}
+
+.foodbowl{
+  width: 100% !important;
+}
+
+.date{
+  font-size: 10px;
+}
+
+
 }
 </style>
