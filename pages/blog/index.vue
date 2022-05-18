@@ -314,7 +314,7 @@ p {
 }
 
 .blogcard{
-  background-color: #FFA80033;
+  background-color: #FFA80033 !important;
   max-width: 350px;
   max-height: 700px;
 }
@@ -341,7 +341,7 @@ p {
 }
 
 .readmore-button{
-  color: rgb(243, 243, 243);
+  color: rgb(243, 243, 243) !important;
   text-transform: capitalize;
   margin-top: -1.5rem !important;
   margin-left: 0.5rem;
@@ -349,7 +349,6 @@ p {
 
 .date{
   font-size: 14.5px;
-  // font-style: italic;
   margin-left: 1rem;
   color: #412b00;
 }
@@ -359,7 +358,7 @@ a{
 // ----------------Download Card-----------------
 
 .vcard{
-  background-color: #FFDC99;
+  background-color: #FFDC99 !important;
   max-width: 75%;
   height: 200px !important;
   margin-top: -100px;
