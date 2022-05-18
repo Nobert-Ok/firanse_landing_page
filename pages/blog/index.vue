@@ -2,8 +2,39 @@
   <div class="body">
     <Nav/>
     <v-row>
-      <v-col col="3">
+      <v-col col="3" class="container">
         <img class="foodbowl" src="~assets/images/foodbowl.png" alt="">
+        <v-card elevation="7" class="mx-auto vcard">
+            <v-card-text justify="center" class="sm-pt-10">
+            <v-row dense no-gutters >
+                <v-col cols="12">
+                <v-card-text align="center" justify="center">
+                    <p class="black--text download-text5">
+                    Love. Life. Food. Firanse.
+                    </p>
+                    <nuxt-link to="/blog" class="mr-10">
+                      <v-icon x-large>
+                        mdi-facebook
+                      </v-icon>
+                    </nuxt-link>
+                    
+                    <nuxt-link to="/blog" class="mr-10">
+                      <v-icon>
+                        mdi-twitter
+                      </v-icon>
+                    </nuxt-link>
+                    
+                    <nuxt-link to="/blog">
+                      <v-icon>
+                        mdi-instagram
+                      </v-icon>
+                    </nuxt-link>
+                    </v-card-text>
+                </v-col>
+            </v-row>
+            </v-card-text>
+        </v-card>
+        <!----------------------------------Info cards--------------------------------------------------------------->
       </v-col>
     </v-row>
     <!-- <v-row v-if="this.featuredpost" class="m-5">
@@ -36,39 +67,54 @@
       color="amber"
     ></v-progress-circular> 
     </div> -->
-    <p class="aboutus3"> Latest Post</p>
-    <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
-      <v-col cols="12" sm="3" v-for="item in this.blogInfo" :key="item.guid" >
-            <!-- <p>{{trimdetails(item.description)}}</p>
-            <img :src="item.thumbnail" alt="">
-            <p>{{getHumanDate(item.pubDate)}}</p> -->
-          <v-card class="mx-auto blogcard">
-              <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
-              <v-card-title class="title">{{item.title}}</v-card-title>
-              <v-card-text class="text--primary">
-                <div>
-                  <p class="trimmeddetails">{{trimdetails(item.description.substring(0,250)+"....")}}</p>
-                </div>
-                <p class="date">{{getHumanDate(item.pubDate)}}</p>
-              </v-card-text>
 
-              <v-card-actions>
-                <a :href="item.link">
-                  <v-btn color="orange" class="readmore-button">
-                  Read More
-                </v-btn>
-                </a>
-              </v-card-actions>
-          </v-card>
-      </v-col>
-    </v-row>
-    <div v-else class="mx-auto">
-      <v-progress-circular
-      indeterminate
-      color="amber"
-    ></v-progress-circular>
+    <!----------------------------------Blog cards--------------------------------------------------------------->
+    <div class="blog">
+      <p class="aboutus3" align="center"> Latest Posts</p>
+      <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
+        <v-col cols="12" sm="6" md="3" v-for="item in this.blogInfo" :key="item.guid" >
+              <!-- <p>{{trimdetails(item.description)}}</p>
+              <img :src="item.thumbnail" alt="">
+              <p>{{getHumanDate(item.pubDate)}}</p> -->
+            <v-card class="mx-auto blogcard">
+                <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
+                <v-card-title class="title">{{item.title}}</v-card-title>
+                <v-card-text class="text--primary">
+                  <div>
+                    <p class="trimmeddetails">{{trimdetails(item.description.substring(0,250)+"....")}}</p>
+                  </div>
+                </v-card-text>
+                <v-card-actions>
+                  <a :href="item.link">
+                    <v-btn color="orange" class="readmore-button">
+                    Read More
+                  </v-btn>
+                  </a>
+                </v-card-actions>
+
+
+                <p class="date">
+                  <v-icon>
+                    mdi-calendar
+                  </v-icon>
+                  {{getHumanDate(item.pubDate)}}
+                </p>
+
+            </v-card>
+        </v-col>
+      </v-row>
+      
+      <div v-else class="mx-auto">
+        <v-progress-circular
+        indeterminate
+        color="amber"
+      ></v-progress-circular>
+      </div>
     </div>
-    <!----------------------------Card ----------------------------------->
+
+
+    <!----------------------------------Download card--------------------------------------------------------------->
+    <Downloadcard/>
 
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -131,6 +177,9 @@ import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import Nav from '~/components/Nav.vue'
 import moment from 'moment'
+import Downloadcard from "~/components/Downloadcard.vue";
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+
 
 export default {
   name: 'index',
@@ -145,7 +194,10 @@ export default {
       trimmeddetails:'',
     }
   },
-    props: {
+  icons:{
+    iconfont: 'mdi', 
+  },
+  props: {
     value: {
       type: String,
       default: '',
@@ -174,7 +226,8 @@ export default {
     Applebutton,
     Googlebutton,
     Nav,
-  },
+    Downloadcard
+},
 
   methods: {
     gotoDashboard() {
@@ -224,10 +277,6 @@ ul {
     color: $primary !important;
 }
 
-// .navbar-nav>.active>a {
-//   background-color: #C0C0C0;
-//   color: green;
-// }
 p {
   line-height: 45px;
 }
@@ -251,80 +300,40 @@ p {
   background-color: #ffe580;
 }
 
-// ----------------About Us-----------------
-
-.aboutus {
-  position: relative;
-  margin: 20px;
-}
-
-.aboutus-image {
-  width: 100%;
-  object-fit: fill;
-}
-
-.aboutus-button {
-  color: white !important;
-  height: 50px !important;
-  width: 45%;
-  text-transform: capitalize;
-  font-size: 30px;
-  font-weight: 900;
-  font-family: 'Poppins' !important;
-  letter-spacing: 2px;
-  background-color: #ffa800 !important;
-}
-
-.aboutus3 {
-  color: #342301 !important;
-  font-size: 30px;
-  letter-spacing: 2px;
-  margin-left: 3rem;
-}
-
-.commitment {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
-  font-family: 'Poppins' !important;
-  letter-spacing: 2px;
-  color: #342301 !important;
-}
-
-.pro-commitment {
-  font-size: 15px;
-  line-height: 24px;
-  font-family: 'Poppins' !important;
-  letter-spacing: 2px;
-  color: #342301 !important;
-}
-
 // ----------------Blog Card-----------------
+.blog{
+  // background-color: #ffe580;
+}
 .aboutus3 {
   color: #342301 !important;
-  font-size: 20px;
   letter-spacing: 2px;
-  margin-left: 2.2rem;
-  margin-bottom: 0px !important;
+  margin-bottom: 1rem !important;
+  margin-top: 30px;
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .blogcard{
   background-color: #FFA80033;
-  max-width: 300px;
+  max-width: 350px;
   max-height: 700px;
 }
 .trimmeddetails{
-  line-height: 15px !important;
-  font-size: 12.5px;
+  line-height: 20px !important;
+  font-size: 14.5px;
   margin-bottom: 0px !important;
+  letter-spacing: 1px;
+  color: #412b00;
 }
 
 .title{
-  font-size: 14.5px !important;
-  line-height: 15px;
+  font-size: 20px !important;
+  line-height: 20px;
   margin-bottom: -10px !important;
-  margin-top: -10px !important;
+  margin-top: -5px !important;
   font-weight: bolder;
+  letter-spacing: 1px;
+  color: #342301;
 }
 
 .foodbowl{
@@ -332,19 +341,30 @@ p {
 }
 
 .readmore-button{
-  color: white;
+  color: rgb(243, 243, 243);
   text-transform: capitalize;
+  margin-top: -1.5rem !important;
+  margin-left: 0.5rem;
 }
 
 .date{
-  font-size: 10px;
-  font-style: italic;
+  font-size: 14.5px;
+  // font-style: italic;
+  margin-left: 1rem;
+  color: #412b00;
 }
 a{
   text-decoration: none;
 }
 // ----------------Download Card-----------------
 
+.vcard{
+  background-color: #FFDC99;
+  max-width: 75%;
+  height: 200px !important;
+  margin-top: -100px;
+  margin-bottom: 5rem;
+}
 .download-button-card {
   width: 100% !important;
 }
@@ -376,20 +396,6 @@ a{
   font-family: 'Poppins' !important;
 }
 
-.cheese {
-  margin-top: -75px;
-  z-index: -1;
-}
-
-.cheese-img {
-  position: relative;
-  width: 40%;
-}
-
-.drinkspill-img {
-  width: 50%;
-  margin-top: -120px;
-}
 
 // ------------Footer--------------------------
 
@@ -448,72 +454,23 @@ svg {
   width: 100% !important;
 }
 
-@media only screen and (max-width: 350px) {
-  .vcard {
-    /* height: 335px !important; */
-  }
-  .subcribe-newsletter {
-    font-size: 24px;
-  }
-  .download-icon {
-    font-size: 25px !important;
-    margin-left: 2px !important;
-  }
-  .mdi-36px {
-    font-size: 15px !important;
-  }
+@media only screen and (max-width: 375px) {
+  .blogcard{
+  background-color: #FFA80033;
+  max-width: 300px !important;
+  max-height: 700px;
+}
+  
 }
 
 /*sm*/
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  header {
-    margin-bottom: 8%;
-  }
-  input {
-    width: 70%;
-    height: 85px;
-    font-size: 25px;
-  }
-  .button {
-    padding: 35px 20px;
-    margin-left: -15%;
-    width: 75px;
-  }
-
-  .subscribe-card {
-    max-width: 65%;
-  }
-
-  .subcribe-newsletter {
-    font-size: 25px;
-  }
-
-  .download {
-    background-color: black;
-    border-radius: 10px;
-    width: 250px;
-  }
-  .grid-image {
-    height: 250px;
-  }
-  .send {
-    font-size: 65px;
-    line-height: 62px;
-  }
-  .share {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-  .cravetag {
-    font-size: 20px;
-  }
-
   .vcard {
-    max-width: 80%;
-    margin-top: -25%;
-    margin-bottom: 20%;
+    max-width: 55%;
+    height: 250px !important;
+    margin-top: -150px;
   }
+  
   .download-text3 {
     font-size: 11px;
   }
@@ -535,105 +492,24 @@ svg {
   .download-icon {
     font-size: 30px;
   }
+   // ----------------Blog Card-----------------
+.aboutus3 {
+  color: #342301 !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 3rem !important;
+  font-size: 49px;
+  line-height: 50px;
+}
 
-  .custom-search-botton {
-    width: 90px;
-    height: 50px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-  .custom-search-input {
-    height: 70px;
-    font-size: 15px;
-  }
 
-  .aboutus {
-    margin: 40px;
-  }
 
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 14px;
-    line-height: 19px;
-    margin-right: 19px;
-  }
-
-  .pro-commitment {
-    font-size: 12px;
-    margin-right: 30px;
-    line-height: 16px;
-  }
-
-  .favorite {
-    font-size: 30px;
-    margin: 3% 0;
-    margin-bottom: 5%;
-    letter-spacing: 1px;
-  }
-  .grid-image2 {
-    width: 40% !important;
-  }
-
-  .cheese-img {
-    width: 33% !important;
-    margin-top: -250px;
-  }
-
-  .drinkspill-img {
-    width: 35%;
-  }
-  //  .header-button{
-  //   width: 100% !important;
-  // }
-  .header-button1 {
-    width: 70% !important;
-  }
 }
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
-  header {
-    background-color: white;
-  }
-  input {
-    height: 90px;
-    width: 600px;
-    font-size: 25px;
-  }
-  .button {
-    padding: 40px 20px;
-    margin-left: -22%;
-    width: 95px;
-  }
-  .subcribe-newsletter {
-    font-size: 35px;
-  }
-
-  .download {
-    width: 200px;
-  }
-
-  .send {
-    font-size: 45px;
-    line-height: 50px;
-    font-weight: 500;
-  }
-
-  .share {
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-  .cravetag {
-    font-size: 20px;
-  }
   .vcard {
-    max-width: 75%;
-    margin-top: -30%;
+    max-width: 65%;
+    margin-top: -100px;
   }
 
   .subscribe-card {
@@ -659,179 +535,48 @@ svg {
   .download-icon {
     font-size: 40px;
   }
-  .custom-search-botton {
-    width: 100px;
-    height: 55px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-  .custom-search-input {
-    height: 75px;
-    font-size: 20px;
-  }
+ // ----------------Blog Card-----------------
+.aboutus3 {
+  color: #342301 !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 2rem !important;
+  font-size: 49px;
+  line-height: 50px;
+}
+.blogcard{
+  max-width: 400px !important;
+}
+.trimmeddetails{
+  line-height: 25px !important;
+  font-size: 15px;
+  margin-bottom: 0px !important;
+}
 
-  .aboutus {
-    margin: 50px 80px;
-  }
+.title{
+  font-size: 20px !important;
+  line-height: 25px;
+  margin-bottom: -10px !important;
+  font-weight: bolder;
+  overflow-wrap: break-word;
+}
 
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
+.foodbowl{
+  width: 100% !important;
+}
 
-  .commitment {
-    font-size: 19px;
-    line-height: 35px;
-    margin-right: 23px;
-  }
+.date{
+  font-size: 15px;
+}
 
-  .pro-commitment {
-    font-size: 15px;
-    margin-right: 39px;
-  }
 
-  .favorite {
-    font-size: 40px;
-    margin: 4% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
-  .grid-image2 {
-    width: 45% !important;
-  }
-
-  .cheese-img {
-    width: 27% !important;
-    margin-top: -40px;
-  }
-
-  .drinkspill-img {
-    width: 33%;
-    margin-top: -13%;
-  }
-
-  .header-button {
-    width: 90% !important;
-  }
-  .header-button1 {
-    width: 60% !important;
-  }
 }
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
-  header {
-    background-color: white;
-  }
-  .grid-image {
-    width: 100%;
-    border-radius: 10px;
-    width: 250px;
-    height: 200px;
-    margin: 5px;
-  }
-  .grid-image2 {
-    width: 50% !important;
-  }
-
-  .first-head {
-    margin-top: -160px;
-  }
-
-  .love {
-    width: 150px;
-    margin-bottom: -60px;
-  }
-  .subcribe-newsletter {
-    font-size: 35px;
-  }
-  .download {
-    background-color: black;
-    border-radius: 10px;
-    width: 250px;
-  }
-  .send {
-    font-size: 60px;
-    line-height: 64px;
-    font-weight: 500;
-  }
-
-  .share {
-    font-size: 1.8rem;
-    line-height: 30px;
-  }
-
-  .favorite {
-    font-size: 45px;
-    margin: 2% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
-  .cravetag {
-    font-size: 27px;
-  }
-  .breaker {
-    margin-top: 20px !important;
-  }
-  .mt-n7 {
-    margin-top: -15px !important;
-  }
   .vcard {
-    max-width: 75%;
-    height: 400px !important;
-    margin-top: -400px;
-  }
-  .subscribe-card {
     max-width: 55%;
-    padding: 50px;
-  }
-
-  .custom-search-botton {
-    width: 90px;
-    height: 50px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-  .custom-search-input {
-    height: 70px;
-    font-size: 20px;
-    padding-left: 30px;
-  }
-
-  .aboutus {
-    margin: 100px 200px;
-  }
-
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 25px;
-    line-height: 35px;
-    margin-right: 29px;
-  }
-
-  .pro-commitment {
-    font-size: 17px;
-    margin-right: 45px;
-  }
-
-  .aboutus-image {
-    width: 100%;
-  }
-
-  .cheese-img {
-    width: 30% !important;
-    margin-top: -120px;
-  }
-
-  .drinkspill-img {
-    width: 30%;
+    height: 250px !important;
+    margin-top: -150px;
   }
 
   .download-text5 {
@@ -851,27 +596,23 @@ svg {
     line-height: 24px;
   }
 
-  .header-button {
-    width: 100% !important;
-  }
 
-  .header-button1 {
-    width: 60% !important;
-  }
   // ----------------Blog Card-----------------
 .aboutus3 {
   color: #342301 !important;
   font-size: 20px;
   letter-spacing: 2px;
-  margin-left: 2.2rem;
-  margin-bottom: 0px !important;
+  margin-bottom: 4rem !important;
+  font-size: 49px;
+  line-height: 50px;
 }
 
 .blogcard{
   background-color: #FFA80033;
-  max-width: 1000px !important;
+  max-width: 700px !important;
   max-height: 700px;
 }
+
 .trimmeddetails{
   line-height: 25px !important;
   font-size: 15px;
@@ -882,7 +623,6 @@ svg {
   font-size: 20px !important;
   line-height: 25px;
   margin-bottom: -10px !important;
-  margin-top: -10px !important;
   font-weight: bolder;
   overflow-wrap: break-word;
 }
@@ -892,9 +632,8 @@ svg {
 }
 
 .date{
-  font-size: 10px;
+  font-size: 15px;
 }
-
 
 }
 </style>

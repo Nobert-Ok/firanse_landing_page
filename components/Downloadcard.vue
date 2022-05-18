@@ -1,301 +1,68 @@
 <template>
-  <div class="body">
-    <Nav/>
-    <v-row dense no-gutters align="center" justify="space-around">
-      <v-col
-        cols="11"
-        md="5"
-        class="first-head ml-sm-7 ml-sm-8"
-        justify="center"
-      >
-        <p class="black--text send">
-          Spreading Love
-          <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
-          <small class="d-block text--center"
-              ><img
-                class="love mx-n14"
-                src="~assets/images/transparent-valentine.png"
-                alt=""
-            /></small> 
-            love
-          </span>-->
-          anywhere, anytime with Food 🥘.
-        </p>
-        <p class="share">
-          Satisfy the food of your loved ones, anytime and anywhere.
-        </p>
-        <p class="share">
-          Enter your friend's <span class="cravetag">firanse_cravetag</span>
-          to view their food cravings.
-        </p>
-        <div class="custom-search">
-          <input
-            type="text"
-            class="custom-search-input"
-            placeholder="Enter Firanse Tag or Phone Number"
-            v-model="cravetag"
-            @keyup.enter="getvalue"
-          />
-          <button class="custom-search-botton" type="submit" @click="getvalue">
-            <v-icon large color="white">mdi-arrow-right</v-icon>
-          </button>
-        </div>
-        <p class="error--text" v-if="nonexistent">This user does not exist!</p>
-        <v-row class="mt-2">
-          <v-col cols="6" align="center">
-            <Applebutton class="header-button" />
-          </v-col>
-          <v-col cols="6" align="center">
-            <Googlebutton class="header-button" />
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="12" md="5" class="my-8" align="center">
-        <img class="maindish" src="~assets/images/maindish.png" alt="" />
-      </v-col>
-    </v-row>
-    <!-------------------------------------- How it works -------------------------------------------->
-    <v-row
-      dense
-      no-gutters
-      align="center"
-      justify="center"
-      class="process px-sm-10 py-11"
-    >
-      <v-col cols="12" sm="6" align="center">
-        <img
-          class="girl-image"
-          align="center"
-          src="~assets/images/girlimage.png"
-          alt=""
-        />
-      </v-col>
-      <v-col cols="12" sm="6" align="center">
-        <p class="white--text how-it-works mt-10">How it works</p>
-        <img class="grid-image1" src="~assets/images/process.png" alt="" />
-      </v-col>
-    </v-row>
-
-    <!-------------------------------------- About Us -------------------------------------------->
-    <div class="aboutus">
-      <v-row dense no-gutters align="center" justify="center">
-        <v-col cols="12" sm="6" justify="center">
-          <p class="black--text commitment">
-            Our commitment is to the love we share and the food you eat.
-          </p>
-          <p class="black--text pro-commitment" v-if="!readMore">
-                {{this.text.substring(0, 200) + "..."}}
-          </p>
-          <p class="black--text pro-commitment" v-if="readMore">
-                {{this.text}}
-          </p>
-
-          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            View More</v-btn
-          >
-          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            View Less</v-btn
-          >
-        </v-col>
-        <v-col cols="12" sm="6" order="first" order-sm="last">
-          <img
-            class="aboutus-image my-6"
-            src="~assets/images/about.png"
-            alt=""
-          />
-        </v-col>
-      </v-row>
-    </div>
-
-    <!-------------------------------------- Partners -------------------------------------------->
-    <v-row
-      dense
-      no-gutters
-      align="center"
-      justify="space-around"
-      class="partners"
-    >
-      <v-col cols="12">
-        <p class="white--text text-center favorite">
-          Your Favourite Restaurants Partner with us
-        </p>
-      </v-col>
-      <v-row justify="center">
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/Dominos.png" alt="" />
-        </v-col>
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/burgerking.png" alt="" />
-        </v-col>
-
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/pizzahut.png" alt="" />
-        </v-col>
-
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/kfc.png" alt="" />
-        </v-col>
-      </v-row>
-    </v-row>
-
+    <div>
     <!----------------------------------Download card--------------------------------------------------------------->
-    <Downloadcard/>
+        <div class="card">
+        <div class="drinkspill" align="right">
+            <img
+            class="drinkspill-img"
+            src="~assets/images/drinkspill.png"
+            alt=""
+            />
+        </div>
+        <v-card elevation="7" class="mx-auto vcard">
+            <v-card-text justify="center" class="pt-5">
+            <v-row dense no-gutters align="center" justify="center">
+                <v-col cols="12" sm="6">
+                <v-card-text>
+                    <p class="black--text download-text5">
+                    Download the FiranseFood
+                    <span class="black--text app-text hidden-sm-and-up"
+                        >App!</span
+                    >
+                    </p>
+                    <p class="black--text download-text6 d-none d-sm-flex">App!</p>
+                    <p class="black--text download-text4">
+                    Sign up and let your loved ones pay for your food anywhere,
+                    anytime.
+                    </p>
+                    <!-- <p class="black--text download-text4"></p> -->
+                </v-card-text>
+                </v-col>
+                <v-col cols="12" sm="6" align="center" class="mt-lg-7">
+                <v-row>
+                    <v-col cols="6" sm="12">
+                    <Applebutton class="header-button1" />
+                    </v-col>
+                    <v-col cols="6" sm="12">
+                    <Googlebutton class="header-button1" />
+                    </v-col>
+                </v-row>
+                </v-col>
+            </v-row>
+            </v-card-text>
+        </v-card>
+        </div>
 
-    <!-----------------------------------Subcribe Card ----------------------------------------------------->
-    <div class="subscribe-card-container">
-      <v-card elevation="4" class="mx-auto subscribe-card">
-        <v-card-text align="center">
-          <v-row dense no-gutters align="center" justify="center">
-            <v-col cols="12">
-              <v-card-text>
-                <p class="white--text subcribe-newsletter">
-                  Subscribe to Our Newsletter
-                </p>
-                <p class="black--text subscribe-text">
-                  To get more information about Firanse Food, enter your email
-                  to subscribe to our newsletter.
-                </p>
-              </v-card-text>
-            </v-col>
-            <v-col cols="12" align="center">
-              <div class="custom-search">
-                <input
-                  type="text"
-                  class="custom-search-input"
-                  placeholder="Enter your email"
-                />
-                <button class="custom-search-botton" type="submit">
-                  <v-icon large color="white">mdi-arrow-right</v-icon>
-                </button>
-              </div>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+        <div class="cheese">
+        <img class="cheese-img" src="~assets/images/cheese.png" alt="" />
+        </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#342301"
-        fill-opacity="1"
-        d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      ></path>
-    </svg>
-    <footer>
-      <v-row justify="center" dense no-gutters>
-        <v-col cols="12" md="10">
-          <v-row no-gutters dense class="mx-4">
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Company</h6>
-              <ul>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-              </ul>
-            </v-col>
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Follow us</h6>
-              <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="12" sm="3" class="my-4">
-              <h6>Other</h6>
-              <ul>
-                <li>FAQs</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="8" sm="3" class="my-10">
-              <Applebutton class="mb-5 header-button" />
-              <Googlebutton class="header-button" />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </footer>
-    <v-row>
-      <v-col cols="12" class="endfooter">
-        <div class="text-center black--text">FiranseFood. &copy;2022</div>
-      </v-col>
-    </v-row>
-  </div>
 </template>
-
 
 <script>
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
-import Nav from '~/components/Nav.vue'
-import { UserController } from '@/modules/user'
-import Downloadcard from '~/components/Downloadcard.vue'
-export default {
-  name: 'index',
-  data() {
-    return {
-      drawer: false,
-      cravetag: this.value,
-      nonexistent: false,
-      text: "At Firanshe foods,we are commited to spreading love around the world"+
-            " and the way we see it, gifting food to our loved ones is one of the"+
-            " ways to do so. At Firanshefoods,we are commited to spreading love"+
-            " around the world and the way we see it, gifting food to our loved"+
-            " ones is one of the ways to do so.",
-      readMore: false,
-    }
-  },
-  props: {
-    value: {
-      type: String,
-      default: '',
-    },
-  },
-  watch: {
-    model(currentValue) {
-      this.$emit('input', currentValue)
-    },
-  },
 
-  components: {
+export default{
+    components: {
     Applebutton,
     Googlebutton,
-    Nav,
-    Downloadcard,
-    Downloadcard
-},
-
-  methods: {
-    getvalue() {
-      this.cravetag = this.cravetag.toLowerCase()
-      UserController.getUserByTagPhone({ search: this.cravetag })
-        .then((data) => {
-          if (!data) {
-            this.nonexistent = true
-            return
-          }
-          this.nonexistent = false
-          this.$router.push('/user/' + data.user.firanse_tag)
-        })
-        .catch((err) => {
-          console.error(err)
-        })
-    },
-    gotoDashboard() {
-      window.open('https://dashboard.firansefood.com')
-    },
-    showMore() {
-        this.readMore = true;
-    },
-    showLess() {
-        this.readMore = false;
-    },
-  },
+  }
 }
+
 </script>
+
+
 <style lang="scss" scoped>
 .logo {
   width: 180px;

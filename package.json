@@ -27,6 +27,7 @@
     "vuetify": "^2.5.5"
   },
   "devDependencies": {
+    "@mdi/font": "^6.7.96",
     "@nuxtjs/global-components": "^0.6.1",
     "@nuxtjs/vuetify": "^1.12.1",
     "eslint-config-prettier": "^8.3.0",
