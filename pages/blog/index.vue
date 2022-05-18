@@ -104,7 +104,7 @@
         </v-col>
       </v-row>
       
-      <div v-else class="mx-auto">
+      <div v-else justify="center" align="center">
         <v-progress-circular
         indeterminate
         color="amber"
