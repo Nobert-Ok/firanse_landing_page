@@ -319,6 +319,7 @@ p {
   max-height: 700px;
 }
 .trimmeddetails{
+  font-family: 'Poppins' !important;
   line-height: 20px !important;
   font-size: 14.5px;
   margin-bottom: 0px !important;
@@ -327,6 +328,7 @@ p {
 }
 
 .title{
+  font-family: Balsamiq Sans !important;
   font-size: 20px !important;
   line-height: 20px;
   margin-bottom: -10px !important;
@@ -348,6 +350,7 @@ p {
 }
 
 .date{
+  font-family: 'Poppins' !important;
   font-size: 14.5px;
   margin-left: 1rem;
   color: #412b00;

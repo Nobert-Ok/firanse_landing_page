@@ -404,7 +404,7 @@ input {
 }
 
 .send {
-  font-family: 'Poppins' !important;
+  font-family: Balsamiq Sans !important;
   font-size: 35px;
   line-height: 36px;
   font-weight: 500;
@@ -522,7 +522,7 @@ input {
 }
 
 .subcribe-newsletter {
-  font-family: 'Poppins' !important;
+  font-family: Balsamiq Sans !important;
   color: #342301 !important;
   font-size: 26px;
   line-height: 35px;
@@ -547,7 +547,7 @@ input {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-  font-family: 'Poppins' !important;
+  font-family: Balsamiq Sans !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -557,7 +557,7 @@ input {
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-  font-family: 'Poppins' !important;
+  font-family: Balsamiq Sans !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
