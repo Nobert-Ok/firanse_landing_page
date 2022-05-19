@@ -2,7 +2,9 @@
     <div>
     <header class="d-flex justify-space-between align-center mx-auto">
       <div class="d-flex align-center my-3 ml-sm-16 ml-4">
-        <img src="~/assets/images/firansee.png" class="logo" />
+        <nuxt-link to="/">
+           <img src="~/assets/images/firansee.png" class="logo" />
+        </nuxt-link>
         <!-- <img src="~/assets/images/whitelogo.png" class="logo__text ml-2" /> -->
       </div>
       <div class="d-md-flex mr-4">
@@ -83,7 +85,7 @@
             <v-btn
               color="#FFA800"
               elevation="4"
-              class="white--text text-none"
+              class="white--text text-none restaurant-button"
               target="blank"
               @click="gotoDashboard"
               >Create a Resturant</v-btn
@@ -137,7 +139,7 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
-  width: 180px;
+  width: 70%;
   height: 100%;
   display: inline;
   border-radius: 0;
@@ -184,8 +186,13 @@ ul {
 }
 
 .nuxtlink{
-      text-decoration: none;
-    }
+    font-family: 'Poppins' !important;
+    text-decoration: none;
+  }
+
+.restaurant-button{
+  font-family: 'Poppins' !important;
+}
 
 
 </style>

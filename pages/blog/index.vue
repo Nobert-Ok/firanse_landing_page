@@ -81,7 +81,7 @@
                 <v-card-title class="title">{{item.title}}</v-card-title>
                 <v-card-text class="text--primary">
                   <div>
-                    <p class="trimmeddetails">{{trimdetails(item.description.substring(0,250)+"....")}}</p>
+                    <p class="trimmeddetails">{{trimdetails(item.description.substring(0,200)+"....")}}</p>
                   </div>
                 </v-card-text>
                 <v-card-actions>
@@ -343,6 +343,7 @@ p {
 }
 
 .readmore-button{
+  font-family: 'Poppins' !important;
   color: rgb(243, 243, 243) !important;
   text-transform: capitalize;
   margin-top: -1.5rem !important;
