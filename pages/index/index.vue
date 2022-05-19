@@ -79,6 +79,9 @@
     <!-------------------------------------- About Us -------------------------------------------->
     <div class="aboutus">
       <v-row dense no-gutters align="center" justify="center">
+        <v-col cols="12">
+          <h3 class="aboutus3">About Us</h3>
+        </v-col>
         <v-col cols="12" sm="6" justify="center">
           <p class="black--text commitment">
             Our commitment is to the love we share and the food you eat.
@@ -401,7 +404,7 @@ input {
 }
 
 .send {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   font-size: 35px;
   line-height: 36px;
   font-weight: 500;
@@ -519,7 +522,7 @@ input {
 }
 
 .subcribe-newsletter {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 26px;
   line-height: 35px;
@@ -544,7 +547,7 @@ input {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -554,7 +557,7 @@ input {
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
