@@ -1,71 +1,7 @@
 <template>
   <div class="body">
-<<<<<<< HEAD
-    <header class="d-flex justify-space-between align-center mx-auto mt-4">
-      <div class="d-flex align-center my-3 ml-sm-16 ml-4">
-        <img src="~/assets/images/firansee.png" class="logo" />
-      </div>
-      <div class="d-md-flex mr-4">
-        <nav class="d-none d-md-block">
-          <ul class="d-flex align-center">
-            <li class="mx-10"><a>Home </a></li>
-            <li class="mx-10"><a>About</a></li>
-            <li class="mx-10"><a>Blog</a></li>
-            <li class="mx-10"><a>Contact</a></li>
-            <li class="mx-10">
-              <v-btn
-                color="#FFA800"
-                elevation="4"
-                class="white--text text-none"
-                target="blank"
-                @click="gotoDashboard"
-                >Create a Resturant</v-btn
-              >
-            </li>
-          </ul>
-        </nav>
-        <v-btn
-          class="ml-2 text-none d-md-none"
-          color="primary"
-          icon
-          @click="drawer = true"
-          ><v-icon>mdi-menu</v-icon></v-btn
-        >
-      </div>
-    </header>
-    <v-row dense no-gutters align="center" justify="space-around">
-      <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
-        <v-btn color="#FFA800" icon class="float-right" @click="drawer = false"
-          ><v-icon>mdi-close</v-icon></v-btn
-        >
-        <div class="d-flex flex-column justify-center align-center full">
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Food Blog</v-btn
-            >
-          </div>
-          <div>
-            <v-btn class="mb-10 text-none" plain color="#FFA800"
-              >Meet the Team</v-btn
-            >
-          </div>
-          <div>
-            <v-btn
-              color="#FFA800"
-              elevation="4"
-              class="white--text text-none"
-              target="blank"
-              @click="gotoDashboard"
-              >Create a Resturant</v-btn
-            >
-          </div>
-        </div>
-      </v-navigation-drawer>
-
-=======
     <Nav/>
     <v-row dense no-gutters align="center" justify="space-around">
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
       <v-col
         cols="11"
         md="5"
@@ -73,11 +9,7 @@
         justify="center"
       >
         <p class="black--text send">
-<<<<<<< HEAD
-          Spreading Love ❤️❤️❤️
-=======
           Spreading Love
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
           <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
           <small class="d-block text--center"
               ><img
@@ -87,19 +19,11 @@
             /></small> 
             love
           </span>-->
-<<<<<<< HEAD
           anywhere, anytime with Food.
         </p>
         <!-- <p class="share">
           Satisfy the food of your loved ones, anytime and anywhere.
         </p> -->
-=======
-          anywhere, anytime with Food 🥘.
-        </p>
-        <p class="share">
-          Satisfy the food of your loved ones, anytime and anywhere.
-        </p>
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
         <p class="share">
           Enter your friend's <span class="cravetag">firanse_cravetag</span>
           to view their food cravings.
@@ -162,19 +86,6 @@
           <p class="black--text commitment">
             Our commitment is to the love we share and the food you eat.
           </p>
-<<<<<<< HEAD
-          <p class="black--text pro-commitment">
-            At Firanshe foods,we are commited to spreading love around the world
-            and the way we see it, gifting food to our loved ones is one of the
-            ways to do so.At Firanshe foods,we are commited to spreading love
-            around the world and the way we see it, gifting food to our loved
-            ones is one of the ways to do so.
-          </p>
-
-          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            View More</v-btn
-          >
-=======
           <p class="black--text pro-commitment" v-if="!readMore">
                 {{this.text.substring(0, 200) + "..."}}
           </p>
@@ -188,7 +99,6 @@
           <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
             View Less</v-btn
           >
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
           <img
@@ -230,58 +140,8 @@
         </v-col>
       </v-row>
     </v-row>
-
     <!----------------------------------Download card--------------------------------------------------------------->
-<<<<<<< HEAD
-    <div class="card">
-      <div class="drinkspill" align="right">
-        <img
-          class="drinkspill-img"
-          src="~assets/images/drinkspill.png"
-          alt=""
-        />
-      </div>
-      <v-card elevation="7" class="mx-auto vcard">
-        <v-card-text justify="center" class="pt-5">
-          <v-row dense no-gutters align="center" justify="center">
-            <v-col cols="12" sm="6">
-              <v-card-text>
-                <p class="black--text download-text5">
-                  Download the FiranseFood
-                  <span class="black--text app-text hidden-sm-and-up"
-                    >App!</span
-                  >
-                </p>
-                <p class="black--text download-text6 d-none d-sm-flex">App!</p>
-                <p class="black--text download-text4">
-                  Sign up and let your loved ones pay for your food anywhere,
-                  anytime.
-                </p>
-                <!-- <p class="black--text download-text4"></p> -->
-              </v-card-text>
-            </v-col>
-            <v-col cols="12" sm="6" align="center" class="mt-lg-7">
-              <v-row>
-                <v-col cols="6" sm="12">
-                  <Applebutton class="header-button1" />
-                </v-col>
-                <v-col cols="6" sm="12">
-                  <Googlebutton class="header-button1" />
-                </v-col>
-              </v-row>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-    </div>
-
-    <div class="cheese">
-      <img class="cheese-img" src="~assets/images/cheese.png" alt="" />
-    </div>
-=======
     <Downloadcard/>
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
-
     <!-----------------------------------Subcribe Card ----------------------------------------------------->
     <div class="subscribe-card-container">
       <v-card elevation="4" class="mx-auto subscribe-card">
@@ -371,13 +231,9 @@
 <script>
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
-<<<<<<< HEAD
-import { UserController } from '@/modules/user'
-=======
 import Nav from '~/components/Nav.vue'
 import { UserController } from '@/modules/user'
 import Downloadcard from '~/components/Downloadcard.vue'
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
 export default {
   name: 'index',
   data() {
@@ -385,15 +241,12 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
-<<<<<<< HEAD
-=======
       text: "At Firanshe foods,we are commited to spreading love around the world"+
             " and the way we see it, gifting food to our loved ones is one of the"+
             " ways to do so. At Firanshefoods,we are commited to spreading love"+
             " around the world and the way we see it, gifting food to our loved"+
             " ones is one of the ways to do so.",
       readMore: false,
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
     }
   },
   props: {
@@ -411,14 +264,10 @@ export default {
   components: {
     Applebutton,
     Googlebutton,
-<<<<<<< HEAD
-  },
-=======
     Nav,
     Downloadcard,
     Downloadcard
 },
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
 
   methods: {
     getvalue() {
@@ -439,15 +288,12 @@ export default {
     gotoDashboard() {
       window.open('https://dashboard.firansefood.com')
     },
-<<<<<<< HEAD
-=======
     showMore() {
         this.readMore = true;
     },
     showLess() {
         this.readMore = false;
     },
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   },
 }
 </script>
@@ -469,11 +315,8 @@ header {
 .body {
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
-=======
   font-family: 'Poppins' !important;
 
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
 }
 .full {
   height: 100vh;
@@ -482,10 +325,7 @@ h1 {
   font-size: 3rem;
 }
 h6 {
-<<<<<<< HEAD
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
@@ -496,18 +336,6 @@ ul {
   list-style-type: none;
   padding: 0;
   li {
-<<<<<<< HEAD
-    margin: 10px 0;
-    color: white;
-    a {
-      color: #000000;
-    }
-  }
-}
-ul li:hover {
-  color: $primary;
-}
-=======
     font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
@@ -526,7 +354,6 @@ ul li:hover {
 }
 
 
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
 p {
   line-height: 45px;
 }
@@ -579,11 +406,7 @@ input {
 }
 
 .send {
-<<<<<<< HEAD
-  font-family: Balsamiq Sans !important;
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   font-size: 35px;
   line-height: 36px;
   font-weight: 500;
@@ -607,10 +430,7 @@ input {
 }
 
 .favorite {
-<<<<<<< HEAD
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   font-size: 22px;
   line-height: 30px;
   letter-spacing: 1px;
@@ -625,10 +445,7 @@ input {
 }
 
 .how-it-works {
-<<<<<<< HEAD
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   font-size: 25px !important;
   font-weight: 900 !important;
   color: #342301 !important;
@@ -660,10 +477,7 @@ input {
 }
 
 .aboutus3 {
-<<<<<<< HEAD
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
@@ -713,11 +527,7 @@ input {
 }
 
 .subcribe-newsletter {
-<<<<<<< HEAD
-  font-family: Balsamiq Sans !important;
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   color: #342301 !important;
   font-size: 26px;
   line-height: 35px;
@@ -742,11 +552,7 @@ input {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-<<<<<<< HEAD
-  font-family: Balsamiq Sans !important;
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -756,11 +562,7 @@ input {
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-<<<<<<< HEAD
-  font-family: Balsamiq Sans !important;
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -792,10 +594,7 @@ footer {
 }
 
 .endfooter {
-<<<<<<< HEAD
-=======
   font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   background-color: white;
   margin: 0.1% !important;
 }
@@ -811,11 +610,8 @@ svg {
 }
 
 .custom-search-input {
-<<<<<<< HEAD
-=======
     font-family: 'Poppins' !important;
 
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -852,12 +648,7 @@ svg {
 }
 
 @media only screen and (max-width: 350px) {
-<<<<<<< HEAD
-=======
-  .vcard {
-    /* height: 335px !important; */
-  }
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
+
   .subcribe-newsletter {
     font-size: 24px;
   }
@@ -976,10 +767,7 @@ svg {
   }
 
   .favorite {
-<<<<<<< HEAD
-=======
     font-family: 'Poppins' !important;
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
     font-size: 30px;
     margin: 3% 0;
     margin-bottom: 5%;
@@ -1269,8 +1057,4 @@ svg {
     width: 60% !important;
   }
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
