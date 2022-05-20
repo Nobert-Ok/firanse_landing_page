@@ -24,6 +24,7 @@
 }
 
 .download-text1{
+    font-family: 'Poppins' !important;
     font-size: 12px;
     font-weight: 900;
 }

@@ -87,8 +87,8 @@
                 <v-card-actions>
                   <a :href="item.link">
                     <v-btn color="orange" class="readmore-button">
-                    Read More
-                  </v-btn>
+                      <span>Read More</span> 
+                    </v-btn>
                   </a>
                 </v-card-actions>
 
@@ -251,6 +251,7 @@ export default {
   overflow: hidden;
 }
 h6 {
+  font-family: 'Poppins' !important;
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
@@ -261,6 +262,7 @@ ul {
   list-style-type: none;
   padding: 0;
   li {
+    font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
     .nuxtlink{
@@ -305,12 +307,18 @@ p {
   // background-color: #ffe580;
 }
 .aboutus3 {
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   letter-spacing: 2px;
   margin-bottom: 1rem !important;
   margin-top: 30px;
   font-size: 30px;
   line-height: 45px;
+}
+
+span{
+    font-family: 'Poppins' !important;
+
 }
 
 .blogcard{
@@ -328,7 +336,7 @@ p {
 }
 
 .title{
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   font-size: 20px !important;
   line-height: 20px;
   margin-bottom: -10px !important;
@@ -358,6 +366,7 @@ p {
 }
 
 a{
+  font-family: 'Poppins' !important;
   text-decoration: none;
 }
 // ----------------Download Card-----------------
@@ -378,7 +387,7 @@ a{
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -388,7 +397,7 @@ a{
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-  font-family: Balsamiq Sans !important;
+  // font-family: Balsamiq Sans !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }

@@ -317,6 +317,8 @@ header {
 .body {
   position: relative;
   overflow: hidden;
+  font-family: 'Poppins' !important;
+
 }
 .full {
   height: 100vh;
@@ -325,6 +327,7 @@ h1 {
   font-size: 3rem;
 }
 h6 {
+  font-family: 'Poppins' !important;
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
@@ -335,6 +338,7 @@ ul {
   list-style-type: none;
   padding: 0;
   li {
+    font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
     .nuxtlink{
@@ -404,7 +408,7 @@ input {
 }
 
 .send {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   font-size: 35px;
   line-height: 36px;
   font-weight: 500;
@@ -428,6 +432,7 @@ input {
 }
 
 .favorite {
+  font-family: 'Poppins' !important;
   font-size: 22px;
   line-height: 30px;
   letter-spacing: 1px;
@@ -442,6 +447,7 @@ input {
 }
 
 .how-it-works {
+  font-family: 'Poppins' !important;
   font-size: 25px !important;
   font-weight: 900 !important;
   color: #342301 !important;
@@ -473,6 +479,7 @@ input {
 }
 
 .aboutus3 {
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
@@ -522,7 +529,7 @@ input {
 }
 
 .subcribe-newsletter {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 26px;
   line-height: 35px;
@@ -547,7 +554,7 @@ input {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -557,7 +564,7 @@ input {
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -589,6 +596,7 @@ footer {
 }
 
 .endfooter {
+  font-family: 'Poppins' !important;
   background-color: white;
   margin: 0.1% !important;
 }
@@ -604,6 +612,8 @@ svg {
 }
 
 .custom-search-input {
+    font-family: 'Poppins' !important;
+
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -761,6 +771,7 @@ svg {
   }
 
   .favorite {
+    font-family: 'Poppins' !important;
     font-size: 30px;
     margin: 3% 0;
     margin-bottom: 5%;

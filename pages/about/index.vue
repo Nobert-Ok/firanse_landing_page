@@ -126,51 +126,7 @@
     </div>
 
      <!----------------------------------Download card--------------------------------------------------------------->
-    <div class="card">
-      <div class="drinkspill" align="right">
-        <img
-          class="drinkspill-img"
-          src="~assets/images/drinkspill.png"
-          alt=""
-        />
-      </div>
-      <v-card elevation="7" class="mx-auto vcard">
-        <v-card-text justify="center" class="pt-5">
-          <v-row dense no-gutters align="center" justify="center">
-            <v-col cols="12" sm="6">
-              <v-card-text>
-                <p class="black--text download-text5">
-                  Download the FiranseFood
-                  <span class="black--text app-text hidden-sm-and-up"
-                    >App!</span
-                  >
-                </p>
-                <p class="black--text download-text6 d-none d-sm-flex">App!</p>
-                <p class="black--text download-text4">
-                  Sign up and let your loved ones pay for your food anywhere,
-                  anytime.
-                </p>
-                <!-- <p class="black--text download-text4"></p> -->
-              </v-card-text>
-            </v-col>
-            <v-col cols="12" sm="6" align="center" class="mt-lg-7">
-              <v-row>
-                <v-col cols="6" sm="12">
-                  <Applebutton class="header-button1" />
-                </v-col>
-                <v-col cols="6" sm="12">
-                  <Googlebutton class="header-button1" />
-                </v-col>
-              </v-row>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-    </div>
-
-    <div class="cheese">
-      <img class="cheese-img" src="~assets/images/cheese.png" alt="" />
-    </div>
+    <Downloadcard/>
 
     <!------------------------------------ Footer ------------------------------------------>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -232,6 +188,7 @@ import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import { UserController } from '@/modules/user'
 import Nav from '~/components/Nav.vue'
+import Downloadcard from '~/components/Downloadcard.vue'
 
 export default {
   name: 'index',
@@ -264,7 +221,8 @@ export default {
     Applebutton,
     Googlebutton,
     Nav,
-  },
+    Downloadcard
+},
 
   methods: {
     getvalue() {
@@ -312,6 +270,8 @@ header {
 .body {
   position: relative;
   overflow: hidden;
+  font-family: 'Poppins' !important;
+
 }
 .full {
   height: 100vh;
@@ -320,6 +280,7 @@ h1 {
   font-size: 3rem;
 }
 h6 {
+  font-family: 'Poppins' !important;
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
@@ -330,6 +291,7 @@ ul {
   list-style-type: none;
   padding: 0;
   li {
+    font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
     .nuxtlink{
@@ -397,6 +359,7 @@ address {
 }
 
 .aboutus3 {
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
@@ -455,7 +418,6 @@ address {
 }
 .card {
   padding: 50px 0;
-  // height: 600px !important;
 }
 
 .vcard {
@@ -474,7 +436,7 @@ address {
 }
 
 .subcribe-newsletter {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 26px;
   line-height: 35px;
