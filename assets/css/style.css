@@ -5,11 +5,19 @@
 
 
 
+<<<<<<< HEAD
 @font-face {
     font-family: "Balsamiq Sans";
     src: local("Balsamiq Sans"),     
     url(~assets/fonts/BalsamiqSans-Regular.ttf) format("truetype");
 }
+=======
+/* @font-face {
+    font-family: "Balsamiq Sans";
+    src: local("Balsamiq Sans"),     
+    url(~assets/fonts/BalsamiqSans-Regular.ttf) format("truetype");
+} */
+>>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
 
 @font-face {
     font-family: "Poppins";

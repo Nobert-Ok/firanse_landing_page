@@ -69,7 +69,11 @@ typings/
 .nuxt
 
 # Nuxt generate
+<<<<<<< HEAD
 dist
+=======
+# dist
+>>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
 
 # vuepress build output
 .vuepress/dist

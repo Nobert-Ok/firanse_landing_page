@@ -16,6 +16,10 @@
 }
 
 .download-text1{
+<<<<<<< HEAD
+=======
+    font-family: 'Poppins' !important;
+>>>>>>> 93071bddf133f68efc78a3b7ab25ae1bf99eea6d
     font-size: 12px;
     font-weight: 900;
 }
