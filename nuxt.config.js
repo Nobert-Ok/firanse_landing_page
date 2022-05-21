@@ -1,8 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s | Nigeria',
-    title: 'Send food to your loved ones',
+    title: 'FiranseFood | Nigeria',
     meta: [
       { charset: 'utf-8' },
       { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" },

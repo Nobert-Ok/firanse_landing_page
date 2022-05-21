@@ -1,9 +1,9 @@
 <template>
-    <div>
+  <div class="nav">
     <header class="d-flex justify-space-between align-center mx-auto">
       <div class="d-flex align-center my-3 ml-sm-16 ml-4">
         <nuxt-link to="/">
-           <img src="~/assets/images/firansee.png" class="logo" />
+          <img src="~/assets/images/firansee.png" class="logo" />
         </nuxt-link>
         <!-- <img src="~/assets/images/whitelogo.png" class="logo__text ml-2" /> -->
       </div>
@@ -11,23 +11,17 @@
         <nav class="d-none d-md-block">
           <ul class="d-flex align-center">
             <li class="mx-10">
-              <nuxt-link to="/" exact class="nuxtlink">
-               Home
-              </nuxt-link>
+              <nuxt-link to="/" exact class="nuxtlink"> Home </nuxt-link>
             </li>
             <li class="mx-10">
-              <nuxt-link to="/about" exact class="nuxtlink">
-               About
-              </nuxt-link>
+              <nuxt-link to="/about" exact class="nuxtlink"> About </nuxt-link>
             </li>
             <li class="mx-10">
-              <nuxt-link to="/blog" exact class="nuxtlink">
-               Blog
-              </nuxt-link>
+              <nuxt-link to="/blog" exact class="nuxtlink"> Blog </nuxt-link>
             </li>
             <li class="mx-10">
-              <nuxt-link to="/contact" exact  class="nuxtlink">
-               Contact
+              <nuxt-link to="/contact" exact class="nuxtlink">
+                Contact
               </nuxt-link>
             </li>
             <li class="mx-10">
@@ -59,26 +53,24 @@
         <div class="d-flex flex-column justify-center align-center full">
           <div>
             <nuxt-link to="/" class="nuxtlink">
-                <v-btn class="mb-10 text-none" plain color="#FFA800"
-                >Home</v-btn>
+              <v-btn class="mb-10 text-none" plain color="#FFA800">Home</v-btn>
             </nuxt-link>
           </div>
           <div>
             <nuxt-link to="/about" class="nuxtlink">
-                <v-btn class="mb-10 text-none" plain color="#FFA800"
-                >About</v-btn>
+              <v-btn class="mb-10 text-none" plain color="#FFA800">About</v-btn>
             </nuxt-link>
           </div>
           <div>
             <nuxt-link to="/blog" class="nuxtlink">
-                <v-btn class="mb-10 text-none" plain color="#FFA800"
-                >Blog</v-btn>
+              <v-btn class="mb-10 text-none" plain color="#FFA800">Blog</v-btn>
             </nuxt-link>
           </div>
           <div>
             <nuxt-link to="/contact" class="nuxtlink">
-                <v-btn class="mb-10 text-none" plain color="#FFA800"
-                >Contact</v-btn>
+              <v-btn class="mb-10 text-none" plain color="#FFA800"
+                >Contact</v-btn
+              >
             </nuxt-link>
           </div>
           <div>
@@ -94,7 +86,7 @@
         </div>
       </v-navigation-drawer>
     </v-row>
-    </div>
+  </div>
 </template>
 <script>
 import Applebutton from '~/components/Applebutton.vue'
@@ -138,15 +130,18 @@ export default {
 
 
 <style lang="scss" scoped>
+.nav {
+  margin: 0 auto;
+}
 .logo {
-  width: 70%;
-  height: 100%;
+  width: 200px;
+  /* height: 100%; */
   display: inline;
   border-radius: 0;
   cursor: pointer;
 }
 .first-head {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 header {
   width: 100%;
@@ -171,7 +166,7 @@ ul {
   li {
     margin: 10px 0;
     color: white;
-    .nuxtlink{
+    .nuxtlink {
       color: #000;
       text-decoration: none;
     }
@@ -182,17 +177,15 @@ ul {
 }
 
 .nuxt-link-exact-active {
-    color: $primary !important;
+  color: $primary !important;
 }
 
-.nuxtlink{
-    font-family: 'Poppins' !important;
-    text-decoration: none;
-  }
+.nuxtlink {
+  font-family: 'Poppins' !important;
+  text-decoration: none;
+}
 
-.restaurant-button{
+.restaurant-button {
   font-family: 'Poppins' !important;
 }
-
-
 </style>

@@ -311,7 +311,7 @@ input {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -321,7 +321,7 @@ input {
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
