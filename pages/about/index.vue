@@ -151,11 +151,10 @@
           <p class="black--text commitment">
             Own Your e-Restaurant 
           </p>
-          <p class="black--text pro-commitment" v-if="!readMore">
-                {{this.text.substring(0, 200) + "..."}}
-          </p>
-          <p class="black--text pro-commitment" v-if="readMore">
-                {{this.text}}
+          <p class="black--text pro-commitment">
+            Create a restaurant with us and sell your dishes to happy lovers, families close to you. 
+            Boost your food business visibility with FiranseFood. 
+            Join us to build a happy and connected society bonded by the love & happiness from delicious food.
           </p>
 
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" @click="gotoDashboard">
@@ -384,7 +383,10 @@ address {
   margin: 20px;
   background-image: url("~/assets/images/emojis.png");
   background-size: cover;
+}
 
+.aboutus1 {
+  padding: 20px;
 }
 
 .aboutus-image {
@@ -680,7 +682,9 @@ svg {
   .aboutus {
     margin: 40px;
   }
-
+  .aboutus1 {
+    margin: 40px;
+  }
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
