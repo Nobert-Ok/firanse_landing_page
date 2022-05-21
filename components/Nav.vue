@@ -141,7 +141,7 @@ export default {
   cursor: pointer;
 }
 .first-head {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 header {
   width: 100%;

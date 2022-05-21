@@ -51,7 +51,7 @@
         </v-row>
       </v-col>
       <v-col cols="12" md="5" class="my-8" align="center">
-        <img class="maindish" src="~assets/images/maindish.png" alt="" />
+        <img class="maindish" src="~assets/images/phone.png" alt="" />
       </v-col>
     </v-row>
     <!-------------------------------------- How it works -------------------------------------------->
@@ -72,7 +72,7 @@
       </v-col>
       <v-col cols="12" sm="6" align="center">
         <p class="white--text how-it-works mt-10">How it works</p>
-        <img class="grid-image1" src="~assets/images/process.png" alt="" />
+        <img class="grid-image1" src="~assets/images/howitworks.png" alt="" />
       </v-col>
     </v-row>
 
@@ -319,7 +319,7 @@ export default {
   cursor: pointer;
 }
 .first-head {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 header {
   width: 100%;
