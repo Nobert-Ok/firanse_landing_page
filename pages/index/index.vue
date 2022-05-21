@@ -254,11 +254,9 @@ export default {
       cravetag: this.value,
       nonexistent: false,
       text:
-        'At Firanshe foods,we are commited to spreading love around the world' +
-        ' and the way we see it, gifting food to our loved ones is one of the' +
-        ' ways to do so. At Firanshefoods,we are commited to spreading love' +
-        ' around the world and the way we see it, gifting food to our loved' +
-        ' ones is one of the ways to do so.',
+        "At FiranseFood, we are commited to spreading love and happiness."+
+        "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time."+
+        "These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
       readMore: false,
     }
   },

@@ -143,13 +143,13 @@
 
     <!-------------------------------------- E-restuarant -------------------------------------------->
 
-    <div class="aboutus1 erestuarant mt-10">
+    <div class="aboutus1 erestuarant">
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12" sm="6" justify="center">
           <p class="black--text commitment">
             Own Your e-Restaurant 
           </p>
-          <p class="black--text pro-commitment">
+          <p class="black--text pro-commitment mr-5">
             Create a restaurant with us and sell your dishes to happy lovers, families close to you. 
             Boost your food business visibility with FiranseFood. 
             Join us to build a happy and connected society bonded by the love & happiness from delicious food.
@@ -158,7 +158,7 @@
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" @click="gotoDashboard">
           Create Restaurant</v-btn
           >
-          
+
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
           <img
@@ -979,9 +979,10 @@ svg {
   
   .ourstory{
     padding: 100px 200px;
-
   }
-
+  .erestuarant{
+    padding: 15%;
+  }
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
