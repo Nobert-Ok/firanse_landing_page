@@ -149,6 +149,7 @@
                 <p class="black--text download-text4">
                   Sign up and let your loved ones pay for your food anywhere,
                   anytime.
+                  
                 </p>
                 <!-- <p class="black--text download-text4"></p> -->
               </v-card-text>
