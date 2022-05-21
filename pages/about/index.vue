@@ -8,12 +8,11 @@
           <p class="black--text commitment">
             It is more than food for us! 
           </p>
-          <p class="black--text pro-commitment" v-if="!readMore">
-                {{this.text.substring(0, 200) + "..."}}
+          <p class="black--text pro-commitment mr-5">
+            At FiranseFood, it is certainly about happiness, love and satifaction from favourite meals or cravings. 
+            With us, you will be able to create a closer bond with your loved ones all with their favourite food.
           </p>
-          <p class="black--text pro-commitment" v-if="readMore">
-                {{this.text}}
-          </p>
+
 
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
               Download Whitepaper</v-btn
@@ -140,50 +139,6 @@
           </p>
         </v-col>
       </v-row>
-    </div>
-
-     <!----------------------------------Download card--------------------------------------------------------------->
-    <div class="card">
-      <div class="drinkspill" align="right">
-        <img
-          class="drinkspill-img"
-          src="~assets/images/drinkspill.png"
-          alt=""
-        />
-      </div>
-      <v-card elevation="7" class="mx-auto vcard">
-        <v-card-text justify="center" class="pt-5">
-          <v-row dense no-gutters align="center" justify="center">
-            <v-col cols="12" sm="6">
-              <v-card-text>
-                <p class="black--text download-text5">
-                  Download the FiranseFood
-                  <span class="black--text app-text hidden-sm-and-up"
-                    >App!</span
-                  >
-                </p>
-                <p class="black--text download-text6 d-none d-sm-flex">App!</p>
-                <p class="black--text download-text4">
-                  Sign up and let your loved ones pay for your food anywhere,
-                  anytime.
-                  
-                </p>
-                <!-- <p class="black--text download-text4"></p> -->
-              </v-card-text>
-            </v-col>
-            <v-col cols="12" sm="6" align="center" class="mt-lg-7">
-              <v-row>
-                <v-col cols="6" sm="12">
-                  <Applebutton class="header-button1" />
-                </v-col>
-                <v-col cols="6" sm="12">
-                  <Googlebutton class="header-button1" />
-                </v-col>
-              </v-row>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
     </div>
 
     <!-------------------------------------- E-restuarant -------------------------------------------->
