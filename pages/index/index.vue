@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <Nav/>
+    <Nav />
     <v-row dense no-gutters align="center" justify="space-around">
       <v-col
         cols="11"
@@ -19,11 +19,11 @@
             /></small> 
             love
           </span>-->
-          anywhere, anytime with Food 🥘.
+          anywhere, anytime with Food.
         </p>
-        <p class="share">
+        <!-- <p class="share">
           Satisfy the food of your loved ones, anytime and anywhere.
-        </p>
+        </p> -->
         <p class="share">
           Enter your friend's <span class="cravetag">firanse_cravetag</span>
           to view their food cravings.
@@ -51,7 +51,7 @@
         </v-row>
       </v-col>
       <v-col cols="12" md="5" class="my-8" align="center">
-        <img class="maindish" src="~assets/images/maindish.png" alt="" />
+        <img class="maindish" src="~assets/images/phone.png" alt="" />
       </v-col>
     </v-row>
     <!-------------------------------------- How it works -------------------------------------------->
@@ -72,7 +72,7 @@
       </v-col>
       <v-col cols="12" sm="6" align="center">
         <p class="white--text how-it-works mt-10">How it works</p>
-        <img class="grid-image1" src="~assets/images/process.png" alt="" />
+        <img class="grid-image1" src="~assets/images/howitworks.png" alt="" />
       </v-col>
     </v-row>
 
@@ -87,16 +87,28 @@
             Our commitment is to the love we share and the food you eat.
           </p>
           <p class="black--text pro-commitment" v-if="!readMore">
-                {{this.text.substring(0, 200) + "..."}}
+            {{ this.text.substring(0, 200) + '...' }}
           </p>
           <p class="black--text pro-commitment" v-if="readMore">
-                {{this.text}}
+            {{ this.text }}
           </p>
 
-          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn
+            @click="showMore"
+            v-if="!readMore"
+            color="#FA710D"
+            large
+            class="aboutus-button px-7 py-7 mb-10"
+          >
             View More</v-btn
           >
-          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn
+            @click="showLess"
+            v-if="readMore"
+            color="#FA710D"
+            large
+            class="aboutus-button px-7 py-7 mb-10"
+          >
             View Less</v-btn
           >
         </v-col>
@@ -140,10 +152,8 @@
         </v-col>
       </v-row>
     </v-row>
-
     <!----------------------------------Download card--------------------------------------------------------------->
-    <Downloadcard/>
-
+    <Downloadcard />
     <!-----------------------------------Subcribe Card ----------------------------------------------------->
     <div class="subscribe-card-container">
       <v-card elevation="4" class="mx-auto subscribe-card">
@@ -243,11 +253,10 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
-      text: "At Firanshe foods,we are commited to spreading love around the world"+
-            " and the way we see it, gifting food to our loved ones is one of the"+
-            " ways to do so. At Firanshefoods,we are commited to spreading love"+
-            " around the world and the way we see it, gifting food to our loved"+
-            " ones is one of the ways to do so.",
+      text:
+        "At FiranseFood, we are commited to spreading love and happiness."+
+        "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time."+
+        "These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
       readMore: false,
     }
   },
@@ -268,8 +277,8 @@ export default {
     Googlebutton,
     Nav,
     Downloadcard,
-    Downloadcard
-},
+    Downloadcard,
+  },
 
   methods: {
     getvalue() {
@@ -291,10 +300,10 @@ export default {
       window.open('https://dashboard.firansefood.com')
     },
     showMore() {
-        this.readMore = true;
+      this.readMore = true
     },
     showLess() {
-        this.readMore = false;
+      this.readMore = false
     },
   },
 }
@@ -308,7 +317,7 @@ export default {
   cursor: pointer;
 }
 .first-head {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 header {
   width: 100%;
@@ -317,6 +326,7 @@ header {
 .body {
   position: relative;
   overflow: hidden;
+  font-family: 'Poppins' !important;
 }
 .full {
   height: 100vh;
@@ -325,6 +335,7 @@ h1 {
   font-size: 3rem;
 }
 h6 {
+  font-family: 'Poppins' !important;
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
@@ -335,9 +346,10 @@ ul {
   list-style-type: none;
   padding: 0;
   li {
+    font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
-    .nuxtlink{
+    .nuxtlink {
       color: #000;
       text-decoration: none;
     }
@@ -348,9 +360,8 @@ ul {
 }
 
 .nuxt-link-exact-active {
-    color: $primary !important;
+  color: $primary !important;
 }
-
 
 p {
   line-height: 45px;
@@ -404,10 +415,10 @@ input {
 }
 
 .send {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   font-size: 35px;
   line-height: 36px;
-  font-weight: 500;
+  font-weight: 700;
   color: #342301 !important;
 }
 .share {
@@ -428,6 +439,7 @@ input {
 }
 
 .favorite {
+  font-family: 'Poppins' !important;
   font-size: 22px;
   line-height: 30px;
   letter-spacing: 1px;
@@ -442,6 +454,7 @@ input {
 }
 
 .how-it-works {
+  font-family: 'Poppins' !important;
   font-size: 25px !important;
   font-weight: 900 !important;
   color: #342301 !important;
@@ -473,6 +486,7 @@ input {
 }
 
 .aboutus3 {
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
@@ -522,7 +536,7 @@ input {
 }
 
 .subcribe-newsletter {
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 26px;
   line-height: 35px;
@@ -547,7 +561,7 @@ input {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -557,7 +571,7 @@ input {
   font-weight: 600;
   line-height: 6px;
   margin-bottom: 50px;
-  font-family: Balsamiq Sans !important;
+  font-family: 'Poppins' !important;
   color: #431d01 !important;
   letter-spacing: 2px;
 }
@@ -589,6 +603,7 @@ footer {
 }
 
 .endfooter {
+  font-family: 'Poppins' !important;
   background-color: white;
   margin: 0.1% !important;
 }
@@ -604,6 +619,8 @@ svg {
 }
 
 .custom-search-input {
+  font-family: 'Poppins' !important;
+
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -640,9 +657,6 @@ svg {
 }
 
 @media only screen and (max-width: 350px) {
-  .vcard {
-    /* height: 335px !important; */
-  }
   .subcribe-newsletter {
     font-size: 24px;
   }
@@ -690,6 +704,7 @@ svg {
   .send {
     font-size: 65px;
     line-height: 62px;
+    font-weight: 500;
   }
   .share {
     font-size: 20px;
@@ -761,6 +776,7 @@ svg {
   }
 
   .favorite {
+    font-family: 'Poppins' !important;
     font-size: 30px;
     margin: 3% 0;
     margin-bottom: 5%;
@@ -811,7 +827,7 @@ svg {
   .send {
     font-size: 45px;
     line-height: 50px;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .share {
@@ -945,7 +961,7 @@ svg {
   .send {
     font-size: 60px;
     line-height: 64px;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .share {
