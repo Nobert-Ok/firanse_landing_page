@@ -158,6 +158,7 @@
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" @click="gotoDashboard">
           Create Restaurant</v-btn
           >
+          
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
           <img
