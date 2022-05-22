@@ -1,21 +1,20 @@
 <template>
   <div class="body">
-    <Nav/>
+    <Nav />
     <!--------------------------------------- About Us ----------------------------------------------->
     <div class="aboutus">
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12" sm="6" justify="center">
-          <p class="black--text commitment">
-            It is more than food for us! 
-          </p>
+          <p class="black--text commitment">It is more than food for us!</p>
           <p class="black--text pro-commitment mr-5">
-            At FiranseFood, it is certainly about happiness, love and satifaction from favourite meals or cravings. 
-            With us, you will be able to create a closer bond with your loved ones all with their favourite food.
+            At FiranseFood, it is certainly about happiness, love and
+            satifaction from favourite meals or cravings. With us, you will be
+            able to create a closer bond with your loved ones all with their
+            favourite food.
           </p>
-
 
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-              Download Whitepaper</v-btn
+            Download Whitepaper</v-btn
           >
         </v-col>
         <v-col cols="12" sm="6" order="last">
@@ -31,24 +30,28 @@
     <div class="ourstory">
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12" class="">
-          <h3 class="aboutus3">Our Story
-          </h3>
-           <span>
-                <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
-             </span>
+          <h3 class="aboutus3">Our Story</h3>
+          <span>
+            <img
+              class="loveimage"
+              src="~/assets/images/Vector.png"
+              alt=""
+              srcset=""
+            />
+          </span>
         </v-col>
         <v-col cols="12" sm="6" justify="center">
           <p class="black--text pro-commitment storyhead">
-                At FiranseFood, we crafted FiranseFood app for all
-                to share food with loved ones by ordering their favourite dishes and delicacies. 
-                Food is one of those certain things that brings out the happiness and best in everyone. 
-                Bringing everyone closer is our mission and we do that with food.
+            At FiranseFood, we crafted FiranseFood app for all to share food
+            with loved ones by ordering their favourite dishes and delicacies.
+            Food is one of those certain things that brings out the happiness
+            and best in everyone. Bringing everyone closer is our mission and we
+            do that with food.
           </p>
 
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
             Download PDF</v-btn
           >
-         
         </v-col>
         <v-col cols="12" sm="6" order="last">
           <img
@@ -58,7 +61,6 @@
           />
         </v-col>
       </v-row>
-
 
       <!-------------------------------------- Our Team -------------------------------------------->
       <!-- <v-row dense no-gutters align="center" justify="center" class="mt-10">
@@ -121,21 +123,23 @@
         
       </v-row>-->
 
-     <!-------------------------------------- Join our Team -------------------------------------------->
+      <!-------------------------------------- Join our Team -------------------------------------------->
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12">
-          <h3 class="aboutus3">Join our Team
-          </h3>
-           <span>
-                <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
-             </span>
-            <p class="black--text pro-commitment">
-            Would you love to part of our team? Check out available roles 
+          <h3 class="aboutus3">Join our Team</h3>
+          <span>
+            <img
+              class="loveimage"
+              src="~/assets/images/Vector.png"
+              alt=""
+              srcset=""
+            />
+          </span>
+          <p class="black--text pro-commitment">
+            Would you love to part of our team? Check out available roles
             <span>
-                <nuxt-link to="/">
-                    here
-                </nuxt-link>
-            </span> 
+              <nuxt-link to="/"> here </nuxt-link>
+            </span>
           </p>
         </v-col>
       </v-row>
@@ -146,19 +150,22 @@
     <div class="aboutus1 erestuarant">
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12" sm="6" justify="center">
-          <p class="black--text commitment">
-            Own Your e-Restaurant 
-          </p>
+          <p class="black--text commitment">Own Your e-Restaurant</p>
           <p class="black--text pro-commitment mr-5">
-            Create a restaurant with us and sell your dishes to happy lovers, families close to you. 
-            Boost your food business visibility with FiranseFood. 
-            Join us to build a happy and connected society bonded by the love & happiness from delicious food.
+            Create a restaurant with us and sell your dishes to happy lovers,
+            families close to you. Boost your food business visibility with
+            FiranseFood. Join us to build a happy and connected society bonded
+            by the love & happiness from delicious food.
           </p>
 
-          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" @click="gotoDashboard">
-          Create Restaurant</v-btn
+          <v-btn
+            color="#FA710D"
+            large
+            class="aboutus-button px-7 py-7 mb-10"
+            @click="gotoDashboard"
           >
-
+            Create Restaurant</v-btn
+          >
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
           <img
@@ -170,8 +177,8 @@
       </v-row>
     </div>
 
-     <!----------------------------------Download card--------------------------------------------------------------->
-    <Downloadcard/>
+    <!----------------------------------Download card--------------------------------------------------------------->
+    <Downloadcard />
 
     <!------------------------------------ Footer ------------------------------------------>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -242,12 +249,13 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
-      text: "At Firanshe foods,we are commited to spreading love around the world"+
-            " and the way we see it, gifting food to our loved ones is one of the"+
-            " ways to do so. At Firanshefoods,we are commited to spreading love"+
-            " around the world and the way we see it, gifting food to our loved"+
-            " ones is one of the ways to do so.",
-        readMore: false,
+      text:
+        'At Firanshe foods,we are commited to spreading love around the world' +
+        ' and the way we see it, gifting food to our loved ones is one of the' +
+        ' ways to do so. At Firanshefoods,we are commited to spreading love' +
+        ' around the world and the way we see it, gifting food to our loved' +
+        ' ones is one of the ways to do so.',
+      readMore: false,
     }
   },
   props: {
@@ -266,8 +274,8 @@ export default {
     Applebutton,
     Googlebutton,
     Nav,
-    Downloadcard
-},
+    Downloadcard,
+  },
 
   methods: {
     getvalue() {
@@ -289,10 +297,10 @@ export default {
       window.open('https://dashboard.firansefood.com')
     },
     showMore() {
-        this.readMore = true;
+      this.readMore = true
     },
     showLess() {
-        this.readMore = false;
+      this.readMore = false
     },
   },
 }
@@ -338,7 +346,7 @@ ul {
     font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
-    .nuxtlink{
+    .nuxtlink {
       color: #000;
       text-decoration: none;
     }
@@ -349,14 +357,12 @@ ul {
 }
 
 .nuxt-link-exact-active {
-    color: $primary !important;
+  color: $primary !important;
 }
-
 
 p {
   line-height: 45px;
 }
-
 
 .process {
   background-color: #ffe580;
@@ -372,15 +378,12 @@ address {
   }
 }
 
-
-
-
 // ----------------About Us-----------------
 
 .aboutus {
   position: relative;
   padding: 20px;
-  background-image: url("~/assets/images/emojis.png");
+  background-image: url('~/assets/images/emojis.png');
   background-size: cover;
 }
 
@@ -396,7 +399,7 @@ address {
 .aboutus-button {
   color: white !important;
   height: 50px !important;
-  width: 65%;
+  /* width: 65%; */
   text-transform: capitalize;
   font-size: 30px;
   font-weight: 900;
@@ -410,7 +413,7 @@ address {
   color: #342301 !important;
   font-size: 30px;
   letter-spacing: 2px;
-  background-image: url("~/assets/images/emojis.png");
+  background-image: url('~/assets/images/emojis.png');
   position: relative;
 }
 
@@ -434,35 +437,34 @@ address {
 // -------------------------------------------------------------------
 .ourstory {
   padding: 20px;
-  background-image: url("~/assets/images/backgroundframe1.png");
+  background-image: url('~/assets/images/backgroundframe1.png');
   background-size: cover;
 }
 
-.loveimage{
-    width: 20%;
-    z-index: -1;
-    margin-top: -1000px;
-    margin-left: 100px;
+.loveimage {
+  width: 20%;
+  z-index: -1;
+  margin-top: -1000px;
+  margin-left: 100px;
 }
 // -------------------------------------------------------------------
 .grid-image2 {
   width: 110% !important;
 }
 
-.name{
-    font-size: 7px;
-    margin-top: -20% !important;
+.name {
+  font-size: 7px;
+  margin-top: -20% !important;
 }
 
-.role{
-    font-size: 7px;
-    margin-top: -45% !important;
+.role {
+  font-size: 7px;
+  margin-top: -45% !important;
 }
 
 // -----------------------------------
-.erestuarant{
-  background-image: url("~/assets/images/backgroundframe2.png");
-
+.erestuarant {
+  background-image: url('~/assets/images/backgroundframe2.png');
 }
 
 // ----------------Download Card-----------------
@@ -581,7 +583,7 @@ svg {
   .mdi-36px {
     font-size: 15px !important;
   }
-    .grid-image2 {
+  .grid-image2 {
     width: 100% !important;
   }
 
@@ -589,16 +591,16 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
-  .name{
+  .name {
     font-size: 0.5rem;
     margin-top: -30% !important;
-}
+  }
 
-  .role{
+  .role {
     font-size: 0.5rem;
     margin-top: -65% !important;
-}
-//   ---------------------------------
+  }
+  //   ---------------------------------
 }
 @media only screen and (max-width: 390px) {
   .vcard {
@@ -614,7 +616,7 @@ svg {
   .mdi-36px {
     font-size: 15px !important;
   }
-    .grid-image2 {
+  .grid-image2 {
     width: 100% !important;
   }
 
@@ -622,16 +624,16 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
-  .name{
+  .name {
     font-size: 0.4rem;
     margin-top: -30% !important;
-}
+  }
 
-  .role{
+  .role {
     font-size: 0.4rem;
     margin-top: -75% !important;
-}
-//   ---------------------------------
+  }
+  //   ---------------------------------
 }
 
 /*sm*/
@@ -690,16 +692,16 @@ svg {
     margin-right: 25px;
   }
 
-  .ourstory{
+  .ourstory {
     padding: 40px;
   }
 
-  .loveimage{
+  .loveimage {
     width: 10%;
     z-index: -1;
     margin-top: -1000px;
     margin-left: 130px;
-}
+  }
 
   .commitment {
     font-size: 14px;
@@ -723,16 +725,16 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
-  .name{
+  .name {
     font-size: 12px;
     margin-top: -8% !important;
-}
+  }
 
-  .role{
+  .role {
     font-size: 12px;
     margin-top: -20% !important;
-}
-//   ---------------------------------
+  }
+  //   ---------------------------------
 
   .cheese-img {
     width: 33% !important;
@@ -753,20 +755,20 @@ svg {
     background-color: white;
   }
 
-//   ---------------------------------
+  //   ---------------------------------
   .grid-image2 {
     width: 100% !important;
   }
-  .name{
+  .name {
     font-size: 15px;
     margin-top: -4% !important;
-}
+  }
 
-  .role{
+  .role {
     font-size: 15px;
     margin-top: -17% !important;
-}
-//   ---------------------------------
+  }
+  //   ---------------------------------
 
   .download {
     width: 200px;
@@ -830,7 +832,7 @@ svg {
     margin: 50px 80px;
   }
 
-   .aboutus1 {
+  .aboutus1 {
     padding: 50px 80px;
   }
 
@@ -839,17 +841,17 @@ svg {
     margin-right: 25px;
   }
 
-  .ourstory{
+  .ourstory {
     padding: 50px 80px;
   }
-  .loveimage{
+  .loveimage {
     width: 10%;
     z-index: -1;
     margin-top: -1000px;
     margin-left: 130px;
-}
+  }
 
-    .cheese-img {
+  .cheese-img {
     width: 27% !important;
     margin-top: -40px;
   }
@@ -858,7 +860,7 @@ svg {
     width: 33%;
     margin-top: -13%;
   }
-  
+
   .commitment {
     font-size: 19px;
     line-height: 35px;
@@ -869,7 +871,6 @@ svg {
     font-size: 15px;
     margin-right: 39px;
   }
-
 
   .header-button {
     width: 90% !important;
@@ -884,24 +885,23 @@ svg {
     background-color: white;
   }
 
-//   ---------------------------------
+  //   ---------------------------------
   .grid-image2 {
     width: 100% !important;
   }
-  .name{
+  .name {
     font-size: 15px;
     margin-top: -4% !important;
-}
+  }
 
-  .role{
+  .role {
     font-size: 15px;
     margin-top: -17% !important;
-}
-//   ---------------------------------
+  }
+  //   ---------------------------------
 
-  .col-3{
+  .col-3 {
     margin-right: 5% !important;
-
   }
 
   .first-head {
@@ -977,11 +977,11 @@ svg {
   .aboutus1 {
     padding: 100px 200px;
   }
-  
-  .ourstory{
+
+  .ourstory {
     padding: 100px 200px;
   }
-  .erestuarant{
+  .erestuarant {
     padding: 15%;
   }
   .aboutus3 {
@@ -1000,7 +1000,7 @@ svg {
     font-size: 17px;
   }
 
-  .storyhead{
+  .storyhead {
     margin-top: -40%;
   }
 
@@ -1010,10 +1010,10 @@ svg {
   }
 
   .aboutus-button {
-  width: 45%;
-}
+    /* width: 45%; */
+  }
 
-    .cheese-img {
+  .cheese-img {
     width: 30% !important;
     margin-top: -120px;
   }
@@ -1047,10 +1047,10 @@ svg {
     width: 60% !important;
   }
 
-  .loveimage{
+  .loveimage {
     width: 10%;
     margin-top: -1000px;
     margin-left: 120px;
-}
+  }
 }
 </style>
