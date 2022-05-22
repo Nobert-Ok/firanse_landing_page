@@ -462,6 +462,7 @@ address {
 // -----------------------------------
 .erestuarant{
   background-image: url("~/assets/images/backgroundframe2.png");
+
 }
 
 // ----------------Download Card-----------------

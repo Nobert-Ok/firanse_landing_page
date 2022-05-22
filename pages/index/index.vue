@@ -88,6 +88,7 @@
           </p>
           <p class="black--text pro-commitment" v-if="!readMore">
             {{ this.text.substring(0, 170) + '...' }}
+
           </p>
           <p class="black--text pro-commitment" v-if="readMore">
             {{ this.text }}
@@ -257,6 +258,7 @@ export default {
         "At FiranseFood, we are commited to spreading love and happiness."+
         "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time."+
         "These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
+
       readMore: false,
     }
   },
