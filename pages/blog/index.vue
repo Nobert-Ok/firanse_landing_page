@@ -1,38 +1,37 @@
 <template>
   <div class="body">
-    <Nav/>
+    <Nav />
     <v-row>
       <v-col col="3" class="container">
-        <img class="foodbowl" src="~assets/images/foodbowl.png" alt="">
+        <img
+          loading="lazy"
+          class="foodbowl"
+          src="~assets/images/foodbowl.png"
+          alt=""
+        />
         <v-card elevation="7" class="mx-auto vcard">
-            <v-card-text justify="center" class="sm-pt-10">
-            <v-row dense no-gutters >
-                <v-col cols="12">
+          <v-card-text justify="center" class="sm-pt-10">
+            <v-row dense no-gutters>
+              <v-col cols="12">
                 <v-card-text align="center" justify="center">
-                    <p class="black--text download-text5">
+                  <p class="black--text download-text5">
                     Love. Life. Food. Firanse.
-                    </p>
-                    <nuxt-link to="/blog" class="mr-10">
-                      <v-icon x-large>
-                        mdi-facebook
-                      </v-icon>
-                    </nuxt-link>
-                    
-                    <nuxt-link to="/blog" class="mr-10">
-                      <v-icon>
-                        mdi-twitter
-                      </v-icon>
-                    </nuxt-link>
-                    
-                    <nuxt-link to="/blog">
-                      <v-icon>
-                        mdi-instagram
-                      </v-icon>
-                    </nuxt-link>
-                    </v-card-text>
-                </v-col>
+                  </p>
+                  <nuxt-link to="/blog" class="mr-10">
+                    <v-icon x-large> mdi-facebook </v-icon>
+                  </nuxt-link>
+
+                  <nuxt-link to="/blog" class="mr-10">
+                    <v-icon> mdi-twitter </v-icon>
+                  </nuxt-link>
+
+                  <nuxt-link to="/blog">
+                    <v-icon> mdi-instagram </v-icon>
+                  </nuxt-link>
+                </v-card-text>
+              </v-col>
             </v-row>
-            </v-card-text>
+          </v-card-text>
         </v-card>
         <!----------------------------------Info cards--------------------------------------------------------------->
       </v-col>
@@ -61,7 +60,7 @@
           </v-card>
       </v-col>
     </v-row> -->
-     <!-- <div v-else class="mx-auto">
+    <!-- <div v-else class="mx-auto">
       <v-progress-circular
       indeterminate
       color="amber"
@@ -70,52 +69,59 @@
 
     <!----------------------------------Blog cards--------------------------------------------------------------->
     <div class="blog">
-      <p class="aboutus3" align="center"> Latest Posts</p>
-      <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
-        <v-col cols="12" sm="6" md="3" v-for="item in this.blogInfo" :key="item.guid" >
-              <!-- <p>{{trimdetails(item.description)}}</p>
+      <p class="aboutus3" align="center">Latest Posts</p>
+      <v-row
+        v-if="this.blogInfo && this.blogInfo.length > 0"
+        justify="space-around"
+      >
+        <v-col
+          cols="12"
+          sm="6"
+          md="3"
+          v-for="item in this.blogInfo"
+          :key="item.guid"
+        >
+          <!-- <p>{{trimdetails(item.description)}}</p>
               <img :src="item.thumbnail" alt="">
               <p>{{getHumanDate(item.pubDate)}}</p> -->
-            <v-card class="mx-auto blogcard">
-                <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
-                <v-card-title class="title">{{item.title}}</v-card-title>
-                <v-card-text class="text--primary">
-                  <div>
-                    <p class="trimmeddetails">{{trimdetails(item.description.substring(0,200)+"....")}}</p>
-                  </div>
-                </v-card-text>
-                <v-card-actions>
-                  <a :href="item.link">
-                    <v-btn color="orange" class="readmore-button">
-                      <span>Read More</span> 
-                    </v-btn>
-                  </a>
-                </v-card-actions>
-
-
-                <p class="date">
-                  <v-icon>
-                    mdi-calendar
-                  </v-icon>
-                  {{getHumanDate(item.pubDate)}}
+          <v-card class="mx-auto blogcard">
+            <v-img
+              class="white--text"
+              :src="item.thumbnail"
+              alt="thumbnail"
+              loading="lazy"
+            ></v-img>
+            <v-card-title class="title">{{ item.title }}</v-card-title>
+            <v-card-text class="text--primary">
+              <div>
+                <p class="trimmeddetails">
+                  {{ trimdetails(item.description.substring(0, 200) + '....') }}
                 </p>
+              </div>
+            </v-card-text>
+            <v-card-actions>
+              <a :href="item.link">
+                <v-btn color="orange" class="readmore-button">
+                  <span>Read More</span>
+                </v-btn>
+              </a>
+            </v-card-actions>
 
-            </v-card>
+            <p class="date">
+              <v-icon> mdi-calendar </v-icon>
+              {{ getHumanDate(item.pubDate) }}
+            </p>
+          </v-card>
         </v-col>
       </v-row>
-      
+
       <div v-else justify="center" align="center">
-        <v-progress-circular
-        indeterminate
-        color="amber"
-      ></v-progress-circular>
+        <v-progress-circular indeterminate color="amber"></v-progress-circular>
       </div>
     </div>
 
-
     <!----------------------------------Download card--------------------------------------------------------------->
-    <Downloadcard/>
-
+    <Downloadcard />
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
@@ -172,14 +178,13 @@
 
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import Nav from '~/components/Nav.vue'
 import moment from 'moment'
-import Downloadcard from "~/components/Downloadcard.vue";
+import Downloadcard from '~/components/Downloadcard.vue'
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
-
 
 export default {
   name: 'index',
@@ -189,13 +194,13 @@ export default {
       cravetag: this.value,
       nonexistent: false,
       avtar: '',
-      blogInfo:[],
-      featuredpost:[],
-      trimmeddetails:'',
+      blogInfo: [],
+      featuredpost: [],
+      trimmeddetails: '',
     }
   },
-  icons:{
-    iconfont: 'mdi', 
+  icons: {
+    iconfont: 'mdi',
   },
   props: {
     value: {
@@ -210,38 +215,39 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`);
-      this.blogInfo = res.data.items;
-      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]];
-      this.avtar = res.data.feed.image;
-      this.trimmeddetails = this.trimdetails(this.featuredpost.description);
-      console.log(this.blogInfo);
-      console.log(this.trimmeddetails);
-
+      const res = await axios.get(
+        `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`
+      )
+      this.blogInfo = res.data.items
+      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]]
+      this.avtar = res.data.feed.image
+      this.trimmeddetails = this.trimdetails(this.featuredpost.description)
+      // console.log(this.blogInfo)
+      // console.log(this.trimmeddetails)
     } catch (e) {
-      console.error(e);
+      console.error(e)
     }
   },
   components: {
     Applebutton,
     Googlebutton,
     Nav,
-    Downloadcard
-},
+    Downloadcard,
+  },
 
   methods: {
     gotoDashboard() {
       window.open('https://dashboard.firansefood.com')
     },
-    trimdetails(node){
-      let tag = document.createElement("div");
-      tag.innerHTML = node;
-      node = tag.innerText;
-      return node;
+    trimdetails(node) {
+      let tag = document.createElement('div')
+      tag.innerHTML = node
+      node = tag.innerText
+      return node
     },
     getHumanDate(date) {
-      return moment(date, 'YYYY-MM-DD').format("MMM DD, YYYY");
-    }
+      return moment(date, 'YYYY-MM-DD').format('MMM DD, YYYY')
+    },
   },
 }
 </script>
@@ -265,7 +271,7 @@ ul {
     font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
-    .nuxtlink{
+    .nuxtlink {
       color: #000;
       text-decoration: none;
     }
@@ -276,7 +282,7 @@ ul {
 }
 
 .nuxt-link-exact-active {
-    color: $primary !important;
+  color: $primary !important;
 }
 
 p {
@@ -303,9 +309,6 @@ p {
 }
 
 // ----------------Blog Card-----------------
-.blog{
-  // background-color: #ffe580;
-}
 .aboutus3 {
   font-family: 'Poppins' !important;
   color: #342301 !important;
@@ -316,17 +319,16 @@ p {
   line-height: 45px;
 }
 
-span{
-    font-family: 'Poppins' !important;
-
+span {
+  font-family: 'Poppins' !important;
 }
 
-.blogcard{
-  background-color: #FFA80033 !important;
+.blogcard {
+  background-color: #ffa80033 !important;
   max-width: 350px;
   max-height: 700px;
 }
-.trimmeddetails{
+.trimmeddetails {
   font-family: 'Poppins' !important;
   line-height: 20px !important;
   font-size: 14.5px;
@@ -335,7 +337,7 @@ span{
   color: #412b00;
 }
 
-.title{
+.title {
   font-family: 'Poppins' !important;
   font-size: 20px !important;
   line-height: 20px;
@@ -346,11 +348,11 @@ span{
   color: #342301;
 }
 
-.foodbowl{
+.foodbowl {
   width: 100% !important;
 }
 
-.readmore-button{
+.readmore-button {
   font-family: 'Poppins' !important;
   color: rgb(243, 243, 243) !important;
   text-transform: capitalize;
@@ -358,21 +360,21 @@ span{
   margin-left: 0.5rem;
 }
 
-.date{
+.date {
   font-family: 'Poppins' !important;
   font-size: 14.5px;
   margin-left: 1rem;
   color: #412b00;
 }
 
-a{
+a {
   font-family: 'Poppins' !important;
   text-decoration: none;
 }
 // ----------------Download Card-----------------
 
-.vcard{
-  background-color: #FFDC99 !important;
+.vcard {
+  background-color: #ffdc99 !important;
   max-width: 75%;
   height: 200px !important;
   margin-top: -100px;
@@ -408,7 +410,6 @@ a{
   font-weight: 400;
   font-family: 'Poppins' !important;
 }
-
 
 // ------------Footer--------------------------
 
@@ -468,12 +469,11 @@ svg {
 }
 
 @media only screen and (max-width: 375px) {
-  .blogcard{
-  background-color: #FFA80033;
-  max-width: 300px !important;
-  max-height: 700px;
-}
-  
+  .blogcard {
+    background-color: #ffa80033;
+    max-width: 300px !important;
+    max-height: 700px;
+  }
 }
 
 /*sm*/
@@ -483,7 +483,7 @@ svg {
     height: 250px !important;
     margin-top: -150px;
   }
-  
+
   .download-text3 {
     font-size: 11px;
   }
@@ -505,18 +505,15 @@ svg {
   .download-icon {
     font-size: 30px;
   }
-   // ----------------Blog Card-----------------
-.aboutus3 {
-  color: #342301 !important;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 3rem !important;
-  font-size: 49px;
-  line-height: 50px;
-}
-
-
-
+  // ----------------Blog Card-----------------
+  .aboutus3 {
+    color: #342301 !important;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 3rem !important;
+    font-size: 49px;
+    line-height: 50px;
+  }
 }
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
@@ -548,41 +545,39 @@ svg {
   .download-icon {
     font-size: 40px;
   }
- // ----------------Blog Card-----------------
-.aboutus3 {
-  color: #342301 !important;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 2rem !important;
-  font-size: 49px;
-  line-height: 50px;
-}
-.blogcard{
-  max-width: 400px !important;
-}
-.trimmeddetails{
-  line-height: 25px !important;
-  font-size: 15px;
-  margin-bottom: 0px !important;
-}
+  // ----------------Blog Card-----------------
+  .aboutus3 {
+    color: #342301 !important;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 2rem !important;
+    font-size: 49px;
+    line-height: 50px;
+  }
+  .blogcard {
+    max-width: 400px !important;
+  }
+  .trimmeddetails {
+    line-height: 25px !important;
+    font-size: 15px;
+    margin-bottom: 0px !important;
+  }
 
-.title{
-  font-size: 20px !important;
-  line-height: 25px;
-  margin-bottom: -10px !important;
-  font-weight: bolder;
-  overflow-wrap: break-word;
-}
+  .title {
+    font-size: 20px !important;
+    line-height: 25px;
+    margin-bottom: -10px !important;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+  }
 
-.foodbowl{
-  width: 100% !important;
-}
+  .foodbowl {
+    width: 100% !important;
+  }
 
-.date{
-  font-size: 15px;
-}
-
-
+  .date {
+    font-size: 15px;
+  }
 }
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
@@ -609,44 +604,42 @@ svg {
     line-height: 24px;
   }
 
-
   // ----------------Blog Card-----------------
-.aboutus3 {
-  color: #342301 !important;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 4rem !important;
-  font-size: 49px;
-  line-height: 50px;
-}
+  .aboutus3 {
+    color: #342301 !important;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 4rem !important;
+    font-size: 49px;
+    line-height: 50px;
+  }
 
-.blogcard{
-  background-color: #FFA80033;
-  max-width: 700px !important;
-  max-height: 700px;
-}
+  .blogcard {
+    background-color: #ffa80033;
+    max-width: 700px !important;
+    max-height: 700px;
+  }
 
-.trimmeddetails{
-  line-height: 25px !important;
-  font-size: 15px;
-  margin-bottom: 0px !important;
-}
+  .trimmeddetails {
+    line-height: 25px !important;
+    font-size: 15px;
+    margin-bottom: 0px !important;
+  }
 
-.title{
-  font-size: 20px !important;
-  line-height: 25px;
-  margin-bottom: -10px !important;
-  font-weight: bolder;
-  overflow-wrap: break-word;
-}
+  .title {
+    font-size: 20px !important;
+    line-height: 25px;
+    margin-bottom: -10px !important;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+  }
 
-.foodbowl{
-  width: 100% !important;
-}
+  .foodbowl {
+    width: 100% !important;
+  }
 
-.date{
-  font-size: 15px;
-}
-
+  .date {
+    font-size: 15px;
+  }
 }
 </style>

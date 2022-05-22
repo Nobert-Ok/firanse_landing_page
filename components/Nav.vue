@@ -31,7 +31,7 @@
                 class="white--text text-none"
                 target="blank"
                 @click="gotoDashboard"
-                >Create a Resturant</v-btn
+                >Create Resturant</v-btn
               >
             </li>
           </ul>
