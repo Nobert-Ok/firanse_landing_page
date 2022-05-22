@@ -465,7 +465,7 @@ input {
 
 .aboutus {
   position: relative;
-  padding: 20px;
+  margin: 20px;
 }
 
 .aboutus-image {
