@@ -6,26 +6,22 @@
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12" sm="6" justify="center">
           <p class="black--text commitment">
-            Our commitment is to the love we share and the food you eat.
+            It is more than food for us! 
           </p>
-          <p class="black--text pro-commitment" v-if="!readMore">
-                {{this.text.substring(0, 200) + "..."}}
-          </p>
-          <p class="black--text pro-commitment" v-if="readMore">
-                {{this.text}}
+          <p class="black--text pro-commitment mr-5">
+            At FiranseFood, it is certainly about happiness, love and satifaction from favourite meals or cravings. 
+            With us, you will be able to create a closer bond with your loved ones all with their favourite food.
           </p>
 
-          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            View More</v-btn
-          >
-          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            View Less</v-btn
+
+          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+              Download Whitepaper</v-btn
           >
         </v-col>
-        <v-col cols="12" sm="6" order="first" order-sm="last">
+        <v-col cols="12" sm="6" order="last">
           <img
             class="aboutus-image my-6"
-            src="~assets/images/about.png"
+            src="~assets/images/packedpics.png"
             alt=""
           />
         </v-col>
@@ -34,14 +30,35 @@
     <!-------------------------------------- Our Story -------------------------------------------->
     <div class="ourstory">
       <v-row dense no-gutters align="center" justify="center">
-        <v-col cols="12">
+        <v-col cols="12" class="">
           <h3 class="aboutus3">Our Story
           </h3>
            <span>
                 <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="">
              </span>
         </v-col>
+        <v-col cols="12" sm="6" justify="center">
+          <p class="black--text pro-commitment storyhead">
+                At FiranseFood, we crafted FiranseFood app for all
+                to share food with loved ones by ordering their favourite dishes and delicacies. 
+                Food is one of those certain things that brings out the happiness and best in everyone. 
+                Bringing everyone closer is our mission and we do that with food.
+          </p>
+
+          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+            Download PDF</v-btn
+          >
+         
+        </v-col>
+        <v-col cols="12" sm="6" order="last">
+          <img
+            class="aboutus-image my-6"
+            src="~assets/images/maindish.png"
+            alt=""
+          />
+        </v-col>
       </v-row>
+
 
       <!-------------------------------------- Our Team -------------------------------------------->
       <!-- <v-row dense no-gutters align="center" justify="center" class="mt-10">
@@ -102,11 +119,10 @@
             </v-col>
         </v-row>
         
-      </v-row>
- -->
+      </v-row>-->
 
      <!-------------------------------------- Join our Team -------------------------------------------->
-      <v-row dense no-gutters align="center" justify="center" class="mt-10">
+      <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12">
           <h3 class="aboutus3">Join our Team
           </h3>
@@ -121,6 +137,35 @@
                 </nuxt-link>
             </span> 
           </p>
+        </v-col>
+      </v-row>
+    </div>
+
+    <!-------------------------------------- E-restuarant -------------------------------------------->
+
+    <div class="aboutus1 erestuarant">
+      <v-row dense no-gutters align="center" justify="center">
+        <v-col cols="12" sm="6" justify="center">
+          <p class="black--text commitment">
+            Own Your e-Restaurant 
+          </p>
+          <p class="black--text pro-commitment mr-5">
+            Create a restaurant with us and sell your dishes to happy lovers, families close to you. 
+            Boost your food business visibility with FiranseFood. 
+            Join us to build a happy and connected society bonded by the love & happiness from delicious food.
+          </p>
+
+          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" @click="gotoDashboard">
+          Create Restaurant</v-btn
+          >
+
+        </v-col>
+        <v-col cols="12" sm="6" order="first" order-sm="last">
+          <img
+            class="aboutus-image my-6"
+            src="~assets/images/e-restuarant.png"
+            alt=""
+          />
         </v-col>
       </v-row>
     </div>
@@ -271,7 +316,6 @@ header {
   position: relative;
   overflow: hidden;
   font-family: 'Poppins' !important;
-
 }
 .full {
   height: 100vh;
@@ -338,7 +382,10 @@ address {
   margin: 20px;
   background-image: url("~/assets/images/emojis.png");
   background-size: cover;
+}
 
+.aboutus1 {
+  padding: 20px;
 }
 
 .aboutus-image {
@@ -349,7 +396,7 @@ address {
 .aboutus-button {
   color: white !important;
   height: 50px !important;
-  width: 45%;
+  width: 65%;
   text-transform: capitalize;
   font-size: 30px;
   font-weight: 900;
@@ -368,7 +415,7 @@ address {
 }
 
 .commitment {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   font-weight: 600;
   font-family: 'Poppins' !important;
@@ -387,7 +434,8 @@ address {
 // -------------------------------------------------------------------
 .ourstory {
   padding: 20px;
-  background-color: #ffe580;
+  background-image: url("~/assets/images/backgroundframe1.png");
+  background-size: cover;
 }
 
 .loveimage{
@@ -412,42 +460,9 @@ address {
 }
 
 // -----------------------------------
-.partners {
-  background-color: #ffe580;
-  padding: 30px;
-}
-.card {
-  padding: 50px 0;
-}
+.erestuarant{
+  background-image: url("~/assets/images/backgroundframe2.png");
 
-.vcard {
-  max-width: 90%;
-  height: 300px !important;
-  margin-top: -35%;
-  border-radius: 20px !important;
-}
-
-.subscribe-card {
-  max-width: 90%;
-  background-color: #ffe580 !important;
-  border-radius: 20px !important;
-  padding: 15px;
-  margin-top: 10%;
-}
-
-.subcribe-newsletter {
-  font-family: 'Poppins' !important;
-  color: #342301 !important;
-  font-size: 26px;
-  line-height: 35px;
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-.subscribe-text {
-  font-size: 14.5px;
-  line-height: 15px;
-  font-family: 'Poppins' !important;
 }
 
 // ----------------Download Card-----------------
@@ -667,7 +682,9 @@ svg {
   .aboutus {
     margin: 40px;
   }
-
+  .aboutus1 {
+    margin: 40px;
+  }
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
@@ -813,6 +830,10 @@ svg {
     margin: 50px 80px;
   }
 
+   .aboutus1 {
+    padding: 50px 80px;
+  }
+
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
@@ -953,11 +974,16 @@ svg {
     padding: 100px 200px;
   }
 
+  .aboutus1 {
+    padding: 100px 200px;
+  }
+  
   .ourstory{
     padding: 100px 200px;
-
   }
-
+  .erestuarant{
+    padding: 15%;
+  }
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
@@ -974,10 +1000,18 @@ svg {
     font-size: 17px;
   }
 
+  .storyhead{
+    margin-top: -40%;
+  }
+
   .aboutus-image {
     width: 100%;
     margin-top: -20% !important;
   }
+
+  .aboutus-button {
+  width: 45%;
+}
 
     .cheese-img {
     width: 30% !important;

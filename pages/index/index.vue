@@ -51,7 +51,7 @@
         </v-row>
       </v-col>
       <v-col cols="12" md="5" class="my-8" align="center">
-        <img class="maindish" src="~assets/images/maindish.png" alt="" />
+        <img class="maindish" src="~assets/images/phone.png" alt="" />
       </v-col>
     </v-row>
     <!-------------------------------------- How it works -------------------------------------------->
@@ -72,7 +72,7 @@
       </v-col>
       <v-col cols="12" sm="6" align="center">
         <p class="white--text how-it-works mt-10">How it works</p>
-        <img class="grid-image1" src="~assets/images/process.png" alt="" />
+        <img class="grid-image1" src="~assets/images/howitworks.png" alt="" />
       </v-col>
     </v-row>
 
@@ -87,7 +87,8 @@
             Our commitment is to the love we share and the food you eat.
           </p>
           <p class="black--text pro-commitment" v-if="!readMore">
-            {{ this.text.substring(0, 200) + '...' }}
+            {{ this.text.substring(0, 170) + '...' }}
+
           </p>
           <p class="black--text pro-commitment" v-if="readMore">
             {{ this.text }}
@@ -132,7 +133,7 @@
     >
       <v-col cols="12">
         <p class="white--text text-center favorite">
-          Your Favourite Restaurants Partner with us
+          These and many more are now closer to you!
         </p>
       </v-col>
       <v-row justify="center">
@@ -254,11 +255,10 @@ export default {
       cravetag: this.value,
       nonexistent: false,
       text:
-        'At Firanshe foods,we are commited to spreading love around the world' +
-        ' and the way we see it, gifting food to our loved ones is one of the' +
-        ' ways to do so. At Firanshefoods,we are commited to spreading love' +
-        ' around the world and the way we see it, gifting food to our loved' +
-        ' ones is one of the ways to do so.',
+        "At FiranseFood, we are commited to spreading love and happiness."+
+        "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time."+
+        "These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
+
       readMore: false,
     }
   },
@@ -319,7 +319,7 @@ export default {
   cursor: pointer;
 }
 .first-head {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 header {
   width: 100%;
@@ -467,7 +467,7 @@ input {
 
 .aboutus {
   position: relative;
-  margin: 20px;
+  padding: 20px;
 }
 
 .aboutus-image {
