@@ -415,7 +415,7 @@ address {
 }
 
 .commitment {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   font-weight: 600;
   font-family: 'Poppins' !important;

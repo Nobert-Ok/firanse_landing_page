@@ -87,7 +87,7 @@
             Our commitment is to the love we share and the food you eat.
           </p>
           <p class="black--text pro-commitment" v-if="!readMore">
-            {{ this.text.substring(0, 200) + '...' }}
+            {{ this.text.substring(0, 170) + '...' }}
           </p>
           <p class="black--text pro-commitment" v-if="readMore">
             {{ this.text }}
@@ -132,7 +132,7 @@
     >
       <v-col cols="12">
         <p class="white--text text-center favorite">
-          Your Favourite Restaurants Partner with us
+          These and many more are now closer to you!
         </p>
       </v-col>
       <v-row justify="center">
@@ -465,7 +465,7 @@ input {
 
 .aboutus {
   position: relative;
-  margin: 20px;
+  padding: 20px;
 }
 
 .aboutus-image {
