@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <header class="d-flex justify-space-between align-center mx-auto">
-      <div class="d-flex align-center my-3 ml-sm-16 ml-4">
+      <div class="d-flex align-center my-3 ml-sm-16">
         <nuxt-link to="/">
           <img src="~/assets/images/firansee.png" class="logo" />
         </nuxt-link>
