@@ -379,7 +379,7 @@ address {
 
 .aboutus {
   position: relative;
-  margin: 20px;
+  padding: 20px;
   background-image: url("~/assets/images/emojis.png");
   background-size: cover;
 }
