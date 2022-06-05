@@ -570,9 +570,6 @@ svg {
   width: 100% !important;
 }
 @media only screen and (max-width: 416px) {
-  .vcard {
-    /* height: 335px !important; */
-  }
   .subcribe-newsletter {
     font-size: 24px;
   }
@@ -603,9 +600,6 @@ svg {
   //   ---------------------------------
 }
 @media only screen and (max-width: 390px) {
-  .vcard {
-    /* height: 335px !important; */
-  }
   .subcribe-newsletter {
     font-size: 24px;
   }
@@ -1007,10 +1001,6 @@ svg {
   .aboutus-image {
     width: 100%;
     margin-top: -20% !important;
-  }
-
-  .aboutus-button {
-    /* width: 45%; */
   }
 
   .cheese-img {

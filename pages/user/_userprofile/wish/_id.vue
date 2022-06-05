@@ -1,164 +1,174 @@
 <template>
   <div v-if="wish" class="wish">
-    <div class="d-flex">
-      <v-btn
-        class="ma-4"
-        color="grey"
-        small
-        icon
-        outlined
-        @click="$router.go(-1)"
-        ><v-icon>mdi-chevron-left</v-icon></v-btn
-      >
-    </div>
-    <v-row dense no-gutters>
-      <!-- First Col -->
-      <v-col cols="12" md="6">
-        <div class="pa-4">
-          <div>
-            <img :src="wish.food.image.location" alt="" />
-          </div>
-          <div>
-            <div class="d-flex justify-space-between my-4">
-              <div>
-                <div>{{ wish.food.name }}</div>
-                <div>{{ wish.price_tag.name }}</div>
-              </div>
-              <div>
-                {{ getFormattedCurrency(wish.price_tag.price) }} x
-                {{ wish.quantity }}
-              </div>
-            </div>
-            <v-rating value="4" dense readonly></v-rating>
-            <v-divider class="my-4"></v-divider>
-            <div>
-              <h4>Description</h4>
-
-              <div class="mt-4">
-                <p>{{ wish.food.description }}</p>
-              </div>
-            </div>
-            <div class="d-flex">
-              <img :src="wish.business.image.location" class="business_image" />
-              <div class="ml-2">
-                <p>
-                  {{ wish.business.name }}
-                  <br />
-                  @{{ wish.business.tag }}
-                </p>
-              </div>
-            </div>
-          </div>
+    <v-row justify="center" align="center">
+      <v-col cols="12" md="8" lg="8">
+        <div class="d-flex">
+          <v-btn
+            class="ma-4"
+            color="grey"
+            small
+            icon
+            outlined
+            @click="$router.go(-1)"
+            ><v-icon>mdi-chevron-left</v-icon></v-btn
+          >
         </div>
-      </v-col>
+        <v-row dense no-gutters>
+          <!-- First Col -->
+          <v-col cols="12" md="6">
+            <div class="pa-4">
+              <div>
+                <img :src="wish.food.image.location" alt="" />
+              </div>
+              <div>
+                <div class="d-flex justify-space-between my-4">
+                  <div>
+                    <div>{{ wish.food.name }}</div>
+                    <div>{{ wish.price_tag.name }}</div>
+                  </div>
+                  <div>
+                    {{ getFormattedCurrency(wish.price_tag.price) }} x
+                    {{ wish.quantity }}
+                  </div>
+                </div>
+                <v-rating value="4" dense readonly></v-rating>
+                <v-divider class="my-4"></v-divider>
+                <div>
+                  <h4>Description</h4>
 
-      <!-- Second Col -->
-      <v-col cols="12" md="6">
-        <v-card class="ma-4 pa-4">
-          <div v-if="wish.extra_tags.length > 0">
-            <h4>Extra</h4>
-            <div class="mt-4">
-              <div
-                class="d-flex justify-space-between my-2"
-                v-for="({ name, price, quantity }, i) in wish.extra_tags"
-                :key="i"
+                  <div class="mt-4">
+                    <p>{{ wish.food.description }}</p>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <img
+                    :src="wish.business.image.location"
+                    class="business_image"
+                  />
+                  <div class="ml-2">
+                    <p>
+                      {{ wish.business.name }}
+                      <br />
+                      @{{ wish.business.tag }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </v-col>
+
+          <!-- Second Col -->
+          <v-col cols="12" md="6">
+            <v-card class="ma-4 pa-4">
+              <div v-if="wish.extra_tags.length > 0">
+                <h4>Extra</h4>
+                <div class="mt-4">
+                  <div
+                    class="d-flex justify-space-between my-2"
+                    v-for="({ name, price, quantity }, i) in wish.extra_tags"
+                    :key="i"
+                  >
+                    <span>{{ name }}</span>
+                    <span>{{ quantity }}</span>
+                    <span>{{ getFormattedCurrency(price) }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h4>Order Summary</h4>
+                <div class="mt-4">
+                  <div class="d-flex justify-space-between my-2">
+                    <span>Delivery Fee</span>
+                    <span>{{ getFormattedCurrency(deliveryFee) }}</span>
+                  </div>
+                  <div class="d-flex justify-space-between my-2">
+                    <span>Sub-total</span>
+                    <span>{{ getFormattedCurrency(getSubTotal()) }}</span>
+                  </div>
+                  <div class="d-flex justify-space-between my-2">
+                    <span>Total</span>
+                    <span>{{ getFormattedCurrency(getTotal()) }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h4>Your details</h4>
+                <div class="mt-4">
+                  <form role="submit" @submit="makePayment">
+                    <input-field
+                      :text="payload.customer.email"
+                      label="Email"
+                      :placeholder="'Enter email address'"
+                      @get="(value) => (payload.customer.email = value)"
+                    />
+                    <input-field
+                      :text="payload.customer.name"
+                      label="Name"
+                      :placeholder="'Enter name'"
+                      @get="(value) => (payload.customer.name = value)"
+                    />
+                    <input-field
+                      :text="payload.customer.phonenumber"
+                      label="Phone Number (optional)"
+                      :required="false"
+                      :placeholder="'Enter a phone number(optional)'"
+                      @get="(value) => (payload.customer.phonenumber = value)"
+                    />
+                    <v-card-actions class="justify-center">
+                      <base-button
+                        text="Proceed to Payment"
+                        @click="makePayment"
+                      />
+                    </v-card-actions>
+                  </form>
+                </div>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+        <v-dialog transparent max-width="500" v-model="success" persistent>
+          <v-card class="pa-4">
+            <div class="d-flex justify-end">
+              <v-btn
+                @click="$router.push(`/user/${wish.user.firanse_tag}`)"
+                x-small
+                icon
+                color="grey"
+                ><v-icon>mdi-close</v-icon></v-btn
               >
-                <span>{{ name }}</span>
-                <span>{{ quantity }}</span>
-                <span>{{ getFormattedCurrency(price) }}</span>
-              </div>
             </div>
-          </div>
-          <div class="mt-8">
-            <h4>Order Summary</h4>
-            <div class="mt-4">
-              <div class="d-flex justify-space-between my-2">
-                <span>Delivery Fee</span>
-                <span>{{ getFormattedCurrency(deliveryFee) }}</span>
-              </div>
-              <div class="d-flex justify-space-between my-2">
-                <span>Sub-total</span>
-                <span>{{ getFormattedCurrency(getSubTotal()) }}</span>
-              </div>
-              <div class="d-flex justify-space-between my-2">
-                <span>Total</span>
-                <span>{{ getFormattedCurrency(getTotal()) }}</span>
-              </div>
+            <div class="d-flex justify-center">
+              <img src="~assets/images/success.svg" class="success-icon" />
             </div>
-          </div>
-          <div class="mt-8">
-            <h4>Your details</h4>
-            <div class="mt-4">
-              <form role="submit" @submit="makePayment">
-                <input-field
-                  :text="payload.customer.email"
-                  label="Email"
-                  :placeholder="'Enter email address'"
-                  @get="(value) => (payload.customer.email = value)"
-                />
-                <input-field
-                  :text="payload.customer.name"
-                  label="Name"
-                  :placeholder="'Enter name'"
-                  @get="(value) => (payload.customer.name = value)"
-                />
-                <input-field
-                  :text="payload.customer.phonenumber"
-                  label="Phone Number (optional)"
-                  :required="false"
-                  :placeholder="'Enter a phone number(optional)'"
-                  @get="(value) => (payload.customer.phonenumber = value)"
-                />
-                <v-card-actions class="justify-center">
-                  <base-button text="Proceed to Payment" @click="makePayment" />
-                </v-card-actions>
-              </form>
+            <div class="my-4">
+              <h4 class="text-center">Successfully ordered</h4>
+              <p class="text-center my-2">
+                {{ wish.user.firstname + wish.user.lastname }} is very grateful
+              </p>
             </div>
-          </div>
-        </v-card>
+          </v-card>
+        </v-dialog>
+        <v-dialog transparent max-width="500" v-model="cancelled" persistent>
+          <v-card class="pa-4">
+            <div class="d-flex justify-end">
+              <v-btn
+                @click="$router.push(`/user/${wish.user.firanse_tag}`)"
+                x-small
+                icon
+                color="grey"
+                ><v-icon>mdi-close</v-icon></v-btn
+              >
+            </div>
+            <div class="d-flex justify-center">
+              <v-icon color="red">mdi-stop</v-icon>
+            </div>
+            <div class="my-4">
+              <h4 class="text-center">Something went wrong</h4>
+            </div>
+          </v-card>
+        </v-dialog>
       </v-col>
     </v-row>
-    <v-dialog transparent max-width="500" v-model="success" persistent>
-      <v-card class="pa-4">
-        <div class="d-flex justify-end">
-          <v-btn
-            @click="$router.push(`/user/${wish.user.firanse_tag}`)"
-            x-small
-            icon
-            color="grey"
-            ><v-icon>mdi-close</v-icon></v-btn
-          >
-        </div>
-        <div class="d-flex justify-center">
-          <img src="~assets/images/success.svg" class="success-icon" />
-        </div>
-        <div class="my-4">
-          <h4 class="text-center">Successfully ordered</h4>
-          <p class="text-center my-2">
-            {{ wish.user.firstname + wish.user.lastname }} is very grateful
-          </p>
-        </div>
-      </v-card>
-    </v-dialog>
-    <v-dialog transparent max-width="500" v-model="cancelled" persistent>
-      <v-card class="pa-4">
-        <div class="d-flex justify-end">
-          <v-btn
-            @click="$router.push(`/user/${wish.user.firanse_tag}`)"
-            x-small
-            icon
-            color="grey"
-            ><v-icon>mdi-close</v-icon></v-btn
-          >
-        </div>
-        <div class="d-flex justify-center">
-          <v-icon color="red">mdi-stop</v-icon>
-        </div>
-        <div class="my-4">
-          <h4 class="text-center">Something went wrong</h4>
-        </div>
-      </v-card>
-    </v-dialog>
   </div>
 </template>
 
@@ -219,21 +229,23 @@ export default {
       WishController.getWishDetail(this.$route.params.id)
         .then((data) => {
           this.wish = data.wish
-          let payload = {
-            pickup_latitude: this.wish.business.address.latitude,
-            pickup_longitude: this.wish.business.address.longitude,
-            delivery_latitude: this.wish.address.latitude,
-            delivery_longitude: this.wish.address.longitude,
-          }
-          OthersController.fetchFare(payload)
-            .then((data) => {
-              this.deliveryFee = data.delivery_price
-              console.log(this.wish)
-              console.log(this.deliveryFee)
-            })
-            .catch((err) => {
-              console.log(err)
-            })
+          this.deliveryFee = data.wish.business.deliveryFee
+
+          // let payload = {
+          //   pickup_latitude: this.wish.business.address.latitude,
+          //   pickup_longitude: this.wish.business.address.longitude,
+          //   delivery_latitude: this.wish.address.latitude,
+          //   delivery_longitude: this.wish.address.longitude,
+          // }
+          // OthersController.fetchFare(payload)
+          //   .then((data) => {
+          //     this.deliveryFee = data.delivery_price
+          //     console.log(this.wish)
+          //     console.log(this.deliveryFee)
+          //   })
+          //   .catch((err) => {
+          //     console.log(err)
+          //   })
         })
         .catch((err) => {
           console.log(err.response)
@@ -343,6 +355,8 @@ h4 {
 }
 .wish {
   background-color: #fff3db;
+  min-height: 100vh;
+  /* width: 100vw; */
 }
 img {
   width: 100%;
