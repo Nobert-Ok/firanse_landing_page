@@ -1,6 +1,6 @@
 <template>
           <v-btn
-            color="#FFA800"
+            color="black"
             large
             class="px-7 py-7 download-button"
             elevation="5"

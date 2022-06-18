@@ -1,8 +1,8 @@
 <template>
-        <v-btn color="#FFA800" large class="px-7 py-7 download-button" elevation="5">
+        <v-btn color="black" large class="px-7 py-7 download-button" elevation="5">
             <v-icon color="white" class="download-icon text--center">mdi-google-play</v-icon>
-            <span class="d-inline-block download-text1 text--center white--text" >
-                <small class="font-weight-light d-block text--center white--text">Get it on</small>
+            <span class="d-inline-block download-text1 text--center" >
+                <small class="font-weight-light d-block text--center">Get it on</small>
                 Google Play
             </span>
         </v-btn>    
@@ -14,7 +14,9 @@
 .download-button{
     width: 150px;
 }
-
+span,small{
+  color: white;
+}
 .download-text1{
     font-size: 12px;
     font-weight: 900;
