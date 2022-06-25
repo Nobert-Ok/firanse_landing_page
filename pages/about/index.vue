@@ -235,9 +235,9 @@ export default {
       drawer: false,
       cravetag: this.value,
       nonexistent: false,
-      text: "At Firanshe foods,we are commited to spreading love around the world"+
+      text: "At Firanshe foods,we are committed to spreading love around the world"+
             " and the way we see it, gifting food to our loved ones is one of the"+
-            " ways to do so. At Firanshefoods,we are commited to spreading love"+
+            " ways to do so. At Firanshefoods,we are committed to spreading love"+
             " around the world and the way we see it, gifting food to our loved"+
             " ones is one of the ways to do so.",
         readMore: false,
