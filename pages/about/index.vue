@@ -174,44 +174,7 @@
     <Downloadcard/>
 
     <!------------------------------------ Footer ------------------------------------------>
-    <footer class=" mt-10">
-      <v-row justify="center" dense no-gutters>
-        <v-col cols="12" md="10">
-          <v-row no-gutters dense class="mx-4 px-md-15 py-md-15">
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Company</h6>
-              <ul>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-              </ul>
-            </v-col>
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Follow us</h6>
-              <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="12" sm="3" class="my-4">
-              <h6>Other</h6>
-              <ul>
-                <li>FAQs</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="8" sm="3" class="my-10">
-              <Applebutton class="mb-5 header-button" />
-              <Googlebutton class="header-button" />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </footer>
+    <Footer/>
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>

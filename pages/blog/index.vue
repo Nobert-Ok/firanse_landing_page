@@ -73,9 +73,6 @@
       <p class="aboutus3" align="center"> Latest Posts</p>
       <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
         <v-col cols="12" sm="6" md="3" v-for="item in this.blogInfo" :key="item.guid" >
-              <!-- <p>{{trimdetails(item.description)}}</p>
-              <img :src="item.thumbnail" alt="">
-              <p>{{getHumanDate(item.pubDate)}}</p> -->
             <v-card class="mx-auto blogcard">
                 <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
                 <v-card-title class="title">{{item.title}}</v-card-title>
@@ -91,69 +88,31 @@
                   </v-btn>
                   </a>
                 </v-card-actions>
-
-
                 <p class="date">
                   <v-icon>
                     mdi-calendar
                   </v-icon>
                   {{getHumanDate(item.pubDate)}}
                 </p>
-
             </v-card>
         </v-col>
       </v-row>
       
       <div v-else justify="center" align="center">
-        <v-progress-circular
+        <h5 class="black--text">No stories at the moment</h5>
+        <!-- <v-progress-circular
         indeterminate
         color="amber"
-      ></v-progress-circular>
+      ></v-progress-circular> -->
       </div>
     </div>
 
 
-    <!----------------------------------Download card--------------------------------------------------------------->
+    <!----------------------------------Download card -------------------------------------->
     <Downloadcard/>
 
-    <footer class="mt-10">
-      <v-row justify="center" dense no-gutters>
-        <v-col cols="12" md="10">
-          <v-row no-gutters dense class="mx-4 px-md-15 py-md-15">
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Company</h6>
-              <ul>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-              </ul>
-            </v-col>
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Follow us</h6>
-              <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="12" sm="3" class="my-4">
-              <h6>Other</h6>
-              <ul>
-                <li>FAQs</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="8" sm="3" class="my-10">
-              <Applebutton class="mb-5 header-button" />
-              <Googlebutton class="header-button" />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </footer>
+    <!------------------------------------ Footer ------------------------------------------>
+    <Footer/>
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -170,7 +129,8 @@ import Googlebutton from '~/components/Googlebutton.vue'
 import Nav from '~/components/Nav.vue'
 import moment from 'moment'
 import Downloadcard from "~/components/Downloadcard.vue";
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import '@mdi/font/css/materialdesignicons.css'
+import Footer from "~/components/Footer.vue"; // Ensure you are using css-loader
 
 
 export default {
@@ -202,7 +162,7 @@ export default {
   },
   async created() {
     try {
-      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`);
+      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@firansefood`);
       this.blogInfo = res.data.items;
       this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]];
       this.avtar = res.data.feed.image;
@@ -218,7 +178,8 @@ export default {
     Applebutton,
     Googlebutton,
     Nav,
-    Downloadcard
+    Downloadcard,
+    Footer
 },
 
   methods: {
