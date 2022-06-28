@@ -2,12 +2,7 @@
   <div class="body">
     <Nav />
     <v-row dense no-gutters align="center" justify="space-around">
-      <v-col
-        cols="11"
-        md="5"
-        class="first-head ml-sm-7 ml-sm-8"
-        justify="center"
-      >
+      <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" justify="center">
         <p class="black--text send">
           Spreading Love
           <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
@@ -29,13 +24,8 @@
           to view their food cravings.
         </p>
         <div class="custom-search">
-          <input
-            type="text"
-            class="custom-search-input"
-            placeholder="Enter Firanse Tag or Phone Number"
-            v-model="cravetag"
-            @keyup.enter="getvalue"
-          />
+          <input type="text" class="custom-search-input" placeholder="Enter Firanse Tag or Phone Number"
+            v-model="cravetag" @keyup.enter="getvalue" />
           <button class="custom-search-botton" type="submit" @click="getvalue">
             <v-icon large color="white">mdi-arrow-right</v-icon>
           </button>
@@ -55,20 +45,9 @@
       </v-col>
     </v-row>
     <!-------------------------------------- How it works -------------------------------------------->
-    <v-row
-      dense
-      no-gutters
-      align="center"
-      justify="center"
-      class="process px-sm-10 py-11"
-    >
+    <v-row dense no-gutters align="center" justify="center" class="process px-sm-10 py-11">
       <v-col cols="12" sm="6" align="center">
-        <img
-          class="girl-image"
-          align="center"
-          src="~assets/images/girlimage.png"
-          alt=""
-        />
+        <img class="girl-image" align="center" src="~assets/images/girlimage.png" alt="" />
       </v-col>
       <v-col cols="12" sm="6" align="center">
         <p class="white--text how-it-works mt-10">How it works</p>
@@ -94,43 +73,19 @@
             {{ this.text }}
           </p>
 
-          <v-btn
-            @click="showMore"
-            v-if="!readMore"
-            color="#FA710D"
-            large
-            class="aboutus-button px-7 py-7 mb-10"
-          >
-            View More</v-btn
-          >
-          <v-btn
-            @click="showLess"
-            v-if="readMore"
-            color="#FA710D"
-            large
-            class="aboutus-button px-7 py-7 mb-10"
-          >
-            View Less</v-btn
-          >
+          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+            View More</v-btn>
+          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+            View Less</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
-          <img
-            class="aboutus-image my-6"
-            src="~assets/images/about.png"
-            alt=""
-          />
+          <img class="aboutus-image my-6" src="~assets/images/about.png" alt="" />
         </v-col>
       </v-row>
     </div>
 
     <!-------------------------------------- Partners -------------------------------------------->
-    <v-row
-      dense
-      no-gutters
-      align="center"
-      justify="space-around"
-      class="partners"
-    >
+    <v-row dense no-gutters align="center" justify="space-around" class="partners">
       <v-col cols="12">
         <p class="white--text text-center favorite">
           These and many more are now closer to you!
@@ -173,11 +128,7 @@
             </v-col>
             <v-col cols="12" align="center">
               <div class="custom-search">
-                <input
-                  type="text"
-                  class="custom-search-input"
-                  placeholder="Enter your email"
-                />
+                <input type="text" class="custom-search-input" placeholder="Enter your email" />
                 <button class="custom-search-botton" type="submit">
                   <v-icon large color="white">mdi-arrow-right</v-icon>
                 </button>
@@ -188,11 +139,9 @@
       </v-card>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#342301"
-        fill-opacity="1"
-        d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      ></path>
+      <path fill="#342301" fill-opacity="1"
+        d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+      </path>
     </svg>
     <footer>
       <v-row justify="center" dense no-gutters>
@@ -255,8 +204,8 @@ export default {
       cravetag: this.value,
       nonexistent: false,
       text:
-        "At FiranseFood, we are commited to spreading love and happiness."+
-        "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time."+
+        "At FiranseFood, we are commited to spreading love and happiness." +
+        "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time." +
         "These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
 
       readMore: false,
@@ -318,9 +267,11 @@ export default {
   border-radius: 0;
   cursor: pointer;
 }
+
 .first-head {
   margin-top: 5px;
 }
+
 header {
   width: 100%;
 }
@@ -330,12 +281,15 @@ header {
   overflow: hidden;
   font-family: 'Poppins' !important;
 }
+
 .full {
   height: 100vh;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h6 {
   font-family: 'Poppins' !important;
   margin: 10px 0;
@@ -343,35 +297,41 @@ h6 {
   text-decoration: underline;
   color: white;
 }
+
 ul {
   list-style: none;
   list-style-type: none;
   padding: 0;
+
   li {
     font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
+
     .nuxtlink {
       color: #000;
       text-decoration: none;
     }
   }
 }
+
 .nuxtlink:hover {
   color: $primary;
 }
 
 .nuxt-link-exact-active {
-  color: $primary !important;
+  color: $primary  !important;
 }
 
 p {
   line-height: 45px;
 }
+
 .maindish {
   width: 90%;
   object-fit: fill;
 }
+
 .girl-image {
   width: 90%;
 }
@@ -391,7 +351,9 @@ p {
 address {
   font-style: normal;
 }
+
 .logo {
+
   /* width: 50%; */
   &__text {
     width: 55%;
@@ -404,6 +366,7 @@ select:focus {
   outline: none;
   -webkit-appearance: none;
 }
+
 input {
   background-color: white;
   height: 60px;
@@ -423,6 +386,7 @@ input {
   font-weight: 700;
   color: #342301 !important;
 }
+
 .share {
   font-size: 17px;
   line-height: 20px;
@@ -431,6 +395,7 @@ input {
   font-family: 'Poppins' !important;
   letter-spacing: 1px;
 }
+
 .cravetag {
   /* font-style: italic; */
   font-weight: 600;
@@ -517,6 +482,7 @@ input {
   background-color: #ffe580;
   padding: 30px;
 }
+
 .card {
   padding: 50px 0;
   // height: 600px !important;
@@ -662,10 +628,12 @@ svg {
   .subcribe-newsletter {
     font-size: 24px;
   }
+
   .download-icon {
     font-size: 25px !important;
     margin-left: 2px !important;
   }
+
   .mdi-36px {
     font-size: 15px !important;
   }
@@ -676,11 +644,13 @@ svg {
   header {
     margin-bottom: 8%;
   }
+
   input {
     width: 70%;
     height: 85px;
     font-size: 25px;
   }
+
   .button {
     padding: 35px 20px;
     margin-left: -15%;
@@ -700,19 +670,23 @@ svg {
     border-radius: 10px;
     width: 250px;
   }
+
   .grid-image {
     height: 250px;
   }
+
   .send {
     font-size: 65px;
     line-height: 62px;
     font-weight: 500;
   }
+
   .share {
     font-size: 20px;
     line-height: 32px;
     font-weight: 500;
   }
+
   .cravetag {
     font-size: 20px;
   }
@@ -722,6 +696,7 @@ svg {
     margin-top: -25%;
     margin-bottom: 20%;
   }
+
   .download-text3 {
     font-size: 11px;
   }
@@ -751,6 +726,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 70px;
     font-size: 15px;
@@ -784,6 +760,7 @@ svg {
     margin-bottom: 5%;
     letter-spacing: 1px;
   }
+
   .grid-image2 {
     width: 40% !important;
   }
@@ -796,6 +773,7 @@ svg {
   .drinkspill-img {
     width: 35%;
   }
+
   //  .header-button{
   //   width: 100% !important;
   // }
@@ -803,21 +781,25 @@ svg {
     width: 70% !important;
   }
 }
+
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
   header {
     background-color: white;
   }
+
   input {
     height: 90px;
     width: 600px;
     font-size: 25px;
   }
+
   .button {
     padding: 40px 20px;
     margin-left: -22%;
     width: 95px;
   }
+
   .subcribe-newsletter {
     font-size: 35px;
   }
@@ -837,9 +819,11 @@ svg {
     line-height: 32px;
     font-weight: 500;
   }
+
   .cravetag {
     font-size: 20px;
   }
+
   .vcard {
     max-width: 75%;
     margin-top: -30%;
@@ -848,9 +832,11 @@ svg {
   .subscribe-card {
     max-width: 50%;
   }
+
   .download-text3 {
     font-size: 12px;
   }
+
   .download-text5 {
     font-size: 45px;
     margin-top: 30px;
@@ -868,6 +854,7 @@ svg {
   .download-icon {
     font-size: 40px;
   }
+
   .custom-search-botton {
     width: 100px;
     height: 55px;
@@ -875,6 +862,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 75px;
     font-size: 20px;
@@ -924,15 +912,18 @@ svg {
   .header-button {
     width: 90% !important;
   }
+
   .header-button1 {
     width: 60% !important;
   }
 }
+
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
   header {
     background-color: white;
   }
+
   .grid-image {
     width: 100%;
     border-radius: 10px;
@@ -940,6 +931,7 @@ svg {
     height: 200px;
     margin: 5px;
   }
+
   .grid-image2 {
     width: 50% !important;
   }
@@ -952,14 +944,17 @@ svg {
     width: 150px;
     margin-bottom: -60px;
   }
+
   .subcribe-newsletter {
     font-size: 35px;
   }
+
   .download {
     background-color: black;
     border-radius: 10px;
     width: 250px;
   }
+
   .send {
     font-size: 60px;
     line-height: 64px;
@@ -981,17 +976,21 @@ svg {
   .cravetag {
     font-size: 27px;
   }
+
   .breaker {
     margin-top: 20px !important;
   }
+
   .mt-n7 {
     margin-top: -15px !important;
   }
+
   .vcard {
     max-width: 75%;
     height: 400px !important;
     margin-top: -400px;
   }
+
   .subscribe-card {
     max-width: 55%;
     padding: 50px;
@@ -1004,6 +1003,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 70px;
     font-size: 20px;

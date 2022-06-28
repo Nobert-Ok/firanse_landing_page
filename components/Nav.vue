@@ -1,4 +1,6 @@
 <template>
+  <!-- <v-row justify="center"> -->
+  <!-- <v-col cols="12" lg="9"> -->
   <div class="nav">
     <header class="d-flex justify-space-between align-center mx-auto">
       <div class="d-flex align-center my-3 ml-sm-16">
@@ -25,68 +27,52 @@
               </nuxt-link>
             </li>
             <li class="mx-10">
-              <v-btn
-                color="#FFA800"
-                elevation="4"
-                class="white--text text-none"
-                target="blank"
-                @click="gotoDashboard"
-                >Create Resturant</v-btn
-              >
+              <v-btn color="#FFA800" elevation="4" class="white--text text-none" target="blank" @click="gotoDashboard">
+                Create Resturant</v-btn>
             </li>
           </ul>
         </nav>
-        <v-btn
-          class="ml-2 text-none d-md-none"
-          color="primary"
-          icon
-          @click="drawer = true"
-          ><v-icon>mdi-menu</v-icon></v-btn
-        >
+        <v-btn class="ml-2 text-none d-md-none" color="primary" icon @click="drawer = true">
+          <v-icon>mdi-menu</v-icon>
+        </v-btn>
       </div>
     </header>
-    <v-row dense no-gutters align="center" justify="space-around">
-      <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
-        <v-btn color="#FFA800" icon class="float-right" @click="drawer = false"
-          ><v-icon>mdi-close</v-icon></v-btn
-        >
-        <div class="d-flex flex-column justify-center align-center full">
-          <div>
-            <nuxt-link to="/" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">Home</v-btn>
-            </nuxt-link>
-          </div>
-          <div>
-            <nuxt-link to="/about" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">About</v-btn>
-            </nuxt-link>
-          </div>
-          <div>
-            <nuxt-link to="/blog" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">Blog</v-btn>
-            </nuxt-link>
-          </div>
-          <div>
-            <nuxt-link to="/contact" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800"
-                >Contact</v-btn
-              >
-            </nuxt-link>
-          </div>
-          <div>
-            <v-btn
-              color="#FFA800"
-              elevation="4"
-              class="white--text text-none restaurant-button"
-              target="blank"
-              @click="gotoDashboard"
-              >Create a Resturant</v-btn
-            >
-          </div>
+    <!-- <v-row dense no-gutters align="center" justify="space-around"> -->
+    <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
+      <v-btn color="#FFA800" icon class="float-right" @click="drawer = false">
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+      <div class="d-flex flex-column justify-center align-center full">
+        <div>
+          <nuxt-link to="/" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">Home</v-btn>
+          </nuxt-link>
         </div>
-      </v-navigation-drawer>
-    </v-row>
+        <div>
+          <nuxt-link to="/about" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">About</v-btn>
+          </nuxt-link>
+        </div>
+        <div>
+          <nuxt-link to="/blog" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">Blog</v-btn>
+          </nuxt-link>
+        </div>
+        <div>
+          <nuxt-link to="/contact" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">Contact</v-btn>
+          </nuxt-link>
+        </div>
+        <div>
+          <v-btn color="#FFA800" elevation="4" class="white--text text-none restaurant-button" target="blank"
+            @click="gotoDashboard">Create a Resturant</v-btn>
+        </div>
+      </div>
+    </v-navigation-drawer>
+    <!-- </v-row> -->
   </div>
+  <!-- </v-col>
+  </v-row> -->
 </template>
 <script>
 import Applebutton from '~/components/Applebutton.vue'
@@ -133,6 +119,7 @@ export default {
 .nav {
   margin: 0 auto;
 }
+
 .logo {
   width: 200px;
   /* height: 100%; */
@@ -140,9 +127,11 @@ export default {
   border-radius: 0;
   cursor: pointer;
 }
+
 .first-head {
   margin-top: 50px;
 }
+
 header {
   width: 100%;
 }
@@ -150,34 +139,40 @@ header {
 .full {
   height: 100vh;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h6 {
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
   color: white;
 }
+
 ul {
   list-style: none;
   list-style-type: none;
   padding: 0;
+
   li {
     margin: 10px 0;
     color: white;
+
     .nuxtlink {
       color: #000;
       text-decoration: none;
     }
   }
 }
+
 .nuxtlink:hover {
   color: $primary;
 }
 
 .nuxt-link-exact-active {
-  color: $primary !important;
+  color: $primary  !important;
 }
 
 .nuxtlink {

@@ -1,16 +1,21 @@
-FROM node:14
+   
+# base node image
+FROM node:10
 
 WORKDIR /usr/src/app
 
-COPY . ./
+ENV PORT 8080
+ENV HOST 0.0.0.0
 
-RUN npm install
+COPY package*.json ./
 
-EXPOSE 8080
+RUN npm install 
 
-ENV HOST=0.0.0.0
-ENV PORT=8080
+# Copy local nuxt code to the container
+COPY . .
 
+# Build production app
 RUN npm run build
 
-CMD [ "npm", "run", "start" ]
+# Start the service
+CMD npm start

@@ -66,7 +66,7 @@ export default {
 
   publicRuntimeConfig: {
     axios: {
-      browserBaseURL: 'https://firanse-functions.herokuapp.com/api'
+      browserBaseURL: 'https://api.firansefood.com/api'
     }
   },
 
@@ -115,7 +115,7 @@ export default {
   env: {
     MAP_API_KEY: "AIzaSyAkRCYqN9HQnj0Z5OIzCQ3E4sirgP246aw",
     FLUTTER_WAVE_SECRETE_KEY: "FLWSECK_TEST-de54ccfe7881e43fd9a90568b3d3ce87-X",
-    BASE_URL: 'https://firanse-functions.herokuapp.com/api',
+    BASE_URL: 'https://api.firansefood.com/api',
     MEDIUM_API: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoye',
   },
   server: {
