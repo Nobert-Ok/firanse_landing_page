@@ -1,29 +1,11 @@
 <template>
-<<<<<<< HEAD
-  <v-btn color="#FFA800" large class="px-7 py-7 download-button" elevation="5">
+  <v-btn color="black" large class="px-7 py-7 download-button" elevation="5">
     <v-icon color="white" class="download-icon mr-4">mdi-apple</v-icon>
     <span class="d-inline-block download-text1 white--text">
       <small class="font-weight-light d-block white--text">Download on</small>
       App Store
     </span>
   </v-btn>
-=======
-          <v-btn
-            color="black"
-            large
-            class="px-7 py-7 download-button"
-            elevation="5"
-          >
-            <v-icon color="white" class="download-icon mr-4"
-              >mdi-apple</v-icon
-            >
-            <span
-              class="d-inline-block download-text1 white--text">
-              <small class="font-weight-light d-block white--text">Download on</small>
-              App Store
-            </span>
-          </v-btn>
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
 </template>
 
 

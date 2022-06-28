@@ -1,14 +1,9 @@
 <template>
   <div class="body">
-    <Nav/>
+    <Nav />
     <v-row dense no-gutters align="center" justify="space-around">
 
-      <v-col
-        cols="11"
-        md="5"
-        class="first-head ml-sm-7 ml-sm-8"
-        justify="center"
-      >
+      <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" justify="center">
         <p class="black--text send">
           Contact
           <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
@@ -22,7 +17,7 @@
           </span>-->
           coming soon 🥘.
         </p>
-        
+
       </v-col>
       <v-col cols="12" md="5" class="my-8" align="center">
         <img class="maindish" src="~assets/images/maindish.png" alt="" />
@@ -30,7 +25,7 @@
     </v-row>
 
     <!------------------------------------ Footer ------------------------------------------>
-    <Footer/>
+    <Footer />
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -102,9 +97,11 @@ export default {
   border-radius: 0;
   cursor: pointer;
 }
+
 .first-head {
   margin-top: 50px;
 }
+
 header {
   width: 100%;
 }
@@ -113,37 +110,44 @@ header {
   position: relative;
   overflow: hidden;
 }
+
 .full {
   height: 100vh;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h6 {
   margin: 10px 0;
   font-size: 25px;
   text-decoration: underline;
   color: white;
 }
+
 ul {
   list-style: none;
   list-style-type: none;
   padding: 0;
+
   li {
     margin: 10px 0;
     color: white;
-    .nuxtlink{
+
+    .nuxtlink {
       color: #000;
       text-decoration: none;
     }
   }
 }
+
 .nuxtlink:hover {
   color: $primary;
 }
 
 .nuxt-link-exact-active {
-    color: $primary !important;
+  color: $primary  !important;
 }
 
 // .navbar-nav>.active>a {
@@ -153,10 +157,12 @@ ul {
 p {
   line-height: 45px;
 }
+
 .maindish {
   width: 90%;
   object-fit: fill;
 }
+
 .girl-image {
   width: 90%;
 }
@@ -176,7 +182,9 @@ p {
 address {
   font-style: normal;
 }
+
 .logo {
+
   /* width: 50%; */
   &__text {
     width: 55%;
@@ -189,6 +197,7 @@ select:focus {
   outline: none;
   -webkit-appearance: none;
 }
+
 input {
   background-color: white;
   height: 60px;
@@ -208,6 +217,7 @@ input {
   font-weight: 500;
   color: #342301 !important;
 }
+
 .share {
   font-size: 17px;
   line-height: 20px;
@@ -216,6 +226,7 @@ input {
   font-family: 'Poppins' !important;
   letter-spacing: 1px;
 }
+
 .cravetag {
   /* font-style: italic; */
   font-weight: 600;
@@ -299,6 +310,7 @@ input {
   background-color: #ffe580;
   padding: 30px;
 }
+
 .card {
   padding: 50px 0;
   // height: 600px !important;
@@ -438,16 +450,16 @@ svg {
 }
 
 @media only screen and (max-width: 350px) {
-  .vcard {
-    /* height: 335px !important; */
-  }
+
   .subcribe-newsletter {
     font-size: 24px;
   }
+
   .download-icon {
     font-size: 25px !important;
     margin-left: 2px !important;
   }
+
   .mdi-36px {
     font-size: 15px !important;
   }
@@ -458,11 +470,13 @@ svg {
   header {
     margin-bottom: 8%;
   }
+
   input {
     width: 70%;
     height: 85px;
     font-size: 25px;
   }
+
   .button {
     padding: 35px 20px;
     margin-left: -15%;
@@ -482,18 +496,22 @@ svg {
     border-radius: 10px;
     width: 250px;
   }
+
   .grid-image {
     height: 250px;
   }
+
   .send {
     font-size: 65px;
     line-height: 62px;
   }
+
   .share {
     font-size: 20px;
     line-height: 32px;
     font-weight: 500;
   }
+
   .cravetag {
     font-size: 20px;
   }
@@ -503,6 +521,7 @@ svg {
     margin-top: -25%;
     margin-bottom: 20%;
   }
+
   .download-text3 {
     font-size: 11px;
   }
@@ -532,6 +551,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 70px;
     font-size: 15px;
@@ -564,6 +584,7 @@ svg {
     margin-bottom: 5%;
     letter-spacing: 1px;
   }
+
   .grid-image2 {
     width: 40% !important;
   }
@@ -576,6 +597,7 @@ svg {
   .drinkspill-img {
     width: 35%;
   }
+
   //  .header-button{
   //   width: 100% !important;
   // }
@@ -583,21 +605,25 @@ svg {
     width: 70% !important;
   }
 }
+
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
   header {
     background-color: white;
   }
+
   input {
     height: 90px;
     width: 600px;
     font-size: 25px;
   }
+
   .button {
     padding: 40px 20px;
     margin-left: -22%;
     width: 95px;
   }
+
   .subcribe-newsletter {
     font-size: 35px;
   }
@@ -617,9 +643,11 @@ svg {
     line-height: 32px;
     font-weight: 500;
   }
+
   .cravetag {
     font-size: 20px;
   }
+
   .vcard {
     max-width: 75%;
     margin-top: -30%;
@@ -628,9 +656,11 @@ svg {
   .subscribe-card {
     max-width: 50%;
   }
+
   .download-text3 {
     font-size: 12px;
   }
+
   .download-text5 {
     font-size: 45px;
     margin-top: 30px;
@@ -648,6 +678,7 @@ svg {
   .download-icon {
     font-size: 40px;
   }
+
   .custom-search-botton {
     width: 100px;
     height: 55px;
@@ -655,6 +686,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 75px;
     font-size: 20px;
@@ -704,15 +736,18 @@ svg {
   .header-button {
     width: 90% !important;
   }
+
   .header-button1 {
     width: 60% !important;
   }
 }
+
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
   header {
     background-color: white;
   }
+
   .grid-image {
     width: 100%;
     border-radius: 10px;
@@ -720,6 +755,7 @@ svg {
     height: 200px;
     margin: 5px;
   }
+
   .grid-image2 {
     width: 50% !important;
   }
@@ -732,14 +768,17 @@ svg {
     width: 150px;
     margin-bottom: -60px;
   }
+
   .subcribe-newsletter {
     font-size: 35px;
   }
+
   .download {
     background-color: black;
     border-radius: 10px;
     width: 250px;
   }
+
   .send {
     font-size: 60px;
     line-height: 64px;
@@ -761,17 +800,21 @@ svg {
   .cravetag {
     font-size: 27px;
   }
+
   .breaker {
     margin-top: 20px !important;
   }
+
   .mt-n7 {
     margin-top: -15px !important;
   }
+
   .vcard {
     max-width: 75%;
     height: 400px !important;
     margin-top: -400px;
   }
+
   .subscribe-card {
     max-width: 55%;
     padding: 50px;
@@ -784,6 +827,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 70px;
     font-size: 20px;

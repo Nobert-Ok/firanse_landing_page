@@ -138,7 +138,6 @@
         </v-card-text>
       </v-card>
     </div>
-<<<<<<< HEAD
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#342301" fill-opacity="1"
         d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
@@ -182,17 +181,6 @@
         </v-col>
       </v-row>
     </footer>
-=======
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#342301"
-        fill-opacity="1"
-        d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      ></path>
-    </svg> -->
-    <Footer />
-    
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -243,7 +231,7 @@ export default {
     Downloadcard,
     Downloadcard,
     Footer
-},
+  },
 
   methods: {
     getvalue() {
