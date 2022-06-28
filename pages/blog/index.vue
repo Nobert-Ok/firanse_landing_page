@@ -69,6 +69,7 @@
 
     <!----------------------------------Blog cards--------------------------------------------------------------->
     <div class="blog">
+<<<<<<< HEAD
       <p class="aboutus3" align="center">Latest Posts</p>
       <v-row
         v-if="this.blogInfo && this.blogInfo.length > 0"
@@ -112,10 +113,38 @@
               {{ getHumanDate(item.pubDate) }}
             </p>
           </v-card>
+=======
+      <p class="aboutus3" align="center"> Latest Posts</p>
+      <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
+        <v-col cols="12" sm="6" md="3" v-for="item in this.blogInfo" :key="item.guid" >
+            <v-card class="mx-auto blogcard">
+                <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
+                <v-card-title class="title">{{item.title}}</v-card-title>
+                <v-card-text class="text--primary">
+                  <div>
+                    <p class="trimmeddetails">{{trimdetails(item.description.substring(0,200)+"....")}}</p>
+                  </div>
+                </v-card-text>
+                <v-card-actions>
+                  <a :href="item.link">
+                    <v-btn color="orange" class="readmore-button">
+                    Read More
+                  </v-btn>
+                  </a>
+                </v-card-actions>
+                <p class="date">
+                  <v-icon>
+                    mdi-calendar
+                  </v-icon>
+                  {{getHumanDate(item.pubDate)}}
+                </p>
+            </v-card>
+>>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
         </v-col>
       </v-row>
 
       <div v-else justify="center" align="center">
+<<<<<<< HEAD
         <v-progress-circular indeterminate color="amber"></v-progress-circular>
       </div>
     </div>
@@ -168,6 +197,22 @@
         </v-col>
       </v-row>
     </footer>
+=======
+        <h5 class="black--text">No stories at the moment</h5>
+        <!-- <v-progress-circular
+        indeterminate
+        color="amber"
+      ></v-progress-circular> -->
+      </div>
+    </div>
+
+
+    <!----------------------------------Download card -------------------------------------->
+    <Downloadcard/>
+
+    <!------------------------------------ Footer ------------------------------------------>
+    <Footer/>
+>>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -183,8 +228,14 @@ import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import Nav from '~/components/Nav.vue'
 import moment from 'moment'
+<<<<<<< HEAD
 import Downloadcard from '~/components/Downloadcard.vue'
 import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+=======
+import Downloadcard from "~/components/Downloadcard.vue";
+import '@mdi/font/css/materialdesignicons.css'
+import Footer from "~/components/Footer.vue"; // Ensure you are using css-loader
+>>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
 
 export default {
   name: 'index',
@@ -215,6 +266,7 @@ export default {
   },
   async created() {
     try {
+<<<<<<< HEAD
       const res = await axios.get(
         `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`
       )
@@ -224,6 +276,16 @@ export default {
       this.trimmeddetails = this.trimdetails(this.featuredpost.description)
       // console.log(this.blogInfo)
       // console.log(this.trimmeddetails)
+=======
+      const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@firansefood`);
+      this.blogInfo = res.data.items;
+      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]];
+      this.avtar = res.data.feed.image;
+      this.trimmeddetails = this.trimdetails(this.featuredpost.description);
+      console.log(this.blogInfo);
+      console.log(this.trimmeddetails);
+
+>>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
     } catch (e) {
       console.error(e)
     }
@@ -233,7 +295,12 @@ export default {
     Googlebutton,
     Nav,
     Downloadcard,
+<<<<<<< HEAD
   },
+=======
+    Footer
+},
+>>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
 
   methods: {
     gotoDashboard() {
