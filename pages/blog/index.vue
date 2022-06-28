@@ -3,12 +3,7 @@
     <Nav />
     <v-row>
       <v-col col="3" class="container">
-        <img
-          loading="lazy"
-          class="foodbowl"
-          src="~assets/images/foodbowl.png"
-          alt=""
-        />
+        <img loading="lazy" class="foodbowl" src="~assets/images/foodbowl.png" alt="" />
         <v-card elevation="7" class="mx-auto vcard">
           <v-card-text justify="center" class="sm-pt-10">
             <v-row dense no-gutters>
@@ -69,135 +64,35 @@
 
     <!----------------------------------Blog cards--------------------------------------------------------------->
     <div class="blog">
-<<<<<<< HEAD
-      <p class="aboutus3" align="center">Latest Posts</p>
-      <v-row
-        v-if="this.blogInfo && this.blogInfo.length > 0"
-        justify="space-around"
-      >
-        <v-col
-          cols="12"
-          sm="6"
-          md="3"
-          v-for="item in this.blogInfo"
-          :key="item.guid"
-        >
-          <!-- <p>{{trimdetails(item.description)}}</p>
-              <img :src="item.thumbnail" alt="">
-              <p>{{getHumanDate(item.pubDate)}}</p> -->
+      <p class="aboutus3" align="center"> Latest Posts</p>
+      <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
+        <v-col cols="12" sm="6" md="3" v-for="item in this.blogInfo" :key="item.guid">
           <v-card class="mx-auto blogcard">
-            <v-img
-              class="white--text"
-              :src="item.thumbnail"
-              alt="thumbnail"
-              loading="lazy"
-            ></v-img>
+            <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
             <v-card-title class="title">{{ item.title }}</v-card-title>
             <v-card-text class="text--primary">
               <div>
-                <p class="trimmeddetails">
-                  {{ trimdetails(item.description.substring(0, 200) + '....') }}
-                </p>
+                <p class="trimmeddetails">{{ trimdetails(item.description.substring(0, 200) + "....") }}</p>
               </div>
             </v-card-text>
             <v-card-actions>
               <a :href="item.link">
                 <v-btn color="orange" class="readmore-button">
-                  <span>Read More</span>
+                  Read More
                 </v-btn>
               </a>
             </v-card-actions>
-
             <p class="date">
-              <v-icon> mdi-calendar </v-icon>
+              <v-icon>
+                mdi-calendar
+              </v-icon>
               {{ getHumanDate(item.pubDate) }}
             </p>
           </v-card>
-=======
-      <p class="aboutus3" align="center"> Latest Posts</p>
-      <v-row v-if="this.blogInfo && this.blogInfo.length > 0" justify="space-around">
-        <v-col cols="12" sm="6" md="3" v-for="item in this.blogInfo" :key="item.guid" >
-            <v-card class="mx-auto blogcard">
-                <v-img class="white--text" :src="item.thumbnail" alt="thumbnail"></v-img>
-                <v-card-title class="title">{{item.title}}</v-card-title>
-                <v-card-text class="text--primary">
-                  <div>
-                    <p class="trimmeddetails">{{trimdetails(item.description.substring(0,200)+"....")}}</p>
-                  </div>
-                </v-card-text>
-                <v-card-actions>
-                  <a :href="item.link">
-                    <v-btn color="orange" class="readmore-button">
-                    Read More
-                  </v-btn>
-                  </a>
-                </v-card-actions>
-                <p class="date">
-                  <v-icon>
-                    mdi-calendar
-                  </v-icon>
-                  {{getHumanDate(item.pubDate)}}
-                </p>
-            </v-card>
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
         </v-col>
       </v-row>
 
       <div v-else justify="center" align="center">
-<<<<<<< HEAD
-        <v-progress-circular indeterminate color="amber"></v-progress-circular>
-      </div>
-    </div>
-
-    <!----------------------------------Download card--------------------------------------------------------------->
-    <Downloadcard />
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#342301"
-        fill-opacity="1"
-        d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-      ></path>
-    </svg>
-    <footer>
-      <v-row justify="center" dense no-gutters>
-        <v-col cols="12" md="10">
-          <v-row no-gutters dense class="mx-4">
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Company</h6>
-              <ul>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-              </ul>
-            </v-col>
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Follow us</h6>
-              <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="12" sm="3" class="my-4">
-              <h6>Other</h6>
-              <ul>
-                <li>FAQs</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="8" sm="3" class="my-10">
-              <Applebutton class="mb-5 header-button" />
-              <Googlebutton class="header-button" />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </footer>
-=======
         <h5 class="black--text">No stories at the moment</h5>
         <!-- <v-progress-circular
         indeterminate
@@ -208,11 +103,10 @@
 
 
     <!----------------------------------Download card -------------------------------------->
-    <Downloadcard/>
+    <Downloadcard />
 
     <!------------------------------------ Footer ------------------------------------------>
-    <Footer/>
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
+    <Footer />
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -228,14 +122,9 @@ import Applebutton from '~/components/Applebutton.vue'
 import Googlebutton from '~/components/Googlebutton.vue'
 import Nav from '~/components/Nav.vue'
 import moment from 'moment'
-<<<<<<< HEAD
-import Downloadcard from '~/components/Downloadcard.vue'
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
-=======
 import Downloadcard from "~/components/Downloadcard.vue";
 import '@mdi/font/css/materialdesignicons.css'
 import Footer from "~/components/Footer.vue"; // Ensure you are using css-loader
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
 
 export default {
   name: 'index',
@@ -266,17 +155,6 @@ export default {
   },
   async created() {
     try {
-<<<<<<< HEAD
-      const res = await axios.get(
-        `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoyeve`
-      )
-      this.blogInfo = res.data.items
-      this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]]
-      this.avtar = res.data.feed.image
-      this.trimmeddetails = this.trimdetails(this.featuredpost.description)
-      // console.log(this.blogInfo)
-      // console.log(this.trimmeddetails)
-=======
       const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@firansefood`);
       this.blogInfo = res.data.items;
       this.featuredpost = this.blogInfo[Object.keys(this.blogInfo)[0]];
@@ -285,7 +163,6 @@ export default {
       console.log(this.blogInfo);
       console.log(this.trimmeddetails);
 
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
     } catch (e) {
       console.error(e)
     }
@@ -295,12 +172,8 @@ export default {
     Googlebutton,
     Nav,
     Downloadcard,
-<<<<<<< HEAD
-  },
-=======
     Footer
-},
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
+  },
 
   methods: {
     gotoDashboard() {
@@ -323,6 +196,7 @@ export default {
   position: relative;
   overflow: hidden;
 }
+
 h6 {
   font-family: 'Poppins' !important;
   margin: 10px 0;
@@ -330,35 +204,41 @@ h6 {
   text-decoration: underline;
   color: white;
 }
+
 ul {
   list-style: none;
   list-style-type: none;
   padding: 0;
+
   li {
     font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
+
     .nuxtlink {
       color: #000;
       text-decoration: none;
     }
   }
 }
+
 .nuxtlink:hover {
   color: $primary;
 }
 
 .nuxt-link-exact-active {
-  color: $primary !important;
+  color: $primary  !important;
 }
 
 p {
   line-height: 45px;
 }
+
 .maindish {
   width: 90%;
   object-fit: fill;
 }
+
 .girl-image {
   width: 90%;
 }
@@ -395,6 +275,7 @@ span {
   max-width: 350px;
   max-height: 700px;
 }
+
 .trimmeddetails {
   font-family: 'Poppins' !important;
   line-height: 20px !important;
@@ -438,6 +319,7 @@ a {
   font-family: 'Poppins' !important;
   text-decoration: none;
 }
+
 // ----------------Download Card-----------------
 
 .vcard {
@@ -447,6 +329,7 @@ a {
   margin-top: -100px;
   margin-bottom: 5rem;
 }
+
 .download-button-card {
   width: 100% !important;
 }
@@ -572,6 +455,7 @@ svg {
   .download-icon {
     font-size: 30px;
   }
+
   // ----------------Blog Card-----------------
   .aboutus3 {
     color: #342301 !important;
@@ -582,6 +466,7 @@ svg {
     line-height: 50px;
   }
 }
+
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
   .vcard {
@@ -592,9 +477,11 @@ svg {
   .subscribe-card {
     max-width: 50%;
   }
+
   .download-text3 {
     font-size: 12px;
   }
+
   .download-text5 {
     font-size: 45px;
     margin-top: 30px;
@@ -612,6 +499,7 @@ svg {
   .download-icon {
     font-size: 40px;
   }
+
   // ----------------Blog Card-----------------
   .aboutus3 {
     color: #342301 !important;
@@ -621,9 +509,11 @@ svg {
     font-size: 49px;
     line-height: 50px;
   }
+
   .blogcard {
     max-width: 400px !important;
   }
+
   .trimmeddetails {
     line-height: 25px !important;
     font-size: 15px;
@@ -646,6 +536,7 @@ svg {
     font-size: 15px;
   }
 }
+
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
   .vcard {

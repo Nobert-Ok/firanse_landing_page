@@ -14,15 +14,10 @@
           </p>
 
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            Download Whitepaper</v-btn
-          >
+            Download Whitepaper</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="last">
-          <img
-            class="aboutus-image my-6"
-            src="~assets/images/packedpics.png"
-            alt=""
-          />
+          <img class="aboutus-image my-6" src="~assets/images/packedpics.png" alt="" />
         </v-col>
       </v-row>
     </div>
@@ -32,12 +27,7 @@
         <v-col cols="12" class="">
           <h3 class="aboutus3">Our Story</h3>
           <span>
-            <img
-              class="loveimage"
-              src="~/assets/images/Vector.png"
-              alt=""
-              srcset=""
-            />
+            <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="" />
           </span>
         </v-col>
         <v-col cols="12" sm="6" justify="center">
@@ -50,15 +40,10 @@
           </p>
 
           <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            Download PDF</v-btn
-          >
+            Download PDF</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="last">
-          <img
-            class="aboutus-image my-6"
-            src="~assets/images/maindish.png"
-            alt=""
-          />
+          <img class="aboutus-image my-6" src="~assets/images/maindish.png" alt="" />
         </v-col>
       </v-row>
 
@@ -128,12 +113,7 @@
         <v-col cols="12">
           <h3 class="aboutus3">Join our Team</h3>
           <span>
-            <img
-              class="loveimage"
-              src="~/assets/images/Vector.png"
-              alt=""
-              srcset=""
-            />
+            <img class="loveimage" src="~/assets/images/Vector.png" alt="" srcset="" />
           </span>
           <p class="black--text pro-commitment">
             Would you love to part of our team? Check out available roles
@@ -158,21 +138,11 @@
             by the love & happiness from delicious food.
           </p>
 
-          <v-btn
-            color="#FA710D"
-            large
-            class="aboutus-button px-7 py-7 mb-10"
-            @click="gotoDashboard"
-          >
-            Create Restaurant</v-btn
-          >
+          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" @click="gotoDashboard">
+            Create Restaurant</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
-          <img
-            class="aboutus-image my-6"
-            src="~assets/images/e-restuarant.png"
-            alt=""
-          />
+          <img class="aboutus-image my-6" src="~assets/images/e-restuarant.png" alt="" />
         </v-col>
       </v-row>
     </div>
@@ -181,7 +151,7 @@
     <Downloadcard />
 
     <!------------------------------------ Footer ------------------------------------------>
-    <Footer/>
+    <Footer />
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -269,9 +239,11 @@ export default {
   border-radius: 0;
   cursor: pointer;
 }
+
 .first-head {
   margin-top: 50px;
 }
+
 header {
   width: 100%;
 }
@@ -281,12 +253,15 @@ header {
   overflow: hidden;
   font-family: 'Poppins' !important;
 }
+
 .full {
   height: 100vh;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h6 {
   font-family: 'Poppins' !important;
   margin: 10px 0;
@@ -294,26 +269,30 @@ h6 {
   text-decoration: underline;
   color: white;
 }
+
 ul {
   list-style: none;
   list-style-type: none;
   padding: 0;
+
   li {
     font-family: 'Poppins' !important;
     margin: 10px 0;
     color: white;
+
     .nuxtlink {
       color: #000;
       text-decoration: none;
     }
   }
 }
+
 .nuxtlink:hover {
   color: $primary;
 }
 
 .nuxt-link-exact-active {
-  color: $primary !important;
+  color: $primary  !important;
 }
 
 p {
@@ -327,7 +306,9 @@ p {
 address {
   font-style: normal;
 }
+
 .logo {
+
   /* width: 50%; */
   &__text {
     width: 55%;
@@ -339,11 +320,7 @@ address {
 .aboutus {
   position: relative;
   padding: 20px;
-<<<<<<< HEAD
-  background-image: url('~/assets/images/emojis.png');
-=======
   background-image: url("~/assets/images/emojis.png");
->>>>>>> a582c6d759828cb5274a104f54f9d124036bab8d
   background-size: cover;
 }
 
@@ -408,6 +385,7 @@ address {
   margin-top: -1000px;
   margin-left: 100px;
 }
+
 // -------------------------------------------------------------------
 .grid-image2 {
   width: 110% !important;
@@ -530,17 +508,21 @@ svg {
 .header-button1 {
   width: 100% !important;
 }
+
 @media only screen and (max-width: 416px) {
   .subcribe-newsletter {
     font-size: 24px;
   }
+
   .download-icon {
     font-size: 25px !important;
     margin-left: 2px !important;
   }
+
   .mdi-36px {
     font-size: 15px !important;
   }
+
   .grid-image2 {
     width: 100% !important;
   }
@@ -549,6 +531,7 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
+
   .name {
     font-size: 0.5rem;
     margin-top: -30% !important;
@@ -558,19 +541,24 @@ svg {
     font-size: 0.5rem;
     margin-top: -65% !important;
   }
+
   //   ---------------------------------
 }
+
 @media only screen and (max-width: 390px) {
   .subcribe-newsletter {
     font-size: 24px;
   }
+
   .download-icon {
     font-size: 25px !important;
     margin-left: 2px !important;
   }
+
   .mdi-36px {
     font-size: 15px !important;
   }
+
   .grid-image2 {
     width: 100% !important;
   }
@@ -579,6 +567,7 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
+
   .name {
     font-size: 0.4rem;
     margin-top: -30% !important;
@@ -588,6 +577,7 @@ svg {
     font-size: 0.4rem;
     margin-top: -75% !important;
   }
+
   //   ---------------------------------
 }
 
@@ -596,6 +586,7 @@ svg {
   header {
     margin-bottom: 8%;
   }
+
   .button {
     padding: 35px 20px;
     margin-left: -15%;
@@ -607,6 +598,7 @@ svg {
     margin-top: -25%;
     margin-bottom: 20%;
   }
+
   .download-text3 {
     font-size: 11px;
   }
@@ -631,6 +623,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 70px;
     font-size: 15px;
@@ -639,9 +632,11 @@ svg {
   .aboutus {
     margin: 40px;
   }
+
   .aboutus1 {
     margin: 40px;
   }
+
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
@@ -676,10 +671,12 @@ svg {
     margin-bottom: 5%;
     letter-spacing: 1px;
   }
+
   //   ---------------------------------
   .grid-image2 {
     width: 100% !important;
   }
+
   .name {
     font-size: 12px;
     margin-top: -8% !important;
@@ -689,6 +686,7 @@ svg {
     font-size: 12px;
     margin-top: -20% !important;
   }
+
   //   ---------------------------------
 
   .cheese-img {
@@ -704,6 +702,7 @@ svg {
     width: 70% !important;
   }
 }
+
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
   header {
@@ -714,6 +713,7 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
+
   .name {
     font-size: 15px;
     margin-top: -4% !important;
@@ -723,6 +723,7 @@ svg {
     font-size: 15px;
     margin-top: -17% !important;
   }
+
   //   ---------------------------------
 
   .download {
@@ -740,9 +741,11 @@ svg {
     line-height: 32px;
     font-weight: 500;
   }
+
   .cravetag {
     font-size: 20px;
   }
+
   .vcard {
     max-width: 75%;
     margin-top: -30%;
@@ -751,9 +754,11 @@ svg {
   .subscribe-card {
     max-width: 50%;
   }
+
   .download-text3 {
     font-size: 12px;
   }
+
   .download-text5 {
     font-size: 45px;
     margin-top: 30px;
@@ -771,6 +776,7 @@ svg {
   .download-icon {
     font-size: 40px;
   }
+
   .custom-search-botton {
     width: 100px;
     height: 55px;
@@ -778,6 +784,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 75px;
     font-size: 20px;
@@ -799,6 +806,7 @@ svg {
   .ourstory {
     padding: 50px 80px;
   }
+
   .loveimage {
     width: 10%;
     z-index: -1;
@@ -830,10 +838,12 @@ svg {
   .header-button {
     width: 90% !important;
   }
+
   .header-button1 {
     width: 60% !important;
   }
 }
+
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
   header {
@@ -844,6 +854,7 @@ svg {
   .grid-image2 {
     width: 100% !important;
   }
+
   .name {
     font-size: 15px;
     margin-top: -4% !important;
@@ -853,6 +864,7 @@ svg {
     font-size: 15px;
     margin-top: -17% !important;
   }
+
   //   ---------------------------------
 
   .col-3 {
@@ -867,14 +879,17 @@ svg {
     width: 150px;
     margin-bottom: -60px;
   }
+
   .subcribe-newsletter {
     font-size: 35px;
   }
+
   .download {
     background-color: black;
     border-radius: 10px;
     width: 250px;
   }
+
   .send {
     font-size: 60px;
     line-height: 64px;
@@ -896,17 +911,21 @@ svg {
   .cravetag {
     font-size: 27px;
   }
+
   .breaker {
     margin-top: 20px !important;
   }
+
   .mt-n7 {
     margin-top: -15px !important;
   }
+
   .vcard {
     max-width: 75%;
     height: 400px !important;
     margin-top: -400px;
   }
+
   .subscribe-card {
     max-width: 55%;
     padding: 50px;
@@ -919,6 +938,7 @@ svg {
     top: 10px;
     bottom: 3px;
   }
+
   .custom-search-input {
     height: 70px;
     font-size: 20px;
@@ -936,9 +956,11 @@ svg {
   .ourstory {
     padding: 100px 200px;
   }
+
   .erestuarant {
     padding: 15%;
   }
+
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
