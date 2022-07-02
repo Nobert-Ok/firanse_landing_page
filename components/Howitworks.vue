@@ -193,11 +193,9 @@
 
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
-    .steps {
-    border-radius: 20px;
+.steps {
     font-size: 12.5px !important;
     line-height: 20px ;
-    padding: 10px 10px !important;
 }
 .number1 {
   left: 15%;
@@ -242,8 +240,31 @@
 }
 
 /*lg*/
-@media only screen and (min-width: 1264px) and (max-width: 1904px) {
-
+@media only screen and (min-width: 1264px) {
+.steps {
+    border-radius: 25px;
+    font-size: 13px !important;
+    line-height: 20px ;
+    padding: 20px 20px !important;
+}
+.number2 {
+  right: 13%;
+  top: 30%;
+  bottom: 3px;
+  width: 35px;
+  height: 35px;
+  font-size: 15px !important;
+  padding: 3px 0px !important;
+}
+.number4 {
+  right: 13%;
+  top: 80%;
+  bottom: 3px;
+  width: 35px;
+  height: 35px;
+  font-size: 15px !important;
+  padding: 3px 0px !important;
+}
 }
 
 

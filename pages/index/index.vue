@@ -877,6 +877,10 @@ svg {
     margin: 5px;
   }
 
+  .girl-image{
+    width: 75%;
+  }
+
   .grid-image2 {
     width: 50% !important;
   }
