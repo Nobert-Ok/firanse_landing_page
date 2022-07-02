@@ -877,6 +877,7 @@ svg {
     margin: 5px;
   }
 
+
   .girl-image{
     width: 75%;
   }
