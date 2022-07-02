@@ -24,6 +24,7 @@
     "pdfjs-dist": "^2.14.305",
     "uuid": "^8.3.2",
     "validatorjs": "^3.22.1",
+    "vue-fixed-header": "^3.2.15",
     "vue-pdf": "^4.3.0",
     "vue-star-rating": "^1.7.0",
     "vuetify": "^2.5.5"

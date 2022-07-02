@@ -13,8 +13,9 @@
             favourite food.
           </p>
 
-          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
-            Download Whitepaper</v-btn>
+          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" onclick="window.open('https://drive.google.com/file/d/19ltXY_zMWnVPu80MOgt0F9sjZlPW3IHm/view')">
+            Download Whitepaper
+          </v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="last">
           <img class="aboutus-image my-6" src="~assets/images/packedpics.png" alt="" />

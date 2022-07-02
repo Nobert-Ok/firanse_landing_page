@@ -3,23 +3,13 @@
     <Nav />
     <v-row dense no-gutters align="center" justify="space-around">
       <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" justify="center">
-        <p class="black--text send">
-          Spreading Love
-          <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
-          <small class="d-block text--center"
-              ><img
-                class="love mx-n14"
-                src="~assets/images/transparent-valentine.png"
-                alt=""
-            /></small> 
-            love
-          </span>-->
-          anywhere, anytime with Food.
+        <p class="black--text send text-center text-sm-left">
+          Spreading Love anywhere, anytime with Food.
         </p>
         <!-- <p class="share">
           Satisfy the food of your loved ones, anytime and anywhere.
         </p> -->
-        <p class="share">
+        <p class="share text-center text-sm-left">
           Enter your friend's <span class="cravetag">firanse_cravetag</span>
           to view their food cravings.
         </p>
@@ -46,24 +36,21 @@
     </v-row>
     <!-------------------------------------- How it works -------------------------------------------->
     <v-row dense no-gutters align="center" justify="center" class="process px-sm-10 py-11">
-      <v-col cols="12" sm="6" align="center">
+      <v-col cols="12" md="6" align="center">
         <img class="girl-image" align="center" src="~assets/images/girlimage.png" alt="" />
       </v-col>
-      <v-col cols="12" sm="6" align="center">
+      <v-col cols="12" md="6" align="center">
         <p class="white--text how-it-works mt-10">How it works</p>
-        <img class="grid-image1" src="~assets/images/howitworks.png" alt="" />
+        <HowitworksVue/>
       </v-col>
     </v-row>
 
     <!-------------------------------------- About Us -------------------------------------------->
     <div class="aboutus">
       <v-row dense no-gutters align="center" justify="center">
-        <v-col cols="12">
-          <h3 class="aboutus3">About Us</h3>
-        </v-col>
         <v-col cols="12" sm="6" justify="center">
-          <p class="black--text commitment">
-            Our commitment is to the love we share and the food you eat.
+          <p class="black--text commitment text-md-h4">
+            <span class="font-weight-black text-h3">“</span>Our commitment is to the love we share and the food you eat.
           </p>
           <p class="black--text pro-commitment" v-if="!readMore">
             {{ this.text.substring(0, 170) + '...' }}
@@ -72,10 +59,11 @@
           <p class="black--text pro-commitment" v-if="readMore">
             {{ this.text }}
           </p>
+          
 
-          <v-btn @click="showMore" v-if="!readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn @click="showMore" outlined v-if="!readMore" color="#FFA800" large class="aboutus-button px-7 py-7 mb-10">
             View More</v-btn>
-          <v-btn @click="showLess" v-if="readMore" color="#FA710D" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn @click="showLess" outlined v-if="readMore" color="#FFA800" large class="aboutus-button px-7 py-7 mb-10">
             View Less</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
@@ -121,7 +109,7 @@
                   Subscribe to Our Newsletter
                 </p>
                 <p class="black--text subscribe-text">
-                  To get more information about Firanse Food, enter your email
+                  To get more information about FiranseFood, enter your email
                   to subscribe to our newsletter.
                 </p>
               </v-card-text>
@@ -138,49 +126,7 @@
         </v-card-text>
       </v-card>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#342301" fill-opacity="1"
-        d="M0,256L80,234.7C160,213,320,171,480,176C640,181,800,235,960,245.3C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-      </path>
-    </svg>
-    <footer>
-      <v-row justify="center" dense no-gutters>
-        <v-col cols="12" md="10">
-          <v-row no-gutters dense class="mx-4">
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Company</h6>
-              <ul>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Contact Us</li>
-              </ul>
-            </v-col>
-            <v-col cols="6" sm="3" class="my-4">
-              <h6>Follow us</h6>
-              <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Instagram</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="12" sm="3" class="my-4">
-              <h6>Other</h6>
-              <ul>
-                <li>FAQs</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </v-col>
-
-            <v-col cols="8" sm="3" class="my-10">
-              <Applebutton class="mb-5 header-button" />
-              <Googlebutton class="header-button" />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </footer>
+    <Footer/>
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -197,6 +143,7 @@ import Nav from '~/components/Nav.vue'
 import { UserController } from '@/modules/user'
 import Downloadcard from '~/components/Downloadcard.vue'
 import Footer from '~/components/Footer.vue'
+import HowitworksVue from '~/components/Howitworks.vue'
 export default {
   name: 'index',
   data() {
@@ -230,7 +177,8 @@ export default {
     Nav,
     Downloadcard,
     Downloadcard,
-    Footer
+    Footer,
+    HowitworksVue
   },
 
   methods: {
@@ -347,7 +295,7 @@ p {
 }
 
 .process {
-  background-color: #ffe580;
+  background-color: #FFF6E5;
 }
 
 address {
@@ -443,7 +391,6 @@ input {
 }
 
 .aboutus-button {
-  color: white !important;
   height: 50px !important;
   width: 45%;
   text-transform: capitalize;
@@ -451,7 +398,6 @@ input {
   font-weight: 900;
   font-family: 'Poppins' !important;
   letter-spacing: 2px;
-  background-color: #ffa800 !important;
 }
 
 .aboutus3 {
@@ -481,7 +427,7 @@ input {
 // -------------------------------------------------------------------
 
 .partners {
-  background-color: #ffe580;
+  background-color: #FFF6E5;
   padding: 30px;
 }
 
@@ -499,7 +445,7 @@ input {
 
 .subscribe-card {
   max-width: 90%;
-  background-color: #ffe580 !important;
+  background-color: #FFF6E5 !important;
   border-radius: 20px !important;
   padding: 15px;
   margin-top: 10%;
@@ -590,12 +536,10 @@ svg {
 
 .custom-search-input {
   font-family: 'Poppins' !important;
-
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
   line-height: 1;
-  box-sizing: border-box;
   outline: none;
   font-size: 15px;
 }
@@ -612,10 +556,8 @@ svg {
   margin: 0;
   padding: 0 10px;
   border-radius: 10px;
-  z-index: 2;
   width: 59px;
   height: 45px;
-  box-shadow: 5px 5px 7px #a4a4a4;
 }
 
 .header-button {
@@ -736,7 +678,7 @@ svg {
   }
 
   .aboutus {
-    margin: 40px;
+    margin: 30px;
   }
 
   .aboutus3 {
@@ -812,7 +754,7 @@ svg {
   }
 
   .send {
-    font-size: 45px;
+    font-size: 40px;
     line-height: 50px;
     font-weight: 700;
   }
@@ -859,20 +801,20 @@ svg {
   }
 
   .custom-search-botton {
-    width: 100px;
-    height: 55px;
-    right: 9px;
-    top: 10px;
+    width: 80px;
+    height: 45px;
+    right: 10px;
+    top: 15px;
     bottom: 3px;
   }
 
   .custom-search-input {
     height: 75px;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .aboutus {
-    margin: 50px 80px;
+    margin: 40px 70px;
   }
 
   .aboutus3 {
@@ -1014,7 +956,7 @@ svg {
   }
 
   .aboutus {
-    margin: 100px 200px;
+    margin: 120px 180px;
   }
 
   .aboutus3 {
