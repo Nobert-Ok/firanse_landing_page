@@ -142,7 +142,7 @@ export default {
 }
 .nav {
   margin: 0 auto;
-  margin-bottom: 10%;
+  margin-bottom: 6%;
 }
 
 header{
