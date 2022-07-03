@@ -6,15 +6,6 @@
       <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" justify="center">
         <p class="black--text send">
           Contact
-          <!-- <span class="mt-sm-n16 send d-inline-block text-center black--text">
-          <small class="d-block text--center"
-              ><img
-                class="love mx-n14"
-                src="~assets/images/transparent-valentine.png"
-                alt=""
-            /></small> 
-            love
-          </span>-->
           coming soon 🥘.
         </p>
 
@@ -467,170 +458,19 @@ svg {
 
 /*sm*/
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  header {
-    margin-bottom: 8%;
-  }
 
-  input {
-    width: 70%;
-    height: 85px;
-    font-size: 25px;
-  }
-
-  .button {
-    padding: 35px 20px;
-    margin-left: -15%;
-    width: 75px;
-  }
-
-  .subscribe-card {
-    max-width: 65%;
-  }
-
-  .subcribe-newsletter {
-    font-size: 25px;
-  }
-
-  .download {
-    background-color: black;
-    border-radius: 10px;
-    width: 250px;
-  }
-
-  .grid-image {
-    height: 250px;
-  }
 
   .send {
     font-size: 65px;
     line-height: 62px;
   }
 
-  .share {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
-  }
 
-  .cravetag {
-    font-size: 20px;
-  }
 
-  .vcard {
-    max-width: 80%;
-    margin-top: -25%;
-    margin-bottom: 20%;
-  }
-
-  .download-text3 {
-    font-size: 11px;
-  }
-
-  .download-text5 {
-    font-size: 30px;
-    margin-top: 30px;
-  }
-
-  .download-text6 {
-    font-size: 30px;
-  }
-
-  .download-text4 {
-    font-size: 15px;
-    font-weight: 400;
-  }
-
-  .download-icon {
-    font-size: 30px;
-  }
-
-  .custom-search-botton {
-    width: 90px;
-    height: 50px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-
-  .custom-search-input {
-    height: 70px;
-    font-size: 15px;
-  }
-
-  .aboutus {
-    margin: 40px;
-  }
-
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 14px;
-    line-height: 19px;
-    margin-right: 19px;
-  }
-
-  .pro-commitment {
-    font-size: 12px;
-    margin-right: 30px;
-    line-height: 16px;
-  }
-
-  .favorite {
-    font-size: 30px;
-    margin: 3% 0;
-    margin-bottom: 5%;
-    letter-spacing: 1px;
-  }
-
-  .grid-image2 {
-    width: 40% !important;
-  }
-
-  .cheese-img {
-    width: 33% !important;
-    margin-top: -250px;
-  }
-
-  .drinkspill-img {
-    width: 35%;
-  }
-
-  //  .header-button{
-  //   width: 100% !important;
-  // }
-  .header-button1 {
-    width: 70% !important;
-  }
 }
 
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
-  header {
-    background-color: white;
-  }
-
-  input {
-    height: 90px;
-    width: 600px;
-    font-size: 25px;
-  }
-
-  .button {
-    padding: 40px 20px;
-    margin-left: -22%;
-    width: 95px;
-  }
-
-  .subcribe-newsletter {
-    font-size: 35px;
-  }
-
-  .download {
-    width: 200px;
-  }
 
   .send {
     font-size: 45px;
@@ -638,108 +478,6 @@ svg {
     font-weight: 500;
   }
 
-  .share {
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-
-  .cravetag {
-    font-size: 20px;
-  }
-
-  .vcard {
-    max-width: 75%;
-    margin-top: -30%;
-  }
-
-  .subscribe-card {
-    max-width: 50%;
-  }
-
-  .download-text3 {
-    font-size: 12px;
-  }
-
-  .download-text5 {
-    font-size: 45px;
-    margin-top: 30px;
-    line-height: 45px;
-  }
-
-  .download-text6 {
-    font-size: 45px;
-  }
-
-  .download-text4 {
-    font-size: 17px;
-  }
-
-  .download-icon {
-    font-size: 40px;
-  }
-
-  .custom-search-botton {
-    width: 100px;
-    height: 55px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-
-  .custom-search-input {
-    height: 75px;
-    font-size: 20px;
-  }
-
-  .aboutus {
-    margin: 50px 80px;
-  }
-
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 19px;
-    line-height: 35px;
-    margin-right: 23px;
-  }
-
-  .pro-commitment {
-    font-size: 15px;
-    margin-right: 39px;
-  }
-
-  .favorite {
-    font-size: 40px;
-    margin: 4% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
-  .grid-image2 {
-    width: 45% !important;
-  }
-
-  .cheese-img {
-    width: 27% !important;
-    margin-top: -40px;
-  }
-
-  .drinkspill-img {
-    width: 33%;
-    margin-top: -13%;
-  }
-
-  .header-button {
-    width: 90% !important;
-  }
-
-  .header-button1 {
-    width: 60% !important;
-  }
 }
 
 /*lg*/
@@ -783,113 +521,6 @@ svg {
     font-size: 60px;
     line-height: 64px;
     font-weight: 500;
-  }
-
-  .share {
-    font-size: 1.8rem;
-    line-height: 30px;
-  }
-
-  .favorite {
-    font-size: 45px;
-    margin: 2% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
-  .cravetag {
-    font-size: 27px;
-  }
-
-  .breaker {
-    margin-top: 20px !important;
-  }
-
-  .mt-n7 {
-    margin-top: -15px !important;
-  }
-
-  .vcard {
-    max-width: 75%;
-    height: 400px !important;
-    margin-top: -400px;
-  }
-
-  .subscribe-card {
-    max-width: 55%;
-    padding: 50px;
-  }
-
-  .custom-search-botton {
-    width: 90px;
-    height: 50px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-
-  .custom-search-input {
-    height: 70px;
-    font-size: 20px;
-    padding-left: 30px;
-  }
-
-  .aboutus {
-    margin: 100px 200px;
-  }
-
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 25px;
-    line-height: 35px;
-    margin-right: 29px;
-  }
-
-  .pro-commitment {
-    font-size: 17px;
-    margin-right: 45px;
-  }
-
-  .aboutus-image {
-    width: 100%;
-  }
-
-  .cheese-img {
-    width: 30% !important;
-    margin-top: -120px;
-  }
-
-  .drinkspill-img {
-    width: 30%;
-  }
-
-  .download-text5 {
-    font-size: 49px;
-    line-height: 50px;
-    margin-top: 30px;
-  }
-
-  .download-text6 {
-    font-size: 39px;
-    margin-bottom: 50px;
-  }
-
-  .download-text4 {
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
-  .header-button {
-    width: 100% !important;
-  }
-
-  .header-button1 {
-    width: 60% !important;
   }
 }
 </style>

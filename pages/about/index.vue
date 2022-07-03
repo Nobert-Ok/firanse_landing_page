@@ -110,7 +110,7 @@
       </v-row>-->
 
       <!-------------------------------------- Join our Team -------------------------------------------->
-      <v-row dense no-gutters align="center" justify="center">
+      <!-- <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12">
           <h3 class="aboutus3">Join our Team</h3>
           <span>
@@ -123,7 +123,7 @@
             </span>
           </p>
         </v-col>
-      </v-row>
+      </v-row> -->
     </div>
 
     <!-------------------------------------- E-restuarant -------------------------------------------->

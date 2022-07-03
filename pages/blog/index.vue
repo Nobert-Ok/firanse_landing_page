@@ -3,7 +3,10 @@
     <Nav />
     <v-row>
       <v-col col="3" class="container">
-        <img loading="lazy" class="foodbowl" src="~assets/images/foodbowl.png" alt="" />
+        <img class="foodbowl" src="~assets/images/foodbowl.png" alt="" />
+        <!-- <div>
+          <img src="~assets/images/firanselogo.png">
+        </div> -->
         <v-card elevation="7" class="mx-auto vcard">
           <v-card-text justify="center" class="sm-pt-10">
             <v-row dense no-gutters>
@@ -12,17 +15,17 @@
                   <p class="black--text download-text5">
                     Love. Life. Food. Firanse.
                   </p>
-                  <nuxt-link to="/blog" class="mr-10">
+                  <a onclick="window.open('https://www.facebook.com/firansefood')" class="mr-10">
                     <v-icon x-large> mdi-facebook </v-icon>
-                  </nuxt-link>
+                  </a>
 
-                  <nuxt-link to="/blog" class="mr-10">
+                  <a onclick="window.open('https://www.twitter.com/firansefood')" class="mr-10">
                     <v-icon> mdi-twitter </v-icon>
-                  </nuxt-link>
+                  </a>
 
-                  <nuxt-link to="/blog">
+                  <a onclick="window.open('https://www.instagram.com/firansefood/')">
                     <v-icon> mdi-instagram </v-icon>
-                  </nuxt-link>
+                  </a>
                 </v-card-text>
               </v-col>
             </v-row>
@@ -323,7 +326,8 @@ a {
 // ----------------Download Card-----------------
 
 .vcard {
-  background-color: #ffdc99 !important;
+  position: relative;
+  background-color: #fff !important;
   max-width: 75%;
   height: 200px !important;
   margin-top: -100px;
@@ -424,6 +428,16 @@ svg {
     max-width: 300px !important;
     max-height: 700px;
   }
+
+    .download-text5 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+    .vcard {
+    max-width: 85%;
+  }
+
 }
 
 /*sm*/

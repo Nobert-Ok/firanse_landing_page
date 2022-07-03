@@ -210,65 +210,6 @@ input {
   color: #342301 !important;
 }
 
-.love {
-  width: 95px;
-  margin-bottom: -40px;
-}
-
-.how-it-works {
-  font-size: 25px !important;
-  font-weight: 900 !important;
-  color: #342301 !important;
-  letter-spacing: 4px;
-}
-
-// ----------------About Us-----------------
-
-.aboutus {
-  position: relative;
-  margin: 20px;
-}
-
-.aboutus-image {
-  width: 100%;
-  object-fit: fill;
-}
-
-.aboutus-button {
-  color: white !important;
-  height: 50px !important;
-  width: 45%;
-  text-transform: capitalize;
-  font-size: 30px;
-  font-weight: 900;
-  font-family: 'Poppins' !important;
-  letter-spacing: 2px;
-  background-color: #ffa800 !important;
-}
-
-.aboutus3 {
-  color: #342301 !important;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-.commitment {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
-  font-family: 'Poppins' !important;
-  letter-spacing: 2px;
-  color: #342301 !important;
-}
-
-.pro-commitment {
-  font-size: 15px;
-  line-height: 24px;
-  font-family: 'Poppins' !important;
-  letter-spacing: 2px;
-  color: #342301 !important;
-}
-
 // -------------------------------------------------------------------
 
 .partners {
@@ -286,29 +227,6 @@ input {
   height: 300px !important;
   margin-top: -35%;
   border-radius: 20px !important;
-}
-
-.subscribe-card {
-  max-width: 90%;
-  background-color: #ffe580 !important;
-  border-radius: 20px !important;
-  padding: 15px;
-  margin-top: 10%;
-}
-
-.subcribe-newsletter {
-  font-family: Balsamiq Sans !important;
-  color: #342301 !important;
-  font-size: 26px;
-  line-height: 35px;
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-.subscribe-text {
-  font-size: 14.5px;
-  line-height: 15px;
-  font-family: 'Poppins' !important;
 }
 
 // ----------------Download Card-----------------
@@ -359,52 +277,7 @@ input {
   margin-top: -120px;
 }
 
-footer {
-  background: #342301;
-}
 
-.endfooter {
-  background-color: white;
-  margin: 0.1% !important;
-}
-
-svg {
-  margin-bottom: -3% !important;
-}
-
-// ----------------Search Button-----------------
-.custom-search {
-  position: relative;
-  width: 100%;
-}
-
-.custom-search-input {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  line-height: 1;
-  box-sizing: border-box;
-  outline: none;
-  font-size: 15px;
-}
-
-.custom-search-botton {
-  position: absolute;
-  right: 9px;
-  top: 7px;
-  bottom: 3px;
-  border: 0;
-  background: #ffa800;
-  color: #fff;
-  outline: none;
-  margin: 0;
-  padding: 0 10px;
-  border-radius: 10px;
-  z-index: 2;
-  width: 59px;
-  height: 45px;
-  box-shadow: 5px 5px 7px #a4a4a4;
-}
 
 .header-button {
   width: 103% !important;
@@ -414,20 +287,16 @@ svg {
   width: 100% !important;
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 370px) {
 
-  .subcribe-newsletter {
-    font-size: 24px;
+  .download-text5,.app-text{
+    font-size: 20px;
   }
 
-  .download-icon {
-    font-size: 25px !important;
-    margin-left: 2px !important;
+  .download-text4{
+    font-size: 14px;
   }
-
-  .mdi-36px {
-    font-size: 15px !important;
-  }
+  
 }
 
 /*sm*/
@@ -436,25 +305,6 @@ svg {
     margin-bottom: 8%;
   }
 
-  input {
-    width: 70%;
-    height: 85px;
-    font-size: 25px;
-  }
-
-  .button {
-    padding: 35px 20px;
-    margin-left: -15%;
-    width: 75px;
-  }
-
-  .subscribe-card {
-    max-width: 65%;
-  }
-
-  .subcribe-newsletter {
-    font-size: 25px;
-  }
 
   .download {
     background-color: black;
@@ -492,55 +342,17 @@ svg {
   }
 
   .download-text5 {
-    font-size: 30px;
+    font-size: 22px;
     margin-top: 30px;
   }
 
   .download-text6 {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   .download-text4 {
     font-size: 15px;
     font-weight: 400;
-  }
-
-  .download-icon {
-    font-size: 30px;
-  }
-
-  .custom-search-botton {
-    width: 90px;
-    height: 50px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-
-  .custom-search-input {
-    height: 70px;
-    font-size: 15px;
-  }
-
-  .aboutus {
-    margin: 40px;
-  }
-
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 14px;
-    line-height: 19px;
-    margin-right: 19px;
-  }
-
-  .pro-commitment {
-    font-size: 12px;
-    margin-right: 30px;
-    line-height: 16px;
   }
 
   .favorite {
@@ -627,7 +439,7 @@ svg {
   }
 
   .download-text5 {
-    font-size: 45px;
+    font-size: 40px;
     margin-top: 30px;
     line-height: 45px;
   }
@@ -639,24 +451,6 @@ svg {
   .download-text4 {
     font-size: 17px;
   }
-
-  .download-icon {
-    font-size: 40px;
-  }
-
-  .custom-search-botton {
-    width: 100px;
-    height: 55px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-
-  .custom-search-input {
-    height: 75px;
-    font-size: 20px;
-  }
-
   .aboutus {
     margin: 50px 80px;
   }
@@ -783,44 +577,6 @@ svg {
   .subscribe-card {
     max-width: 55%;
     padding: 50px;
-  }
-
-  .custom-search-botton {
-    width: 90px;
-    height: 50px;
-    right: 9px;
-    top: 10px;
-    bottom: 3px;
-  }
-
-  .custom-search-input {
-    height: 70px;
-    font-size: 20px;
-    padding-left: 30px;
-  }
-
-  .aboutus {
-    margin: 100px 200px;
-  }
-
-  .aboutus3 {
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
-  .commitment {
-    font-size: 25px;
-    line-height: 35px;
-    margin-right: 29px;
-  }
-
-  .pro-commitment {
-    font-size: 17px;
-    margin-right: 45px;
-  }
-
-  .aboutus-image {
-    width: 100%;
   }
 
   .cheese-img {

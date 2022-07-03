@@ -445,10 +445,11 @@ input {
 
 .subscribe-card {
   max-width: 90%;
-  background-color: #FFF6E5 !important;
+  background-color: #FFF7E6 !important;
   border-radius: 20px !important;
   padding: 15px;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 7%;
 }
 
 .subcribe-newsletter {
