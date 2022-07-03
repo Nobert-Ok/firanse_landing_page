@@ -140,6 +140,7 @@ export default {
   top: 0;
   width: 100vw;
 }
+
 .nav {
   margin: 0 auto;
   margin-bottom: 6%;
