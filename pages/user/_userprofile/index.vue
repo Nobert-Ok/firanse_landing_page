@@ -332,7 +332,7 @@ h4 {
 }
 
 .user-details {
-  background: #ECECEC;
+  background: #ECECEC !important;
   border-radius: 20px;
 }
 

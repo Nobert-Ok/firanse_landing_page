@@ -349,7 +349,7 @@ h4 {
 }
 
 .card{
-  background-color: #ECECEC;
+  background-color: #ECECEC !important;
 }
 .business_image {
   object-fit: cover;
