@@ -336,6 +336,7 @@ h4 {
   border-radius: 20px;
 }
 
+
 .image-cluster {
   display: inline-block;
   position: relative;
