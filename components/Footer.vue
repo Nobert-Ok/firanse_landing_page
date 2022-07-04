@@ -104,4 +104,18 @@ footer{
     width: 100% !important;
   }
 }
+
+@media only screen and (min-width: 1904px) {
+  h6{
+    font-size: 25px;
+  }
+    ul {
+      li {
+        font-size: 19px;
+        a,.nuxtlink {
+          font-size: 19px;
+        }
+      }
+    }
+}
 </style>

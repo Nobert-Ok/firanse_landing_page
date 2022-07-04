@@ -20,11 +20,11 @@
                   </a>
 
                   <a onclick="window.open('https://www.twitter.com/firansefood')" class="mr-10">
-                    <v-icon> mdi-twitter </v-icon>
+                    <v-icon x-large> mdi-twitter </v-icon>
                   </a>
 
                   <a onclick="window.open('https://www.instagram.com/firansefood/')">
-                    <v-icon> mdi-instagram </v-icon>
+                    <v-icon x-large> mdi-instagram </v-icon>
                   </a>
                 </v-card-text>
               </v-col>
@@ -96,7 +96,7 @@
       </v-row>
 
       <div v-else justify="center" align="center">
-        <h5 class="black--text">No stories at the moment</h5>
+        <h5 class="black--text text-sm-h6">No stories at the moment</h5>
         <!-- <v-progress-circular
         indeterminate
         color="amber"
@@ -261,11 +261,11 @@ p {
 // ----------------Blog Card-----------------
 .aboutus3 {
   font-family: 'Poppins' !important;
-  color: #342301 !important;
+  color: #000 !important;
   letter-spacing: 2px;
   margin-bottom: 1rem !important;
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 45px;
 }
 
@@ -344,7 +344,7 @@ a {
   font-weight: 600;
   line-height: 35px;
   font-family: 'Poppins' !important;
-  color: #431d01 !important;
+  color: #000 !important;
   letter-spacing: 2px;
 }
 
@@ -365,20 +365,6 @@ a {
   font-family: 'Poppins' !important;
 }
 
-// ------------Footer--------------------------
-
-footer {
-  background: #342301;
-}
-
-.endfooter {
-  background-color: white;
-  margin: 0.1% !important;
-}
-
-svg {
-  margin-bottom: -3% !important;
-}
 
 // ----------------Search Button-----------------
 .custom-search {
@@ -422,7 +408,22 @@ svg {
   width: 100% !important;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 370px) {
+
+    .download-text5 {
+    font-size: 16px;
+    // margin-top: 10px;
+  }
+
+    .vcard {
+    max-width: 85%;
+    margin-top: -50px;
+    height: 200px !important;
+  }
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 600px) {
   .blogcard {
     background-color: #ffa80033;
     max-width: 300px !important;
@@ -430,49 +431,23 @@ svg {
   }
 
     .download-text5 {
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 17px;
+    margin-top: 10px;
   }
 
     .vcard {
     max-width: 85%;
+    margin-top: -50px;
+    height: 160px !important;
   }
 
 }
 
 /*sm*/
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  .vcard {
-    max-width: 55%;
-    height: 250px !important;
-    margin-top: -150px;
-  }
-
-  .download-text3 {
-    font-size: 11px;
-  }
-
-  .download-text5 {
-    font-size: 30px;
-    margin-top: 30px;
-  }
-
-  .download-text6 {
-    font-size: 30px;
-  }
-
-  .download-text4 {
-    font-size: 15px;
-    font-weight: 400;
-  }
-
-  .download-icon {
-    font-size: 30px;
-  }
 
   // ----------------Blog Card-----------------
   .aboutus3 {
-    color: #342301 !important;
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 3rem !important;
@@ -483,40 +458,9 @@ svg {
 
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
-  .vcard {
-    max-width: 65%;
-    margin-top: -100px;
-  }
-
-  .subscribe-card {
-    max-width: 50%;
-  }
-
-  .download-text3 {
-    font-size: 12px;
-  }
-
-  .download-text5 {
-    font-size: 45px;
-    margin-top: 30px;
-    line-height: 45px;
-  }
-
-  .download-text6 {
-    font-size: 45px;
-  }
-
-  .download-text4 {
-    font-size: 17px;
-  }
-
-  .download-icon {
-    font-size: 40px;
-  }
 
   // ----------------Blog Card-----------------
   .aboutus3 {
-    color: #342301 !important;
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 2rem !important;
@@ -553,32 +497,9 @@ svg {
 
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
-  .vcard {
-    max-width: 55%;
-    height: 250px !important;
-    margin-top: -150px;
-  }
-
-  .download-text5 {
-    font-size: 49px;
-    line-height: 50px;
-    margin-top: 30px;
-  }
-
-  .download-text6 {
-    font-size: 39px;
-    margin-bottom: 50px;
-  }
-
-  .download-text4 {
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 24px;
-  }
 
   // ----------------Blog Card-----------------
   .aboutus3 {
-    color: #342301 !important;
     font-size: 20px;
     letter-spacing: 2px;
     margin-bottom: 4rem !important;
@@ -612,6 +533,55 @@ svg {
 
   .date {
     font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1904px) {
+    // ----------------Blog Card-----------------
+  .vcard {
+  max-width: 55%;
+  height: 250px !important;
+  margin-top: -140px;
+  margin-bottom: 5rem;
+}
+  .aboutus3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 4rem !important;
+    font-size: 49px;
+    line-height: 50px;
+  }
+
+  .blogcard {
+    background-color: #ffa80033;
+    max-width: 700px !important;
+    max-height: 700px;
+  }
+
+  .trimmeddetails {
+    line-height: 25px !important;
+    font-size: 15px;
+    margin-bottom: 0px !important;
+  }
+
+  .title {
+    font-size: 20px !important;
+    line-height: 25px;
+    margin-bottom: -10px !important;
+    font-weight: bolder;
+    overflow-wrap: break-word;
+  }
+
+  .foodbowl {
+    width: 100% !important;
+  }
+
+  .date {
+    font-size: 15px;
+  }
+  .download-text5{
+    font-size: 44px;
+    margin-bottom: 3rem;
   }
 }
 </style>

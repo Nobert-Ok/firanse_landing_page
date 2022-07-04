@@ -58,190 +58,21 @@ export default {
 
 
 <style lang="scss" scoped>
-.logo {
-  width: 180px;
-  height: 100%;
-  display: inline;
-  border-radius: 0;
-  cursor: pointer;
-}
-
-.first-head {
-  margin-top: 50px;
-}
-
-header {
-  width: 100%;
-}
-
-.body {
-  position: relative;
-  overflow: hidden;
-}
-
-.full {
-  height: 100vh;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h6 {
-  margin: 10px 0;
-  font-size: 25px;
-  text-decoration: underline;
-  color: white;
-}
-
-ul {
-  list-style: none;
-  list-style-type: none;
-  padding: 0;
-
-  li {
-    margin: 10px 0;
-    color: white;
-
-    .nuxtlink {
-      color: #000;
-      text-decoration: none;
-    }
-  }
-}
-
-.nuxtlink:hover {
-  color: $primary;
-}
-
-.nuxt-link-exact-active {
-  color: $primary  !important;
-}
-
-
-p {
-  line-height: 45px;
-}
-
-.maindish {
-  width: 90%;
-  object-fit: fill;
-}
-
-.girl-image {
-  width: 90%;
-}
-
-.grid-image1 {
-  width: 65% !important;
-}
-
-.grid-image2 {
-  width: 90% !important;
-}
-
-.process {
-  background-color: #ffe580;
-}
-
-address {
-  font-style: normal;
-}
-
-.logo {
-
-  /* width: 50%; */
-  &__text {
-    width: 55%;
-  }
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  -webkit-appearance: none;
-}
-
-input {
-  background-color: white;
-  height: 60px;
-  width: 100%;
-  border-radius: 10px;
-  font-size: 25px;
-  padding: 10px;
-  color: black;
-  display: inline;
-  border: 1px solid black;
-}
-
-.send {
-  font-family: Balsamiq Sans !important;
-  font-size: 35px;
-  line-height: 36px;
-  font-weight: 500;
-  color: #342301 !important;
-}
-
-.share {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: none;
-  color: #342301 !important;
-  font-family: 'Poppins' !important;
-  letter-spacing: 1px;
-}
-
-.cravetag {
-  /* font-style: italic; */
-  font-weight: 600;
-  font-size: 17px;
-  font-family: 'Poppins' !important;
-  letter-spacing: 1px;
-  color: #431d01;
-}
-
-.favorite {
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  margin: 2.5% 0;
-  margin-bottom: 10%;
-  color: #342301 !important;
-}
-
-// -------------------------------------------------------------------
-
-.partners {
-  background-color: #ffe580;
-  padding: 30px;
-}
-
-.card {
-  padding: 50px 0;
-  // height: 600px !important;
-}
+// ----------------Download Card-----------------
 
 .vcard {
   max-width: 90%;
   height: 300px !important;
-  margin-top: -35%;
+  margin-top: -25%;
   border-radius: 20px !important;
 }
-
-// ----------------Download Card-----------------
-
-.download-button-card {
-  width: 100% !important;
-}
-
 .download-text5,
 .app-text {
   font-size: 27px;
   font-weight: 600;
   line-height: 35px;
   font-family: 'Poppins' !important;
-  color: #431d01 !important;
+  color: #000 !important;
   letter-spacing: 2px;
 }
 
@@ -251,7 +82,7 @@ input {
   line-height: 6px;
   margin-bottom: 50px;
   font-family: 'Poppins' !important;
-  color: #431d01 !important;
+  color: #000 !important;
   letter-spacing: 2px;
 }
 
@@ -263,7 +94,7 @@ input {
 }
 
 .cheese {
-  margin-top: -75px;
+  margin-top: -35px;
   z-index: -1;
 }
 
@@ -273,14 +104,8 @@ input {
 }
 
 .drinkspill-img {
-  width: 50%;
-  margin-top: -120px;
-}
-
-
-
-.header-button {
-  width: 103% !important;
+  width: 40%;
+  margin-top: -50px;
 }
 
 .header-button1 {
@@ -301,9 +126,6 @@ input {
 
 /*sm*/
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  header {
-    margin-bottom: 8%;
-  }
 
 
   .download {
@@ -312,33 +134,11 @@ input {
     width: 250px;
   }
 
-  .grid-image {
-    height: 250px;
-  }
-
-  .send {
-    font-size: 65px;
-    line-height: 62px;
-  }
-
-  .share {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-
-  .cravetag {
-    font-size: 20px;
-  }
 
   .vcard {
     max-width: 80%;
     margin-top: -25%;
     margin-bottom: 20%;
-  }
-
-  .download-text3 {
-    font-size: 11px;
   }
 
   .download-text5 {
@@ -355,16 +155,6 @@ input {
     font-weight: 400;
   }
 
-  .favorite {
-    font-size: 30px;
-    margin: 3% 0;
-    margin-bottom: 5%;
-    letter-spacing: 1px;
-  }
-
-  .grid-image2 {
-    width: 40% !important;
-  }
 
   .cheese-img {
     width: 33% !important;
@@ -374,10 +164,6 @@ input {
   .drinkspill-img {
     width: 35%;
   }
-
-  //  .header-button{
-  //   width: 100% !important;
-  // }
   .header-button1 {
     width: 70% !important;
   }
@@ -385,15 +171,6 @@ input {
 
 /*md*/
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
-  header {
-    background-color: white;
-  }
-
-  input {
-    height: 90px;
-    width: 600px;
-    font-size: 25px;
-  }
 
   .button {
     padding: 40px 20px;
@@ -401,42 +178,17 @@ input {
     width: 95px;
   }
 
-  .subcribe-newsletter {
-    font-size: 35px;
-  }
-
+ 
   .download {
     width: 200px;
   }
 
-  .send {
-    font-size: 45px;
-    line-height: 50px;
-    font-weight: 500;
-  }
-
-  .share {
-    font-size: 18px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-
-  .cravetag {
-    font-size: 20px;
-  }
-
   .vcard {
     max-width: 75%;
-    margin-top: -30%;
+    height: 350px !important;
+    margin-top: -25%;
   }
 
-  .subscribe-card {
-    max-width: 50%;
-  }
-
-  .download-text3 {
-    font-size: 12px;
-  }
 
   .download-text5 {
     font-size: 40px;
@@ -471,30 +223,20 @@ input {
     margin-right: 39px;
   }
 
-  .favorite {
-    font-size: 40px;
-    margin: 4% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
   .grid-image2 {
     width: 45% !important;
   }
 
   .cheese-img {
     width: 27% !important;
-    margin-top: -40px;
+    margin-top: -55px;
   }
 
   .drinkspill-img {
-    width: 33%;
-    margin-top: -13%;
+    width: 30%;
+    margin-top: -5%;
   }
 
-  .header-button {
-    width: 90% !important;
-  }
 
   .header-button1 {
     width: 60% !important;
@@ -549,29 +291,15 @@ input {
     line-height: 30px;
   }
 
-  .favorite {
-    font-size: 45px;
-    margin: 2% 0;
-    letter-spacing: 1px;
-    margin-bottom: 5%;
-  }
-
-  .cravetag {
-    font-size: 27px;
-  }
-
-  .breaker {
-    margin-top: 20px !important;
-  }
 
   .mt-n7 {
     margin-top: -15px !important;
   }
 
   .vcard {
-    max-width: 75%;
+    max-width: 65%;
     height: 400px !important;
-    margin-top: -400px;
+    margin-top: -200px;
   }
 
   .subscribe-card {
@@ -580,33 +308,71 @@ input {
   }
 
   .cheese-img {
-    width: 30% !important;
-    margin-top: -120px;
+    width: 25% !important;
+    margin-top: -70px;
   }
 
   .drinkspill-img {
-    width: 30%;
+    width: 25%;
   }
 
   .download-text5 {
-    font-size: 49px;
+    font-size: 45px;
     line-height: 50px;
     margin-top: 30px;
   }
 
   .download-text6 {
-    font-size: 39px;
+    font-size: 45px;
     margin-bottom: 50px;
   }
 
   .download-text4 {
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 24px;
+    font-size: 25px;
+    line-height: 35px;
   }
 
-  .header-button {
-    width: 100% !important;
+  .header-button1 {
+    width: 70% !important;
+  }
+}
+
+@media only screen and (min-width: 1904px) {
+  .vcard {
+    max-width: 65%;
+    height: 500px !important;
+    margin-top: -200px;
+  }
+
+  .subscribe-card {
+    max-width: 55%;
+    padding: 50px;
+  }
+
+  .cheese-img {
+    width: 20% !important;
+    margin-top: -50px;
+  }
+
+  .drinkspill-img {
+    width: 20%;
+  }
+
+  .download-text5 {
+    font-size: 49px;
+    line-height: 65px;
+    margin-top: 30px;
+  }
+
+  .download-text6 {
+    font-size: 49px;
+    margin-bottom: 60px;
+  }
+
+  .download-text4 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 40px;
   }
 
   .header-button1 {

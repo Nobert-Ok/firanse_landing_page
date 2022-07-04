@@ -46,10 +46,10 @@
     </v-row>
 
     <!-------------------------------------- About Us -------------------------------------------->
-    <div class="aboutus">
+    <div class="aboutus my-xl-16 mx-xl-16">
       <v-row dense no-gutters align="center" justify="center">
         <v-col cols="12" sm="6" justify="center">
-          <p class="black--text commitment text-md-h4">
+          <p class="black--text commitment">
             <span class="font-weight-black text-h3">“</span>Our commitment is to the love we share and the food you eat.
           </p>
           <p class="black--text pro-commitment" v-if="!readMore">
@@ -115,9 +115,9 @@
               </v-card-text>
             </v-col>
             <v-col cols="12" align="center">
-              <div class="custom-search">
+              <div class="custom-search px-xl-16">
                 <input type="text" class="custom-search-input" placeholder="Enter your email" />
-                <button class="custom-search-botton" type="submit">
+                <button class="custom-search-botton mx-xl-16" type="submit">
                   <v-icon large color="white">mdi-arrow-right</v-icon>
                 </button>
               </div>
@@ -454,7 +454,7 @@ input {
 
 .subcribe-newsletter {
   font-family: 'Poppins' !important;
-  color: #342301 !important;
+  color: #000 !important;
   font-size: 26px;
   line-height: 30px;
   font-weight: 400;
@@ -1016,5 +1016,70 @@ svg {
   .header-button1 {
     width: 60% !important;
   }
+}
+
+@media only screen and (min-width: 1904px) {
+  .send{
+    font-size: 70px;
+    line-height: 80px;
+  }
+
+  .share,.cravetag{
+    font-size: 30px;
+    line-height: 50px;
+  }
+   .commitment {
+    font-size: 50px;
+    line-height: 70px;
+    margin-right: 109px;
+  }
+
+  .pro-commitment {
+    font-size: 25px;
+    margin-right: 45px;
+    line-height: 60px;
+  }
+
+  .aboutus-image {
+    width: 90%;
+  }
+
+  .favorite{
+    font-size: 50px;
+    margin-bottom: 5%;
+    line-height: 80px;
+  }
+  .grid-image2 {
+    width: 30% !important;
+  }
+
+  .subscribe-card {
+  max-width: 60%;
+  height: 350px;
+  background-color: #FFF7E6 !important;
+  border-radius: 20px !important;
+  padding: 15px;
+  margin-top: 5%;
+  margin-bottom: 7%;
+}
+.subcribe-newsletter {
+  font-size: 45px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 3%;
+}
+
+.subscribe-text{
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 3%;
+}
+
+ .custom-search-input {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+
+
 }
 </style>

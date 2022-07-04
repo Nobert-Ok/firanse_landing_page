@@ -405,6 +405,8 @@ address {
 // -----------------------------------
 .erestuarant {
   background-image: url('~/assets/images/backgroundframe2.png');
+  background-size: cover;
+
 }
 
 // ----------------Download Card-----------------
@@ -946,21 +948,15 @@ svg {
     padding-left: 30px;
   }
 
-  .aboutus {
-    padding: 100px 200px;
-  }
-
-  .aboutus1 {
-    padding: 100px 200px;
-  }
-
-  .ourstory {
-    padding: 100px 200px;
+ .aboutus,.ourstory,.erestuarant {
+    padding: 100px 150px;
   }
 
   .erestuarant {
-    padding: 15%;
+    padding-top: 250px;
   }
+
+ 
 
   .aboutus3 {
     font-size: 40px;
@@ -983,17 +979,8 @@ svg {
   }
 
   .aboutus-image {
-    width: 100%;
+    width: 80%;
     margin-top: -20% !important;
-  }
-
-  .cheese-img {
-    width: 30% !important;
-    margin-top: -120px;
-  }
-
-  .drinkspill-img {
-    width: 30%;
   }
 
   .download-text5 {
@@ -1027,4 +1014,43 @@ svg {
     margin-left: 120px;
   }
 }
+
+@media only screen and (min-width: 1904px) {
+  .aboutus {
+  padding-top: 100px;
+  }
+  .aboutus,.ourstory,.erestuarant {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 100px;
+}
+  .aboutus-image {
+  width: 85%;
+  object-fit: fill;
+}
+  .commitment,.aboutus3 {
+    font-size: 50px;
+    line-height: 70px;
+    margin-right: 109px;
+  }
+
+  .pro-commitment {
+    font-size: 25px;
+    margin-right: 45px;
+    line-height: 60px;
+  }
+
+.loveimage{
+  width: 7%;
+}
+.aboutus-button{
+  height: 70px !important;
+  width: 45%; 
+  color: #000;
+  font-size: 50px !important;
+}
+
+}
+
+
 </style>

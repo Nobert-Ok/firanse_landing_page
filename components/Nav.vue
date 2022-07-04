@@ -1,5 +1,4 @@
 <template>
-  <fixed-header>
     <div class="nav">
       <header class="d-flex justify-space-between align-center mx-auto">
         <div class="d-flex my-3 ml-sm-10">
@@ -87,7 +86,6 @@
         </div>
       </v-navigation-drawer>
     </div>
-  </fixed-header>
 </template>
 <script>
 import Applebutton from '~/components/Applebutton.vue'
@@ -155,9 +153,7 @@ header{
 
 .logo {
   width: 75%;
-  /* height: 100%; */
   display: inline;
-  border-radius: 0;
   cursor: pointer;
 }
 
@@ -196,6 +192,7 @@ ul {
     .nuxtlink,a {
       color: #000;
       text-decoration: none !important;
+      
     }
   }
 }
@@ -220,22 +217,39 @@ ul {
 @media only screen and (min-width: 300px) and (max-width: 960px) {
   .logo{
     margin-left: 1rem;
+    width: 100% !important;
+
   }
   .nav {
-  margin-bottom: 20%;
+  margin-bottom: 4%;
+  }
+
+  ul {
+     li {
+    .nuxtlink,a {
+      font-size: 22px;      
+    }
+  }
   }
 
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 1260px) {
   .nav {
-  margin-bottom: 12%;
+  margin-bottom: 4%;
   }
+
+  .logo{
+    width: 110% !important;
+  }
+
+  ul {
+     li {
+    .nuxtlink,a {
+      font-size: 22px;      
+    }
+  }
+}
 }
 
-@media only screen and (max-width: 500px) {
-  .nav {
-  margin-bottom: 18%;
-  }
-}
 </style>

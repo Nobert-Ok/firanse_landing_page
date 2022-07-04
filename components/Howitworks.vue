@@ -244,12 +244,11 @@
 }
 
 /*lg*/
-@media only screen and (min-width: 1264px) {
+@media only screen and (min-width: 1264px) and (max-width:1900px) {
 .steps {
-    border-radius: 25px;
-    font-size: 13px !important;
-    line-height: 20px ;
-    padding: 20px 20px !important;
+  font-size: 13px !important;
+  line-height: 20px ;
+  padding: 20px 20px !important;
 }
 .number2 {
   right: 13%;
@@ -268,6 +267,13 @@
   height: 35px;
   font-size: 15px !important;
   padding: 3px 0px !important;
+}
+}
+
+@media only screen and (min-width: 1904px) {
+  .steps {
+  font-size: 22px !important;
+  padding: 22px 22px !important;
 }
 }
 

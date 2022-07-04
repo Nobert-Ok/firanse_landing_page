@@ -35,4 +35,37 @@
     font-size: 9px;
   }
 }
+
+@media only screen and (min-width: 1264px) and (max-width:1904px) {
+  .download-button {
+    width: 100px;
+    height: 65px !important;
+  }
+
+  .download-icon {
+    font-size: 35px !important;
+    /* margin-left: 5px; */
+  }
+
+  .download-text1 {
+    font-size: 15px;
+  }
+}
+
+
+@media only screen and (min-width: 1264px) {
+  .download-button {
+    width: 150px;
+    height: 70px !important;
+  }
+
+  .download-icon {
+    font-size: 40px !important;
+    /* margin-left: 5px; */
+  }
+
+  .download-text1 {
+    font-size: 19px;
+  }
+}
 </style>
