@@ -3,13 +3,13 @@
     <Nav />
     <v-row dense no-gutters align="center" justify="space-around">
       <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" justify="center">
-        <p class="black--text send text-center text-sm-left">
+        <p class="black--text send text-left">
           Spreading Love anywhere, anytime with Food.
         </p>
         <!-- <p class="share">
           Satisfy the food of your loved ones, anytime and anywhere.
         </p> -->
-        <p class="share text-center text-sm-left">
+        <p class="share text-left">
           Enter your friend's <span class="cravetag">firanse_cravetag</span>
           to view their food cravings.
         </p>
@@ -40,7 +40,7 @@
         <img class="girl-image" align="center" src="~assets/images/girlimage.png" alt="" />
       </v-col>
       <v-col cols="12" md="6" align="center">
-        <p class="white--text how-it-works mt-10">How it works</p>
+        <p class="white--text send mt-10 mb-10">How it works</p>
         <HowitworksVue/>
       </v-col>
     </v-row>
@@ -331,17 +331,17 @@ input {
 
 .send {
   font-family: 'Poppins' !important;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
-  color: #342301 !important;
+  font-weight: 500;
+  color: #000 !important;
 }
 
 .share {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 20px;
   font-weight: none;
-  color: #342301 !important;
+  color: #000 !important;
   font-family: 'Poppins' !important;
   letter-spacing: 1px;
 }
@@ -349,15 +349,15 @@ input {
 .cravetag {
   /* font-style: italic; */
   font-weight: 600;
-  font-size: 17px;
+  font-size: 15px;
   font-family: 'Poppins' !important;
   letter-spacing: 1px;
-  color: #431d01;
+  color: #000;
 }
 
 .favorite {
   font-family: 'Poppins' !important;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 30px;
   letter-spacing: 1px;
   margin: 2.5% 0;
@@ -408,7 +408,7 @@ input {
 }
 
 .commitment {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 20px;
   font-weight: 600;
   font-family: 'Poppins' !important;
@@ -417,7 +417,7 @@ input {
 }
 
 .pro-commitment {
-  font-size: 15px;
+  font-size: 12px;
   line-height: 24px;
   font-family: 'Poppins' !important;
   letter-spacing: 2px;
@@ -456,14 +456,14 @@ input {
   font-family: 'Poppins' !important;
   color: #342301 !important;
   font-size: 26px;
-  line-height: 35px;
+  line-height: 30px;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .subscribe-text {
   font-size: 14.5px;
-  line-height: 15px;
+  line-height: 18px;
   font-family: 'Poppins' !important;
 }
 
@@ -542,7 +542,7 @@ svg {
   border-radius: 10px;
   line-height: 1;
   outline: none;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .custom-search-botton {
@@ -622,9 +622,8 @@ svg {
   }
 
   .send {
-    font-size: 65px;
+    font-size: 45px;
     line-height: 62px;
-    font-weight: 500;
   }
 
   .share {
@@ -757,7 +756,6 @@ svg {
   .send {
     font-size: 40px;
     line-height: 50px;
-    font-weight: 700;
   }
 
   .share {
@@ -909,7 +907,7 @@ svg {
   .send {
     font-size: 60px;
     line-height: 64px;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .share {

@@ -226,4 +226,16 @@ ul {
   }
 
 }
+
+@media only screen and (max-width: 960px) {
+  .nav {
+  margin-bottom: 12%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+  margin-bottom: 18%;
+  }
+}
 </style>

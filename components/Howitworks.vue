@@ -1,5 +1,5 @@
 <template>
-    <div style="position:relative;">
+    <div class="body">
         <v-row justify="center" class="custom-search">
             <v-col cols="1">
             <p class="number1 py-2 text-h6 ml-n5 ml-sm-n1">
@@ -55,6 +55,10 @@
 </template>
 
 <style lang="scss" scoped>
+
+.body{
+  font-family: 'Poppins' !important;
+}
 
 .custom-search {
   position: relative;

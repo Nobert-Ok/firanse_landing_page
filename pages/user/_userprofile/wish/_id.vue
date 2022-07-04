@@ -59,7 +59,7 @@
 
           <!-- Second Col -->
           <v-col cols="12" md="6">
-            <v-card class="ma-4 pa-4">
+            <v-card class="ma-4 pa-4 card">
               <div v-if="wish.extra_tags.length > 0">
                 <h4>Extra</h4>
                 <div class="mt-4">
@@ -347,6 +347,10 @@ h1 {
 h4 {
   color: #342301;
 }
+
+.card{
+  background-color: #C4C4C4;
+}
 .business_image {
   object-fit: cover;
   border-radius: 50%;
@@ -354,7 +358,7 @@ h4 {
   width: 50px;
 }
 .wish {
-  background-color: #fff3db;
+  background-color: #fff;
   min-height: 100vh;
   /* width: 100vw; */
 }
