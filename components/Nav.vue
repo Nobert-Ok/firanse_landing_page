@@ -1,7 +1,7 @@
 <template>
     <div class="nav">
       <header class="d-flex justify-space-between align-center mx-auto">
-        <div class="d-flex my-3 ml-sm-10">
+        <div class="d-flex my-3 ml-sm-10 ml-5">
           <nuxt-link to="/">
             <img src="~/assets/images/firansee.png" class="logo" />
           </nuxt-link>
@@ -23,9 +23,9 @@
                   Contact
                 </nuxt-link>
               </li>
-              <li class="mx-6">
+              <li class="ml-16 mr-3">
                 <a href="https://dashboard.firansefood.com/auth/login">
-                  <v-btn color="#FFA800" outlined class="text-none px-7" target="blank">
+                  <v-btn color="#FFA800" outlined class="text-none" target="blank">
                   Login 
                   </v-btn>
                 </a>
@@ -141,12 +141,12 @@ export default {
 
 .nav {
   margin: 0 auto;
-  margin-bottom: 6%;
+  margin-bottom:20% !important;
 }
 
 header{
-    position: fixed;
-      background-color: white !important;
+  position: fixed;
+  background-color: white !important;
   // position: relative;
   z-index: 1;
 }
@@ -214,14 +214,14 @@ ul {
   font-family: 'Poppins' !important;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 960px) {
+@media only screen and (min-width: 450px) and (max-width: 600px) {
   .logo{
     margin-left: 1rem;
     width: 100% !important;
 
   }
   .nav {
-  margin-bottom: 4%;
+  margin-bottom: 15% !important;
   }
 
   ul {
@@ -231,10 +231,27 @@ ul {
     }
   }
   }
-
 }
 
-@media only screen and (min-width: 1260px) {
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  .nav {
+  margin-bottom: 8% !important;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1264px) {
+  .nav {
+  margin-bottom: 6% !important;
+  }
+}
+
+@media only screen and (min-width: 1264px) and (max-width: 1904px) {
+  .nav {
+  margin-bottom: 9% !important;
+  }
+}
+
+@media only screen and (min-width: 1904px) {
   .nav {
   margin-bottom: 4%;
   }

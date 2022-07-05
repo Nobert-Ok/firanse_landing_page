@@ -53,7 +53,7 @@
 }
 
 
-@media only screen and (min-width: 1264px) {
+@media only screen and (min-width: 1904px) {
   .download-button {
     width: 150px;
     height: 70px !important;
