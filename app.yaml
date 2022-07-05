@@ -1,0 +1,7 @@
+runtime: nodejs12
+
+env_variables:
+     MAP_API_KEY: AIzaSyAkRCYqN9HQnj0Z5OIzCQ3E4sirgP246aw
+     BASE_URL: https://api.firansefood.com/api
+     FLUTTER_WAVE_SECRETE_KEY: FLWSECK_TEST-de54ccfe7881e43fd9a90568b3d3ce87-X
+     MEDIUM_API: https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nobertokoye
