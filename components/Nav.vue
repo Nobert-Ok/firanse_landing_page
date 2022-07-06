@@ -141,7 +141,6 @@ export default {
 
 .nav {
   margin: 0 auto;
-  margin-top: 1%;
   margin-bottom:20% !important;
 }
 
@@ -164,6 +163,7 @@ header{
 
 header {
   width: 100%;
+  padding-top: 1%;
 }
 
 .full {
