@@ -9,23 +9,23 @@
         <div class="d-md-flex mr-4">
           <nav class="d-none d-md-block">
             <ul class="d-flex align-center">
-              <li class="mx-8">
+              <li class="mx-8 mx-md-4 mx-lg-10">
                 <nuxt-link to="/" exact class="nuxtlink"> Home </nuxt-link>
               </li>
-              <li class="mx-8">
+              <li class="mx-8  mx-md-4 mx-lg-10">
                 <nuxt-link to="/about" exact class="nuxtlink"> About </nuxt-link>
               </li>
-              <li class="mx-8">
+              <li class="mx-8  mx-md-4 mx-lg-10">
                 <nuxt-link to="/blog" exact class="nuxtlink"> Blog </nuxt-link>
               </li>
-              <li class="mx-8">
+              <li class="mx-8  mx-md-4 mx-lg-10">
                 <nuxt-link to="/contact" exact class="nuxtlink">
                   Contact
                 </nuxt-link>
               </li>
-              <li class="ml-16 mr-3">
+              <li class="ml-16 mr-3 ml-md-10">
                 <a href="https://dashboard.firansefood.com/auth/login">
-                  <v-btn color="#FFA800" outlined class="text-none" target="blank">
+                  <v-btn color="#FFA800" outlined class="text-none button-font" target="blank">
                   Login 
                   </v-btn>
                 </a>
@@ -33,7 +33,7 @@
               </li>
               <li class="mx-10">
                 <a href="https://dashboard.firansefood.com">
-                  <v-btn color="#FFA800" class="white--text text-none" target="blank">
+                  <v-btn color="#FFA800" class="white--text text-none button-font" target="blank">
                   Create Resturant</v-btn>
                 </a>
               </li>
@@ -141,13 +141,13 @@ export default {
 
 .nav {
   margin: 0 auto;
+  margin-top: 1%;
   margin-bottom:20% !important;
 }
 
 header{
   position: fixed;
   background-color: white !important;
-  // position: relative;
   z-index: 1;
 }
 
@@ -155,6 +155,7 @@ header{
   width: 75%;
   display: inline;
   cursor: pointer;
+  vertical-align: text-bottom !important;
 }
 
 .first-head {
@@ -213,6 +214,11 @@ ul {
 .restaurant-button {
   font-family: 'Poppins' !important;
 }
+@media only screen and (max-width: 450px) {
+  .logo{
+    width: 90% !important;
+  }
+}
 
 @media only screen and (min-width: 450px) and (max-width: 600px) {
   .logo{
@@ -234,26 +240,50 @@ ul {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 960px) {
+  .logo{
+    width: 100% !important;
+  }
   .nav {
-  margin-bottom: 8% !important;
+  margin-bottom: 10% !important;
   }
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
+  .logo{
+    width: 100% !important;
+  }
   .nav {
   margin-bottom: 6% !important;
+  }
+    ul {
+     li {
+    .nuxtlink,a,.button-font {
+      font-size: 18px;      
+    }
+  }
   }
 }
 
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
+  .logo{
+    width: 100% !important;
+  }
   .nav {
-  margin-bottom: 9% !important;
+  margin-bottom: 10% !important;
+  }
+
+  ul {
+     li {
+    .nuxtlink,a,.button-font {
+      font-size: 20px;      
+    }
+  }
   }
 }
 
 @media only screen and (min-width: 1904px) {
   .nav {
-  margin-bottom: 4%;
+  margin-bottom: 9% !important;
   }
 
   .logo{
@@ -262,7 +292,7 @@ ul {
 
   ul {
      li {
-    .nuxtlink,a {
+    .nuxtlink,a,.button-font {
       font-size: 22px;      
     }
   }
