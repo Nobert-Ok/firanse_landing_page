@@ -145,6 +145,8 @@ export default {
 }
 
 header{
+  width: 100%;
+  padding-top: 1%;
   position: fixed;
   background-color: white !important;
   z-index: 1;
@@ -159,11 +161,6 @@ header{
 
 .first-head {
   margin-top: 50px;
-}
-
-header {
-  width: 100%;
-  padding-top: 1%;
 }
 
 .full {
