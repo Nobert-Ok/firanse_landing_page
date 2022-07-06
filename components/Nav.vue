@@ -146,7 +146,7 @@ export default {
 
 header{
   width: 100%;
-  padding-top: 1%;
+  padding: 2px 0;
   position: fixed;
   background-color: white !important;
   z-index: 1;
