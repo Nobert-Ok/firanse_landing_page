@@ -2,13 +2,13 @@
   <div class="nav">
     <header>
       <nav class="d-md-flex py-2 py-md-4 justify-space-between align-center">
-        <div class="d-flex my-3 ml-sm-10 ml-5 align-center">
-          <v-btn class="ml-2 mr-sm-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
+        <div class="d-flex my-3 ml-sm-10 ml-5 align-center justify-space-between">
           <nuxt-link to="/">
             <img src="~/assets/images/firansee.png" class="logo" />
           </nuxt-link>
+          <v-btn class="mr-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
+            <v-icon>mdi-menu</v-icon>
+          </v-btn>
         </div>
         <div class="d-md-flex mr-4 d-none">
           <ul class="d-flex align-center">

@@ -41,7 +41,7 @@
       </v-col>
       <v-col cols="12" md="6" align="center">
         <p class="white--text send mt-10 mb-10">How it works</p>
-        <HowitworksVue/>
+        <HowitworksVue />
       </v-col>
     </v-row>
 
@@ -59,11 +59,13 @@
           <p class="black--text pro-commitment" v-if="readMore">
             {{ this.text }}
           </p>
-          
 
-          <v-btn @click="showMore" outlined v-if="!readMore" color="#FFA800" large class="aboutus-button px-7 py-7 mb-10">
+
+          <v-btn @click="showMore" outlined v-if="!readMore" color="#FFA800" large
+            class="aboutus-button px-7 py-7 mb-10">
             View More</v-btn>
-          <v-btn @click="showLess" outlined v-if="readMore" color="#FFA800" large class="aboutus-button px-7 py-7 mb-10">
+          <v-btn @click="showLess" outlined v-if="readMore" color="#FFA800" large
+            class="aboutus-button px-7 py-7 mb-10">
             View Less</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
@@ -126,7 +128,7 @@
         </v-card-text>
       </v-card>
     </div>
-    <Footer/>
+    <Footer />
     <v-row>
       <v-col cols="12" class="endfooter">
         <div class="text-center black--text">FiranseFood. &copy;2022</div>
@@ -219,7 +221,7 @@ export default {
 }
 
 .first-head {
-  margin-top: 5px;
+  margin-top: 50px;
 }
 
 header {
@@ -877,7 +879,7 @@ svg {
   }
 
 
-  .girl-image{
+  .girl-image {
     width: 75%;
   }
 
@@ -1019,16 +1021,18 @@ svg {
 }
 
 @media only screen and (min-width: 1904px) {
-  .send{
+  .send {
     font-size: 70px;
     line-height: 80px;
   }
 
-  .share,.cravetag{
+  .share,
+  .cravetag {
     font-size: 30px;
     line-height: 50px;
   }
-   .commitment {
+
+  .commitment {
     font-size: 50px;
     line-height: 70px;
     margin-right: 109px;
@@ -1044,38 +1048,40 @@ svg {
     width: 90%;
   }
 
-  .favorite{
+  .favorite {
     font-size: 50px;
     margin-bottom: 5%;
     line-height: 80px;
   }
+
   .grid-image2 {
     width: 30% !important;
   }
 
   .subscribe-card {
-  max-width: 60%;
-  height: 350px;
-  background-color: #FFF7E6 !important;
-  border-radius: 20px !important;
-  padding: 15px;
-  margin-top: 5%;
-  margin-bottom: 7%;
-}
-.subcribe-newsletter {
-  font-size: 45px;
-  line-height: 30px;
-  letter-spacing: 2px;
-  margin-bottom: 3%;
-}
+    max-width: 60%;
+    height: 350px;
+    background-color: #FFF7E6 !important;
+    border-radius: 20px !important;
+    padding: 15px;
+    margin-top: 5%;
+    margin-bottom: 7%;
+  }
 
-.subscribe-text{
-  font-size: 25px;
-  line-height: 30px;
-  margin-bottom: 3%;
-}
+  .subcribe-newsletter {
+    font-size: 45px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 3%;
+  }
 
- .custom-search-input {
+  .subscribe-text {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 3%;
+  }
+
+  .custom-search-input {
     font-size: 20px;
     padding-left: 20px;
   }
