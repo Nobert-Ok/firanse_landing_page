@@ -1,91 +1,101 @@
 <template>
-    <div class="nav">
-      <header class="d-flex justify-space-between align-center mx-auto">
-        <div class="d-flex my-3 ml-sm-10 ml-5">
+  <div class="nav">
+    <header>
+      <nav class="d-md-flex py-2 py-md-4 justify-space-between align-center">
+        <div class="d-flex my-3 ml-sm-10 ml-5 align-center">
+          <v-btn class="ml-2 mr-sm-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
+            <v-icon>mdi-menu</v-icon>
+          </v-btn>
           <nuxt-link to="/">
             <img src="~/assets/images/firansee.png" class="logo" />
           </nuxt-link>
         </div>
-        <div class="d-md-flex mr-4">
-          <nav class="d-none d-md-block">
-            <ul class="d-flex align-center">
-              <li class="mx-8 mx-md-4 mx-lg-10">
-                <nuxt-link to="/" exact class="nuxtlink"> Home </nuxt-link>
-              </li>
-              <li class="mx-8  mx-md-4 mx-lg-10">
-                <nuxt-link to="/about" exact class="nuxtlink"> About </nuxt-link>
-              </li>
-              <li class="mx-8  mx-md-4 mx-lg-10">
-                <nuxt-link to="/blog" exact class="nuxtlink"> Blog </nuxt-link>
-              </li>
-              <li class="mx-8  mx-md-4 mx-lg-10">
-                <nuxt-link to="/contact" exact class="nuxtlink">
-                  Contact
-                </nuxt-link>
-              </li>
-              <li class="ml-16 mr-3 ml-md-10">
-                <a href="https://dashboard.firansefood.com/auth/login">
-                  <v-btn color="#FFA800" outlined class="text-none button-font" target="blank">
-                  Login 
-                  </v-btn>
-                </a>
-                
-              </li>
-              <li class="mx-10">
-                <a href="https://dashboard.firansefood.com">
-                  <v-btn color="#FFA800" class="white--text text-none button-font" target="blank">
-                  Create Resturant</v-btn>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <v-btn class="ml-2 text-none d-md-none" color="primary" icon @click="drawer = true">
-            <v-icon>mdi-menu</v-icon>
-          </v-btn>
+        <div class="d-md-flex mr-4 d-none">
+          <ul class="d-flex align-center">
+            <li class="mx-8">
+              <nuxt-link to="/" exact class="nuxtlink">
+                <span>Home</span>
+              </nuxt-link>
+            </li>
+            <li class="mx-8">
+              <nuxt-link to="/about" exact class="nuxtlink">
+                <span>About us</span>
+              </nuxt-link>
+            </li>
+            <li class="mx-8">
+              <nuxt-link to="/blog" exact class="nuxtlink">
+                <span>Blog</span>
+              </nuxt-link>
+            </li>
+            <li class="mx-8">
+              <nuxt-link to="/contact" exact class="nuxtlink">
+                <span>Contact us</span>
+              </nuxt-link>
+            </li>
+          </ul>
         </div>
-      </header>
-      <!-- <v-row dense no-gutters align="center" justify="space-around"> -->
-      <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
-        <v-btn color="#FFA800" icon class="float-right" @click="drawer = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-        <div class="d-flex flex-column justify-center align-center full">
-          <div>
-            <nuxt-link to="/" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">Home</v-btn>
-            </nuxt-link>
+        <div class="d-md-flex  d-none">
+          <div class="ml-16 mr-3 ml-md-10">
+            <a href="https://dashboard.firansefood.com/auth/login" target="blank">
+              <div class="btn btn--white">
+                Login
+              </div>
+            </a>
+
           </div>
-          <div>
-            <nuxt-link to="/about" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">About</v-btn>
-            </nuxt-link>
-          </div>
-          <div>
-            <nuxt-link to="/blog" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">Blog</v-btn>
-            </nuxt-link>
-          </div>
-          <div>
-            <nuxt-link to="/contact" class="nuxtlink">
-              <v-btn class="mb-10 text-none" plain color="#FFA800">Contact</v-btn>
-            </nuxt-link>
-          </div>
-          <div class="mb-10">
-            <a href="https://dashboard.firansefood.com/auth/login" class="text-decoration-none">
-              <v-btn color="#FFA800" outlined class="text-none px-7 restaurant-button" target="blank">
-              Login 
-              </v-btn>
+          <div class="mx-10">
+            <a href="https://dashboard.firansefood.com" target="blank">
+              <div class="btn">
+                Create Resturant
+              </div>
             </a>
           </div>
-          <div>              
-            <a href="https://dashboard.firansefood.com">
-              <v-btn color="#FFA800" class="white--text text-none restaurant-button" target="blank">
+        </div>
+      </nav>
+    </header>
+    <!-- <v-row dense no-gutters align="center" justify="space-around"> -->
+    <v-navigation-drawer v-model="drawer" absolute temporary width="100%">
+      <v-btn color="#FFA800" icon class="float-right" @click="drawer = false">
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+      <div class="d-flex flex-column justify-center align-center full">
+        <div>
+          <nuxt-link to="/" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">Home</v-btn>
+            <!-- <span>Home</span> -->
+          </nuxt-link>
+        </div>
+        <div>
+          <nuxt-link to="/about" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">About</v-btn>
+          </nuxt-link>
+        </div>
+        <div>
+          <nuxt-link to="/blog" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">Blog</v-btn>
+          </nuxt-link>
+        </div>
+        <div>
+          <nuxt-link to="/contact" class="nuxtlink">
+            <v-btn class="mb-10 text-none" plain color="#FFA800">Contact</v-btn>
+          </nuxt-link>
+        </div>
+        <div class="mb-10">
+          <a href="https://dashboard.firansefood.com/auth/login" class="text-decoration-none">
+            <v-btn color="#FFA800" outlined class="text-none px-7 restaurant-button" target="blank">
+              Login
+            </v-btn>
+          </a>
+        </div>
+        <div>
+          <a href="https://dashboard.firansefood.com">
+            <v-btn color="#FFA800" class="white--text text-none restaurant-button" target="blank">
               Create Resturant</v-btn>
-            </a>
-          </div>
+          </a>
         </div>
-      </v-navigation-drawer>
-    </div>
+      </div>
+    </v-navigation-drawer>
+  </div>
 </template>
 <script>
 import Applebutton from '~/components/Applebutton.vue'
@@ -132,6 +142,23 @@ export default {
 
 
 <style lang="scss" scoped>
+.btn {
+  background-color: #FFA800;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 15px;
+
+  &--white {
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 15px;
+    border: 2px solid #FFA800;
+    color: #FFA800;
+    text-decoration: none;
+  }
+}
+
+
 .navbar.vue-fixed-header--isFixed {
   position: fixed;
   left: 0;
@@ -141,14 +168,15 @@ export default {
 
 .nav {
   margin: 0 auto;
-  margin-bottom:20% !important;
+  margin-bottom: 20% !important;
 }
 
-header{
+header {
   width: 100%;
   padding: 2px 0;
   position: fixed;
   background-color: white !important;
+  box-shadow: 0px 1px 3px #888888;
   z-index: 1;
 }
 
@@ -188,10 +216,11 @@ ul {
     margin: 10px 0;
     color: white;
 
-    .nuxtlink,a {
+    .nuxtlink,
+    a {
       color: #000;
       text-decoration: none !important;
-      
+
     }
   }
 }
@@ -212,89 +241,105 @@ ul {
 .restaurant-button {
   font-family: 'Poppins' !important;
 }
+
 @media only screen and (max-width: 450px) {
-  .logo{
+  .logo {
     width: 90% !important;
   }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 600px) {
-  .logo{
+  .logo {
     margin-left: 1rem;
     width: 100% !important;
 
   }
+
   .nav {
-  margin-bottom: 15% !important;
+    margin-bottom: 15% !important;
   }
 
   ul {
-     li {
-    .nuxtlink,a {
-      font-size: 22px;      
+    li {
+
+      .nuxtlink,
+      a {
+        font-size: 22px;
+      }
     }
-  }
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 960px) {
-  .logo{
+  .logo {
     width: 100% !important;
   }
+
   .nav {
-  margin-bottom: 10% !important;
+    margin-bottom: 10% !important;
   }
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1264px) {
-  .logo{
+  .logo {
     width: 100% !important;
   }
+
   .nav {
-  margin-bottom: 6% !important;
+    margin-bottom: 6% !important;
   }
-    ul {
-     li {
-    .nuxtlink,a,.button-font {
-      font-size: 18px;      
+
+  ul {
+    li {
+
+      .nuxtlink,
+      a,
+      .button-font {
+        font-size: 18px;
+      }
     }
-  }
   }
 }
 
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
-  .logo{
+  .logo {
     width: 100% !important;
   }
+
   .nav {
-  margin-bottom: 10% !important;
+    margin-bottom: 10% !important;
   }
 
   ul {
-     li {
-    .nuxtlink,a,.button-font {
-      font-size: 20px;      
+    li {
+
+      .nuxtlink,
+      a,
+      .button-font {
+        font-size: 20px;
+      }
     }
-  }
   }
 }
 
 @media only screen and (min-width: 1904px) {
   .nav {
-  margin-bottom: 9% !important;
+    margin-bottom: 9% !important;
   }
 
-  .logo{
+  .logo {
     width: 110% !important;
   }
 
   ul {
-     li {
-    .nuxtlink,a,.button-font {
-      font-size: 22px;      
+    li {
+
+      .nuxtlink,
+      a,
+      .button-font {
+        font-size: 22px;
+      }
     }
   }
 }
-}
-
 </style>

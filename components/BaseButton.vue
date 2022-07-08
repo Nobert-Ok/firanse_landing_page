@@ -1,11 +1,6 @@
 <template>
-  <v-btn
-    color="#FFA800"
-    large
-    class="px-7 py-7 download-button text-none white--text"
-    elevation="5"
-    @click="$emit('click')"
-  >
+  <v-btn color="#FFA800" large class="px-7 py-7 download-button text-none white--text" elevation="5"
+    @click="$emit('click')">
     {{ text }}
   </v-btn>
 </template>
