@@ -1,5 +1,5 @@
 <template>
-  <v-btn color="black" large class="px-7 py-7 download-button" elevation="5">
+  <v-btn color="black" large class="px-7 py-7 download-button">
     <v-icon color="white" class="download-icon mr-4">mdi-apple</v-icon>
     <span class="d-inline-block download-text1 white--text">
       <small class="font-weight-light d-block white--text font-weight-bold">Download on</small>
