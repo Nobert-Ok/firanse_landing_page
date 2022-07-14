@@ -3,11 +3,13 @@
     <header>
       <nav class="d-md-flex py-2 py-md-4 justify-space-between align-center">
         <div class="d-flex my-3 ml-sm-10 ml-5 align-center justify-space-between">
-          <nuxt-link to="/">
-            <img src="~/assets/images/firansee.png" class="logo" />
-          </nuxt-link>
-          <div class="red pa-1 px-2 rounded-xl mt-n8">
-            <span class="white--text caption font-weight-bold">BETA</span>
+          <div class="d-flex">
+            <nuxt-link to="/">
+              <img src="~/assets/images/firansee.png" class="logo" />
+            </nuxt-link>
+            <!-- <div class="red pa-1  rounded-xl">
+              <span class="white--text caption font-weight-bold">BETA</span>
+            </div> -->
           </div>
           <v-btn class="mr-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
             <v-icon>mdi-menu</v-icon>
