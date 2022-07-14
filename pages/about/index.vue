@@ -13,7 +13,8 @@
             favourite food.
           </p>
 
-          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10" onclick="window.open('https://drive.google.com/file/d/19ltXY_zMWnVPu80MOgt0F9sjZlPW3IHm/view')">
+          <v-btn color="#FA710D" large class="aboutus-button px-7 py-7 mb-10"
+            onclick="window.open('https://drive.google.com/file/d/19ltXY_zMWnVPu80MOgt0F9sjZlPW3IHm/view')">
             Download Whitepaper
           </v-btn>
         </v-col>
@@ -135,7 +136,10 @@
           <p class="black--text pro-commitment mr-5">
             Create a restaurant with us and sell your dishes to happy lovers,
             families close to you. Boost your food business visibility with
-            FiranseFood. Join us to build a happy and connected society bonded
+            FiranseFood.
+            <br />
+            <br />
+            Join us to build a happy and connected society bonded
             by the love & happiness from delicious food.
           </p>
 
@@ -375,6 +379,8 @@ address {
 
 // -------------------------------------------------------------------
 .ourstory {
+  // display: flex;
+  // min-height: 100vh;
   padding: 20px;
   background-image: url('~/assets/images/backgroundframe1.png');
   background-size: cover;
@@ -404,8 +410,11 @@ address {
 
 // -----------------------------------
 .erestuarant {
+  display: flex;
+  min-height: 100vh;
   background-image: url('~/assets/images/backgroundframe2.png');
   background-size: cover;
+  // padding: auto 0px;
 
 }
 
@@ -948,7 +957,9 @@ svg {
     padding-left: 30px;
   }
 
- .aboutus,.ourstory,.erestuarant {
+  .aboutus,
+  .ourstory,
+  .erestuarant {
     padding: 100px 150px;
   }
 
@@ -956,7 +967,7 @@ svg {
     padding-top: 250px;
   }
 
- 
+
 
   .aboutus3 {
     font-size: 40px;
@@ -1017,18 +1028,24 @@ svg {
 
 @media only screen and (min-width: 1904px) {
   .aboutus {
-  padding-top: 100px;
+    padding-top: 100px;
   }
-  .aboutus,.ourstory,.erestuarant {
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 100px;
-}
+
+  .aboutus,
+  .ourstory,
+  .erestuarant {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
+  }
+
   .aboutus-image {
-  width: 85%;
-  object-fit: fill;
-}
-  .commitment,.aboutus3 {
+    width: 85%;
+    object-fit: fill;
+  }
+
+  .commitment,
+  .aboutus3 {
     font-size: 50px;
     line-height: 70px;
     margin-right: 109px;
@@ -1040,17 +1057,16 @@ svg {
     line-height: 60px;
   }
 
-.loveimage{
-  width: 7%;
-}
-.aboutus-button{
-  height: 70px !important;
-  width: 45%; 
-  color: #000;
-  font-size: 50px !important;
-}
+  .loveimage {
+    width: 7%;
+  }
+
+  .aboutus-button {
+    height: 70px !important;
+    width: 45%;
+    color: #000;
+    font-size: 50px !important;
+  }
 
 }
-
-
 </style>

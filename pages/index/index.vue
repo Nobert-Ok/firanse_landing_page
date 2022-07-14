@@ -40,7 +40,7 @@
         <img class="girl-image" align="center" src="~assets/images/girlimage.png" alt="" />
       </v-col>
       <v-col cols="12" md="6" align="center">
-        <p class="white--text send mt-10 mb-10">How it works</p>
+        <p class="white--text font-weight-black text-h3 send mt-10 mb-10">How it works</p>
         <HowitworksVue />
       </v-col>
     </v-row>
@@ -52,21 +52,11 @@
           <p class="black--text commitment">
             <span class="font-weight-black text-h3">“</span>Our commitment is to the love we share and the food you eat.
           </p>
-          <p class="black--text pro-commitment" v-if="!readMore">
-            {{ this.text.substring(0, 170) + '...' }}
-
+          <p class="black--text pro-commitment">
+            At FiranseFood, we are commited to spreading love and happiness.
+            Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the
+            time. These are ways we can spread love and put a smile on someone’s face. Use FiranseFood today!
           </p>
-          <p class="black--text pro-commitment" v-if="readMore">
-            {{ this.text }}
-          </p>
-
-
-          <v-btn @click="showMore" outlined v-if="!readMore" color="#FFA800" large
-            class="aboutus-button px-7 py-7 mb-10">
-            View More</v-btn>
-          <v-btn @click="showLess" outlined v-if="readMore" color="#FFA800" large
-            class="aboutus-button px-7 py-7 mb-10">
-            View Less</v-btn>
         </v-col>
         <v-col cols="12" sm="6" order="first" order-sm="last">
           <img class="aboutus-image my-6" src="~assets/images/about.png" alt="" />
@@ -155,8 +145,8 @@ export default {
       nonexistent: false,
       text:
         "At FiranseFood, we are commited to spreading love and happiness." +
-        "Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time." +
-        "These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
+        " Gift food to your loved ones and have access to your favourite meal, dishes, snacks or dessert all the time." +
+        " These are ways we can spread love and put a smile on someone\’s face. Use FiranseFood today!",
 
       readMore: false,
     }
@@ -332,7 +322,7 @@ input {
 }
 
 .send {
-  font-family: 'Poppins' !important;
+  font-family: Poppins !important;
   font-size: 30px;
   line-height: 36px;
   font-weight: 500;
@@ -385,6 +375,8 @@ input {
 .aboutus {
   position: relative;
   margin: 20px;
+  min-height: 100vh;
+  display: flex;
 }
 
 .aboutus-image {

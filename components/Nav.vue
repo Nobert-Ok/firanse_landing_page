@@ -6,6 +6,9 @@
           <nuxt-link to="/">
             <img src="~/assets/images/firansee.png" class="logo" />
           </nuxt-link>
+          <div class="red pa-1 px-2 rounded-xl mt-n8">
+            <span class="white--text caption font-weight-bold">BETA</span>
+          </div>
           <v-btn class="mr-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
             <v-icon>mdi-menu</v-icon>
           </v-btn>
@@ -19,7 +22,7 @@
             </li>
             <li class="mx-8">
               <nuxt-link to="/about" exact class="nuxtlink">
-                <span>About us</span>
+                <span>About Us</span>
               </nuxt-link>
             </li>
             <li class="mx-8">
@@ -29,7 +32,7 @@
             </li>
             <li class="mx-8">
               <nuxt-link to="/contact" exact class="nuxtlink">
-                <span>Contact us</span>
+                <span>Contact Us</span>
               </nuxt-link>
             </li>
           </ul>
@@ -46,7 +49,7 @@
           <div class="mx-10">
             <a href="https://dashboard.firansefood.com" target="blank">
               <div class="btn">
-                Create Resturant
+                Create Restaurant
               </div>
             </a>
           </div>
