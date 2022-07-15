@@ -1,5 +1,6 @@
 <template>
-  <v-btn color="black" large class="px-7 py-7 download-button">
+  <v-btn color="black" large class="px-7 py-7 download-button" 
+  onclick="window.open('https://play.google.com/store/apps/details?id=com.firansefood')">
     <v-icon color="white" class="download-icon text--center">mdi-google-play</v-icon>
     <span class="d-inline-block download-text1 text--center">
       <small class="font-weight-light d-block text--center font-weight-bold">Get it on</small>
