@@ -1,8 +1,8 @@
 <template>
   <div class="body">
     <Nav />
-    <v-row dense no-gutters align="center" justify="space-around">
-      <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" justify="center">
+    <v-row dense no-gutters align="center" justify="space-around" >
+      <v-col cols="11" md="5" class="first-head ml-sm-7 ml-sm-8" align-self="center">
         <p class="black--text send text-left">
           Spreading Love anywhere, anytime with Food.
         </p>
@@ -71,20 +71,18 @@
           These and many more are now closer to you!
         </p>
       </v-col>
-      <v-row justify="center">
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/Dominos.png" alt="" />
+      <v-row align="center">
+        <v-col cols="3" >
+          <img class="grid-image2" align="right" src="~assets/images/ukoni.png" alt="" />
         </v-col>
         <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/burgerking.png" alt="" />
+          <img class="grid-image2" src="~assets/images/afang.png" alt="" />
         </v-col>
-
         <v-col cols="3" align="center">
           <img class="grid-image2" src="~assets/images/pizzahut.png" alt="" />
         </v-col>
-
-        <v-col cols="3" align="center">
-          <img class="grid-image2" src="~assets/images/kfc.png" alt="" />
+        <v-col cols="3">
+          <img class="grid-image2" align="left" src="~assets/images/Sharwama.png" alt="" />
         </v-col>
       </v-row>
     </v-row>
@@ -375,7 +373,7 @@ input {
 .aboutus {
   position: relative;
   margin: 20px;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
 }
 
@@ -673,12 +671,15 @@ svg {
 
   .aboutus {
     margin: 30px;
+    min-height: 40vh;
+
   }
 
   .aboutus3 {
     font-size: 40px;
     margin-right: 25px;
   }
+
 
   .commitment {
     font-size: 14px;
@@ -701,7 +702,7 @@ svg {
   }
 
   .grid-image2 {
-    width: 40% !important;
+    width: 45% !important;
   }
 
   .cheese-img {
@@ -899,7 +900,7 @@ svg {
   }
 
   .send {
-    font-size: 60px;
+    font-size: 55px;
     line-height: 64px;
     font-weight: 500;
   }
