@@ -6,7 +6,7 @@
       </v-btn>
     </div>
     <v-row no-gutters dense justify="center">
-      <v-col cols="12" md="8" lg="6">
+      <v-col cols="12" md="8" lg="8">
         <pdf v-for="i in 10" :key="i" :page="i" :src="'/privacy.pdf'"></pdf>
       </v-col>
     </v-row>

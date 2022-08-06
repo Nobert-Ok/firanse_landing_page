@@ -1,16 +1,13 @@
 <template>
   <div class="nav">
     <header>
-      <nav class="d-md-flex py-2 py-md-4 justify-space-between align-center">
+      <nav class="d-md-flex py-2 py-md-2 justify-space-between align-center">
         <div class="d-flex my-3 ml-sm-10 ml-5 align-center justify-space-between">
-          <!-- <div class="d-flex"> -->
-          <nuxt-link to="/">
-            <img src="~/assets/images/firansee.png" class="logo" />
-          </nuxt-link>
-          <!-- <div class="red pa-1 mt-n8 rounded-xl">
-            <span class="white--text caption font-weight-bold">BETA</span>
-          </div> -->
-          <!-- </div> -->
+          <div class="d-flex">
+            <nuxt-link to="/">
+              <img src="~/assets/images/firansee.png" class="logo" />
+            </nuxt-link>
+          </div>
           <v-btn class="mr-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
             <v-icon>mdi-menu</v-icon>
           </v-btn>
@@ -39,8 +36,8 @@
             </li>
           </ul>
         </div>
-        <div class="d-md-flex  d-none">
-          <div class="ml-16 mr-3 ml-md-10">
+        <div class="d-md-flex d-none">
+          <div class="ml-16 mr-10 ml-md-10">
             <a href="https://dashboard.firansefood.com/auth/login" target="blank">
               <div class="btn btn--white">
                 Login
@@ -154,16 +151,20 @@ export default {
   background-color: #FFA800;
   padding: 10px 20px;
   color: white;
-  border-radius: 15px;
+  border-radius: 10px;
 
   &--white {
     background-color: white;
     padding: 8px 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 2px solid #FFA800;
     color: #FFA800;
     text-decoration: none;
   }
+}
+
+a {
+  text-decoration: none !important;
 }
 
 
@@ -184,7 +185,7 @@ header {
   padding: 2px 0;
   position: fixed;
   background-color: white !important;
-  box-shadow: 0px 1px 3px #888888;
+  box-shadow: 0px 1px 3px #eaeaea;
   z-index: 1;
 }
 
@@ -228,7 +229,6 @@ ul {
     a {
       color: #000;
       text-decoration: none !important;
-
     }
   }
 }
