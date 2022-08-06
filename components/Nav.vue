@@ -7,9 +7,9 @@
           <nuxt-link to="/">
             <img src="~/assets/images/firansee.png" class="logo" />
           </nuxt-link>
-          <div class="red pa-1 mt-n8 rounded-xl">
+          <!-- <div class="red pa-1 mt-n8 rounded-xl">
             <span class="white--text caption font-weight-bold">BETA</span>
-          </div>
+          </div> -->
           <!-- </div> -->
           <v-btn class="mr-4 text-none d-inline d-md-none" color="primary" icon @click="drawer = true">
             <v-icon>mdi-menu</v-icon>

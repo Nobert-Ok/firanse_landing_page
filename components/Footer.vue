@@ -32,17 +32,17 @@
             <h6>Other</h6>
             <ul>
               <li>
-                <nuxt-link to="/about" class="nuxtlink">Careers</nuxt-link>
+                <nuxt-link to="/legal" class="nuxtlink">Terms of Use</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/contact" class="nuxtlink">Contact Us</nuxt-link>
+                <nuxt-link to="/legal/privacy" class="nuxtlink">Privacy & Policy</nuxt-link>
               </li>
-              <li><a
+              <!-- <li><a
                   onclick="window.open('https://drive.google.com/file/d/1z4ZVxNd-DuMN8fL97E_mbH8cLwjsOPdg/view?usp=sharing')">Terms
                   of Use</a></li>
               <li><a
                   onclick="window.open('https://drive.google.com/file/d/1I-SpQjnfDqQgAtgO0ymXrUSi9dDK_YlR/view?usp=sharing')">Privacy
-                  Policy</a></li>
+                  Policy</a></li> -->
             </ul>
           </v-col>
 
