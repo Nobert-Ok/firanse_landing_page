@@ -38,7 +38,12 @@
         </div>
         <div class="d-md-flex d-none">
           <div class="ml-16 mr-10 ml-md-10">
-            <a href="https://dashboard.firansefood.com/auth/login" target="blank">
+            <!-- <a href="https://dashboard.firansefood.com/auth/login" target="blank">
+              <div class="btn btn--white">
+                Login
+              </div>
+            </a> -->
+            <a href="/login">
               <div class="btn btn--white">
                 Login
               </div>
@@ -46,16 +51,16 @@
 
           </div>
           <div class="mx-10">
-            <a href="https://dashboard.firansefood.com" target="blank">
-              <div class="btn">
-                Create Restaurant
-              </div>
-            </a>
-            <!-- <a href="/create-business" class="d-none" target="blank">
+            <!-- <a href="https://dashboard.firansefood.com" target="blank">
               <div class="btn">
                 Create Restaurant
               </div>
             </a> -->
+            <a href="/create-business">
+              <div class="btn">
+                Create Restaurant
+              </div>
+            </a>
           </div>
         </div>
       </nav>
