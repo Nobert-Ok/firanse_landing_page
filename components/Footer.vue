@@ -32,10 +32,10 @@
             <h6>Other</h6>
             <ul>
               <li>
-                <nuxt-link to="/legal" class="nuxtlink">Terms of Use</nuxt-link>
+                <nuxt-link to="/legal/terms" class="nuxtlink">Terms of Use</nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/legal/privacy" class="nuxtlink">Privacy & Policy</nuxt-link>
+                <nuxt-link to="/legal" class="nuxtlink">Privacy & Policy</nuxt-link>
               </li>
               <!-- <li><a
                   onclick="window.open('https://drive.google.com/file/d/1z4ZVxNd-DuMN8fL97E_mbH8cLwjsOPdg/view?usp=sharing')">Terms
