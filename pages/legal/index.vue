@@ -1,30 +1,27 @@
 <template>
   <div>
     <v-row justify="center">
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="9">
         <div class="my-8">
           <v-btn large icon @click="$router.go(-1)">
             <v-icon color="#FFA800">mdi-arrow-left</v-icon>
           </v-btn>
         </div>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <h1 style="padding-top: 3pt;padding-left: 10pt;text-indent: 0pt;text-align: center;">PRIVACY POLICY OF
           FIRANSEFOOD</h1>
         <p style="padding-top: 4pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">Thank you for choosing to be
           part
           of our community at FiranseFood LLC (&quot;<b>Company</b>,&quot; &quot;<b>we</b>,&quot; &quot;<b>us</b>,&quot;
           or
-          &quot;<b>our</b><a href="mailto:firansefood@gmail.com" class="s2" target="_blank">&quot;). We are committed to
+          &quot;<b>our</b>).<a href="mailto:firansefood@gmail.com" class="s2" target="_blank">&quot; We are committed to
             protecting your personal information and your right to privacy. If you have any questions or concerns about
             this
             privacy notice or our practices with regard to your personal information, please contact us at </a><a
             href="mailto:firansefood@gmail.com" class="s1" target="_blank">firansefood@gmail.com</a><a
             href="mailto:firansefood@gmail.com" class="s2" target="_blank">.</a></p>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <p style="padding-top: 4pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">This privacy notice describes
           how
           we might use your information if you:</p>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <ul id="l1">
           <li data-list-text="">
             <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;"><a href="https://www.firansefood.com/"
@@ -32,32 +29,26 @@
                 target="_blank">www.firansefood.com</a><a href="http://www.cityfood.ng/" class="s3"
                 target="_blank">.</a>
             </p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="">
-            <p style="padding-top: 4pt;padding-left: 43pt;text-indent: -18pt;text-align: left;">Download and use our
+            <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Download and use our
               mobile
               App/Website/Web App — FiranseFood.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="">
             <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Engage with us in other related ways ―
               including any sales, marketing, or events.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">In this privacy notice, if we refer to:</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="">
             <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">&quot;<b>Website</b>,&quot; we are
               referring
               to any website of ours that links to this policy</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="">
             <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">&quot;<b>App/Website/Web App</b>,&quot;
               we
               are referring to any App/Website/Web App of ours that link to this policy, including any listed above</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="">
             <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">&quot;<b>Services</b>,&quot; we are
@@ -65,24 +56,20 @@
               to our Website, App, Web App, and other related services, including any sales, marketing, or events</p>
           </li>
         </ul>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">The purpose of this privacy notice is to explain
           to
           you in the clearest way possible what information we collect, how we use it, and what rights you have in
           relation
           to it. If there are any terms in this privacy notice that you do not agree with, please discontinue use of our
           Services immediately.</p>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <h3 style="padding-left: 7pt;text-indent: 3pt;text-align: left;">Please read this privacy notice carefully, as
           it
           will help you understand what we do with the information that we collect.</h3>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <ol id="l2">
           <li data-list-text="1.">
             <h3 style="padding-left: 16pt;text-indent: -10pt;text-align: left;">WHAT INFORMATION DO WE COLLECT?</h3>
             <h3 style="padding-top: 6pt;padding-left: 9pt;text-indent: 0pt;text-align: left;">Personal information you
               disclose to us</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 7pt;text-indent: 0pt;text-align: left;">In Short: <span class="s4">We collect
                 personal
                 information that you provide to us.</span></h2>
@@ -90,12 +77,10 @@
               information that you voluntarily provide to us when you register on the Services, express an interest in
               obtaining information about us or our products and Services, when you participate in activities on the
               Services or otherwise when you contact us.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">The personal information that we collect
               depends
               on the context of your interactions with us and the Services, the choices you make and the products and
               features you use. The personal information we collect may include the following:</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h3 style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Personal Information Provided by You. <span
                 class="p">We collect names; phone numbers; email</span></h3>
             <p style="padding-top: 1pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">addresses; usernames;
@@ -109,22 +94,18 @@
                 Flutterwave. You may find their privacy notice link(s) </a><a
                 href="https://www.flutterwave.com/privacy-policy"
                 target="_blank">https://www.flutterwave.com/privacy-policy</a></h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-top: 4pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">All personal information
               that
               you provide to us must be true, complete and accurate, and you must notify us of any changes to such
               personal
               information.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h3 style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Information automatically collected</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p class="s4" style="padding-left: 6pt;text-indent: -1pt;text-align: left;"><span class="h2">In Short:
               </span>Some information <span class="s5">— </span>such as your Internet Protocol (IP) address and/or
               browser
               and device characteristics <span class="s5">— </span>is collected automatically when you visit our
               Services.
             </p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We automatically collect certain information
               when you visit, use or navigate the Services. This information does not reveal your specific identity
               (like
@@ -152,7 +133,6 @@
                     as
                     which features you use), device event information (such as system activity, error reports (sometimes
                     called &#39;crash dumps&#39;) and hardware settings).</span></p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <p class="s4" style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Device Data. <span
@@ -164,7 +144,6 @@
                     location, browser type, hardware model Internet service provider and/or mobile carrier, operating
                     system
                     and system configuration information.</span></p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <p class="s4" style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Location Data. <span
@@ -179,16 +158,13 @@
                     certain aspects of the Services.</span></p>
                 <h3 style="padding-top: 3pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">Information collected
                   through our App/Website/Web App</h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
                 <h2 style="padding-left: 6pt;text-indent: -1pt;text-align: left;">In Short: <span class="s4">We collect
                     information regarding your geolocation, push notifications, when you use our App/Website/Web
                     App.</span>
                 </h2>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
                 <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">If you use our App/Website/Web App, we
                   also
                   collect the following information:</p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <p class="s4" style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Geolocation Information.
@@ -198,7 +174,6 @@
                     location-based services. If you wish to change our access or permissions, you may do so in your
                     device&#39;s settings.</span>
                 </p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <p class="s4" style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Push Notifications. <span
@@ -209,23 +184,19 @@
                     turn them off in your device&#39;s settings.</span></p>
               </li>
             </ul>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">This information is primarily needed to
               maintain
               the security and operation of our App/Website/Web App, for troubleshooting and for our internal analytics
               and
               reporting purposes.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="2.">
             <h3 style="padding-top: 9pt;padding-left: 17pt;text-indent: -11pt;text-align: left;">HOW DO WE USE YOUR
               INFORMATION?</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 6pt;text-indent: -1pt;text-align: left;">In Short: <span class="s4">We process your
                 information for purposes based on legitimate business interests, the fulfilment of our contract with
                 you,
                 compliance with our legal obligations, and/or your consent.</span></h2>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We use personal information collected via
               our
               Services for a variety of business purposes described below. We process your personal information for
@@ -235,11 +206,9 @@
               you, with your consent, and/or for compliance with our legal obligations. We indicate the specific
               processing
               grounds we rely on next to each purpose listed below.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We use the information we collect or
               receive:
             </p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <ul id="l4">
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To facilitate account creation and
@@ -249,7 +218,6 @@
                     Google account), we use the information you allowed us to collect from those third parties to
                     facilitate
                     account creation and logon process for the performance of the contract</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To post testimonials. <a
@@ -263,7 +231,6 @@
                     class="s6"> </span><span class="p">and be sure to include your name, testimonial location, and
                     contact
                     information.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Request feedback. <span class="p">We
@@ -277,35 +244,30 @@
                   communications. <span class="p">We may use your information in order to enable user-to-user
                     communications
                     with each user&#39;s consent.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To manage user accounts. <span
                     class="p">We may use your information for the purposes of managing our account and keeping it in
                     working
                     order.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To send administrative information
                   to
                   you. <span class="p">We may use your personal information to send you product, service and new feature
                     information and/or information about changes to our terms, conditions, and policies.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To protect our Services. <span
                     class="p">We may use your information as part of our efforts to keep our Services safe and secure
                     (for
                     example, for fraud monitoring and prevention).</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;line-height: 94%;text-align: left;">To enforce our
                   terms,
                   conditions and policies for business purposes, to comply with legal and regulatory requirements or in
                   connection with our contract.</h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To respond to legal requests and
@@ -313,14 +275,12 @@
                   harm. <span class="p">If we receive a subpoena or other legal request, we may need to inspect the data
                     we
                     hold to determine how to respond.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Fulfil and manage your orders. <span
                     class="p">We may use your information to fulfil and manage your orders, payments, returns, and
                     exchanges
                     made through the Services.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Administer prize draws and
@@ -329,21 +289,18 @@
                     to
                     participate in our competitions.</span>
                 </h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To deliver and facilitate delivery
                   of
                   services to the user. <span class="p">We may use your information to provide you with the requested
                     service.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To respond to user inquiries/offer
                   support to users. <span class="p">We may use your information to respond to your inquiries and solve
                     any
                     potential issues you might have with the use of our Services.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">To send you marketing and
@@ -355,7 +312,6 @@
                     subscribing to marketing or otherwise contacting us, we will collect personal information from you.
                     You
                     can opt-out of our marketing emails at any time.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Deliver targeted advertising to you.
@@ -365,7 +321,6 @@
                     its
                     effectiveness.</span>
                 </h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">For other business purposes. <span
@@ -378,7 +333,6 @@
                     and anonymized form so that it is not associated with individual end users and does not include
                     personal
                     information. We will not use identifiable personal information without your consent.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
             </ul>
           </li>
@@ -386,7 +340,6 @@
             <h3 style="padding-left: 17pt;text-indent: -11pt;text-align: left;">WILL YOUR INFORMATION BE SHARED WITH
               ANYONE?
             </h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 6pt;text-indent: -1pt;text-align: left;">In Short: <span class="s4">We only share
                 information with your consent, to comply with laws, to provide you with services, to protect your
                 rights, or
@@ -394,28 +347,24 @@
             <p style="padding-top: 2pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">We may process or share
               your
               data that we hold based on the following legal basis:</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <ul id="l5">
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Consent: <span class="p">We may
                     process
                     your data if you have given us specific consent to use your personal information for a specific
                     purpose.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Legitimate Interests: <span
                     class="p">We
                     may process your data when it is reasonably necessary to achieve our legitimate business
                     interests.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Performance of a Contract: <span
                     class="p">Where we have entered into a contract with you, we may process your personal information
                     to
                     fulfil the terms of our contract.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Legal Obligations: <span
@@ -427,7 +376,6 @@
                     a court order or a subpoena (including in response to public authorities to meet national security
                     or
                     law enforcement requirements).</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Vital Interests: <span class="p">We
@@ -437,11 +385,9 @@
                     threats
                     to the safety of any person and illegal activities, or as evidence in litigation in which we are
                     involved.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
                 <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">More specifically, we may need to
                   process
                   your data or share your personal information in the following situations:</p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Business Transfers. <span
@@ -450,7 +396,6 @@
                     sale
                     of company assets, financing, or acquisition of all or a portion of our business to another
                     company.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Google Maps Platform APIs. <a
@@ -463,14 +408,12 @@
                     location. You may revoke your consent anytime by contacting us at the contact details provided at
                     the
                     end of this document.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Business Partners. <span
                     class="p">We
                     may share your information with our business partners to offer you certain products, services or
                     promotions.</span></h3>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <h3 style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Offer Wall. <span class="p">Our
@@ -502,29 +445,24 @@
             <h3 style="padding-top: 3pt;padding-left: 17pt;text-indent: -11pt;text-align: left;">DO WE USE COOKIES AND
               OTHER
               TRACKING TECHNOLOGIES?</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p class="s4" style="padding-left: 5pt;text-indent: 0pt;text-align: left;"><span class="h2">In Short:
               </span>We
               <u>may</u> use cookies and other tracking technologies to collect and store your information.
             </p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-top: 4pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">We may use cookies and
               similar
               tracking technologies (like web beacons and pixels) to access or store information. Specific information
               about
               how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="5.">
             <h3 style="padding-left: 17pt;text-indent: -11pt;text-align: left;">HOW DO WE HANDLE YOUR SOCIAL LOGINS?
             </h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 6pt;text-indent: -1pt;text-align: left;">In Short: <span class="s4">If you choose
                 to
                 register or log in to our services using a social media account, we may have access to certain
                 information
                 about you.</span></h2>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Our Services offers you the ability to
               register
               and login using your third-party social media account details (like your Facebook or Twitter logins).
@@ -535,7 +473,6 @@
               often
               include your name, email address, friends list, profile picture as well as other information you choose to
               make public on such social media platform.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We will use the information we receive only
               for
               the purposes that are described in this privacy notice or that are otherwise made clear to you on the
@@ -545,18 +482,15 @@
               to
               understand how they collect, use and share your personal information, and how you can set your privacy
               preferences on their sites and apps.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="6.">
             <h3 style="padding-top: 11pt;padding-left: 17pt;text-indent: -11pt;text-align: left;">HOW LONG DO WE KEEP
               YOUR
               INFORMATION?</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 6pt;text-indent: -1pt;text-align: left;">In Short: <span class="s4">We keep your
                 information for as long as necessary to fulfil the purposes outlined in this privacy notice unless
                 otherwise
                 required by law.</span></h2>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We will only keep your personal information
               for
               as long as it is necessary for the purposes set out in this privacy notice, unless a longer retention
@@ -564,7 +498,6 @@
               is required or permitted by law (such as tax, accounting or other legal requirements). No purpose in this
               notice will require us keeping your personal information for longer than the period of time in which users
               have an account with us.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">When we have no ongoing legitimate business
               need
               to process your personal information, we will either delete or anonymize such information, or, if this is
@@ -576,12 +509,10 @@
           <li data-list-text="7.">
             <h3 style="padding-top: 3pt;padding-left: 17pt;text-indent: -11pt;text-align: left;">HOW DO WE KEEP YOUR
               INFORMATION SAFE?</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 6pt;text-indent: -1pt;text-align: left;">In Short: <span class="s4">We aim to
                 protect
                 your personal information through a system of organizational and technical security measures.</span>
             </h2>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We have implemented appropriate technical
               and
               organizational security measures designed to protect the security of any personal information we process.
@@ -594,16 +525,13 @@
               protect your personal information, transmission of personal information to and from our Services is at
               your
               own risk. You should only access the Services within a secure environment.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="8.">
             <h3 style="padding-left: 17pt;text-indent: -11pt;text-align: left;">DO WE COLLECT INFORMATION FROM MINORS?
             </h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 5pt;text-indent: 0pt;text-align: left;">In Short: <span class="s4">We do not
                 knowingly
                 collect data from or market to children under 18 years of age.</span></h2>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;"><a href="mailto:thenexbuydistrict@gmail.com"
                 class="s2" target="_blank">We do not knowingly solicit data from or market to children under 18 years of
                 age. By using the Services, you represent that you are at least 18 or that you are the parent or
@@ -616,17 +544,13 @@
                 have collected from children under age 18, please contact us at </a><a
                 href="mailto:thenexbuydistrict@gmail.com" class="s1" target="_blank">firansefood@gmail.com</a><a
                 href="mailto:thenexbuydistrict@gmail.com" class="s2" target="_blank">.</a></p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h3 style="padding-top: 4pt;padding-left: 6pt;text-indent: 0pt;text-align: left;">Account Information</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">If you would at any time like to review or
               change the information in your account or terminate your account, you can:</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <ul id="l6">
               <li data-list-text="">
                 <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Log in to your account settings and
                   update your user account.</p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <p style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Contact us using the contact
@@ -639,7 +563,6 @@
                   assist with any investigations, enforce our Terms of Use and/or comply with applicable legal
                   requirements.
                 </p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
                 <p class="s8" style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Cookies and similar
                   technologies:<span class="h3"> </span><span class="p">Most Web browsers are set to accept cookies by
                     default. If you prefer, you can usually choose to set your browser to remove cookies and to reject
@@ -658,7 +581,6 @@
                   example to
                   send you service-related emails that are necessary for the administration and use of your account, to
                   respond to service requests, or for other non-marketing purposes. To otherwise opt-out, you may:</p>
-                <p style="text-indent: 0pt;text-align: left;"><br /></p>
               </li>
               <li data-list-text="">
                 <p class="s9" style="padding-left: 43pt;text-indent: -18pt;text-align: left;">Access your account
@@ -668,11 +590,9 @@
             </ul>
           </li>
         </ol>
-        <p style="text-indent: 0pt;text-align: left;"><br /></p>
         <ol id="l7">
           <li data-list-text="10.">
             <h3 style="padding-left: 22pt;text-indent: -15pt;text-align: left;">CONTROLS FOR DO-NOT-TRACK FEATURES</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Most web browsers and some mobile operating
               systems and mobile applications include a Do-Not Track (&quot;DNT&quot;) feature or setting you can
               activate
@@ -685,15 +605,12 @@
               that we must follow in the future, we will inform you about that practice in a revised version of this
               privacy
               notice.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="11.">
             <h3 style="padding-left: 22pt;text-indent: -15pt;text-align: left;">DO WE MAKE UPDATES TO THIS NOTICE?</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <h2 style="padding-left: 5pt;text-indent: 0pt;text-align: left;">In Short: <span class="s4">Yes, we will
                 update
                 this notice as necessary to stay compliant with relevant laws.</span></h2>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;">We may update this privacy notice from time
               to
               time. The updated version will be indicated by an updated &quot;Revised&quot; date and the updated version
@@ -702,12 +619,10 @@
               notification.
               We encourage you to review this privacy notice frequently to be informed of how we are protecting your
               information.</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="12.">
             <h3 style="padding-top: 10pt;padding-left: 22pt;text-indent: -15pt;text-align: left;">HOW CAN YOU CONTACT US
               ABOUT THIS NOTICE?</h3>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
             <p style="padding-left: 6pt;text-indent: 0pt;text-align: left;"><a href="mailto:thenexbuydistrict@gmail.com"
                 class="s2" target="_blank">If you have questions or comments about this notice, you may email us at
               </a><span
@@ -716,7 +631,6 @@
             <p style="padding-top: 8pt;padding-left: 6pt;text-indent: 0pt;line-height: 157%;text-align: left;">
               FiranseFood
               LLC Lagos, Nigeria Lagos, Lagos, 410001 Nigeria</p>
-            <p style="text-indent: 0pt;text-align: left;"><br /></p>
           </li>
           <li data-list-text="13.">
             <h3 style="padding-top: 7pt;padding-left: 22pt;text-indent: -15pt;text-align: left;">HOW CAN YOU REVIEW,
@@ -724,7 +638,7 @@
               OR DELETE THE DATA WE COLLECT FROM YOU?</h3>
           </li>
         </ol>
-        <p class="mt-8" style="padding-top: 7pt;padding-left: 6pt;text-indent: 0pt;text-align: left;"><a
+        <p style="padding-top: 7pt;padding-left: 6pt;text-indent: 0pt;text-align: left;"><a
             href="mailto:firansefood@gmail.com" class="s2" target="_blank">Based on the applicable laws of your country,
             you
             may have the right to request access to the personal information we collect from you, change that

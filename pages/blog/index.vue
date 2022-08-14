@@ -2,7 +2,7 @@
   <div class="body">
     <Nav />
     <v-row>
-      <v-col col="3" class="container">
+      <v-col col="3" class="container mt-lg-n16">
         <img class="foodbowl" src="~assets/images/foodbowl.png" alt="" />
         <!-- <div>
           <img src="~assets/images/firanselogo.png">
@@ -497,7 +497,9 @@ a {
 
 /*lg*/
 @media only screen and (min-width: 1264px) and (max-width: 1904px) {
-
+  .mt-lg-n16{
+    margin-top: -5% !important;
+    }
   // ----------------Blog Card-----------------
   .aboutus3 {
     font-size: 20px;
@@ -538,6 +540,9 @@ a {
 
 @media only screen and (min-width: 1904px) {
     // ----------------Blog Card-----------------
+  .mt-lg-n16{
+    margin-top: -5% !important;
+    }
   .vcard {
   max-width: 55%;
   height: 250px !important;
