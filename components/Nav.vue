@@ -93,11 +93,11 @@
           </nuxt-link>
         </div>
         <div class="mb-10">
-          <a href="https://dashboard.firansefood.com/auth/login" class="text-decoration-none">
-            <v-btn color="#FFA800" outlined class="text-none px-7 restaurant-button" target="blank">
-              Login
-            </v-btn>
-          </a>
+            <nuxt-link to="/auth/login" exact class="nuxtlink">
+                <div class="btn btn--white">
+                  Login
+                </div>
+            </nuxt-link>
         </div>
         <div>
           <a href="https://dashboard.firansefood.com">
