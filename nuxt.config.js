@@ -26,23 +26,36 @@ export default {
 
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      // { rel: "preconnect", href: "https://fonts.gstatic.com" },
-      // { href: "https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap", rel: "stylesheet" }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    head: {
+      script: [{
+        src: `https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_API_KEY}&libraries=places`,
+      }],
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/css/style.css'],
 
+  router: {
+    linkActiveClass: 'nuxt-link-active',
+    linkExactActiveClass: 'nuxt-link-exact-active'
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axios',
+    '~/plugins/vuelidate.js',
+    '~/plugins/router-util',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{
+    path: "~/components", // will get any components nested in let's say /components/test too
+    pathPrefix: false,
+    extensions: ["vue"],
+  }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

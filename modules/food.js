@@ -1,60 +1,80 @@
-// /* eslint-disable no-async-promise-executor */
 import { $axios } from '@/static/api'
 
-
 class Food {
-    FetchFoods(payload) {
-        const { state, category = '', time_for_meal = "",
-            type_of_meal = "", page = 1, limit = 30 } = payload
+    createFood(formdata) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await $axios.get(`/food/foods?state=${state}&category=${category}&time_for_meal=${time_for_meal}&type_of_meal=${type_of_meal}&page=${page}&count=${limit}`)
-                resolve(response.data.data)
-            } catch (error) {
+                const response = await $axios.post(`/food/create`, formdata)
+                resolve(response.data)
+            }
+            catch (error) {
                 reject(error)
             }
         })
     }
-    FetchFood(food_id) {
+    updateFood(payload) {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const response = await this.$axios.put(`/food/update`, payload)
+                resolve(response.data)
+            }
+            catch (error) {
+                reject(error)
+            }
+        })
+    }
+
+    updateFoodImage(formdata) {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const response = await $axios.put(`/food/image/${formdata.food_id}`, formdata.payload)
+                resolve(response.data)
+            }
+            catch (error) {
+                reject(error)
+            }
+        })
+    }
+    getFood(food_id) {
         return new Promise(async (resolve, reject) => {
             try {
                 const response = await $axios.get(`/food/${food_id}`)
-                resolve(response.data.data)
-            } catch (error) {
+                resolve(response.data)
+            }
+            catch (error) {
                 reject(error)
             }
         })
     }
-    getHomeFood(location) {
+    getBusinessFood() {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await $axios.get(`/food/home?state=${location}`)
-                resolve(response.data.data)
-            } catch (error) {
+                const response = await $axios.get(`/food/business/${business._id}`)
+                resolve(response.data)
+            }
+            catch (error) {
                 reject(error)
             }
         })
     }
-    rateFood(payload) {
+    toggleFoodActive(payload) {
         return new Promise(async (resolve, reject) => {
             try {
-                // {
-                //     "rating": 5,
-                //         "food_id": "61899bcd0523873438ca365d"
-                // }
-                const response = await $axios.post(`/food/rate`, payload)
-                resolve(response.data.data)
-            } catch (error) {
+                const response = await this.$axios.put(`/food/toggle/${payload.food_id}`, { is_active: payload.is_active })
+                resolve(response.data)
+            }
+            catch (error) {
                 reject(error)
             }
         })
     }
-    searchFood(keyword) {
+    deleteFood(payload) {
         return new Promise(async (resolve, reject) => {
             try {
-                const response = await $axios.get(`/food/search?name=${keyword}`)
-                resolve(response.data.data)
-            } catch (error) {
+                const response = await this.$axios.delete(`/food/delete/${food_id}`)
+                resolve(response.data)
+            }
+            catch (error) {
                 reject(error)
             }
         })

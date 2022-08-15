@@ -43,11 +43,11 @@
                 Login
               </div>
             </a> -->
-            <a href="/login">
-              <div class="btn btn--white">
-                Login
-              </div>
-            </a>
+              <nuxt-link to="/auth/login" exact class="nuxtlink">
+                <div class="btn btn--white">
+                  Login
+                </div>
+              </nuxt-link>
 
           </div>
           <div class="mx-10">

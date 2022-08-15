@@ -1,0 +1,173 @@
+@charset 'UTF-8';
+
+@import 'text';
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"),
+        url('~/static/fonts/Poppins-Regular.ttf') format("truetype");
+}
+
+
+
+.wrapper {
+    position: relative;
+    top: 70px;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.logo {
+    width: 150px;
+
+    @media only screen and (min-width: 950px) {
+        width: 150px;
+    }
+
+    @media only screen and (min-width: 1264px) {
+        width: 150px;
+    }
+}
+
+/* :root {
+    --navigation-width: 250px;
+    --d-header-height: 120px;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    font-family: 'Poppins' !important;
+}
+
+.container-wrapper {
+    width: 100vw;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 600px) {
+        width: 100vw;
+    }
+
+    @media only screen and (min-width: 950px) {
+        width: 90vw;
+    }
+
+    @media only screen and (min-width: 1264px) {
+        width: 90vw;
+    }
+
+    @media only screen and (min-width: 1904px) {
+        width: 65vw;
+    }
+}
+
+.outlined {
+    border: 1px solid #EBEBEB;
+    border-radius: $border-radius;
+
+    &__dotted {
+        border: 3px dotted #EBEBEB;
+    }
+
+    // :hover {
+    //     border: 1px solid $primary;
+    //     border-radius: $border-radius;
+    // }
+
+
+}
+
+.text {
+    &__sm {
+        font-size: 12px;
+    }
+
+    &__md {
+        font-size: 14px;
+    }
+
+    &__base {
+        font-size: $font-base;
+    }
+
+    &__bold {
+        font-weight: $font-bold;
+    }
+}
+
+img {
+    object-fit: cover;
+}
+
+ul {
+    padding: 0;
+    margin: 0px;
+    display: inline;
+    list-style: none;
+    list-style-type: none;
+
+
+    li {
+        display: block;
+        padding: 0;
+        margin: 0 0px;
+    }
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    min-width: 150px;
+}
+
+th {
+    color: #6D7175
+}
+
+.table {
+    &__status {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #aaa;
+        color: #6D7175;
+        padding: 0 20px 20px 0;
+
+        :hover {
+            cursor: pointer;
+        }
+
+        &--active {
+            color: black;
+            border-bottom: 3px solid $primary;
+        }
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// a {
+//     color: #6D7175
+// }

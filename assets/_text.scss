@@ -1,0 +1,24 @@
+.__title {
+    font-weight: 700;
+    font-size: $font-md;
+    // line-height: 20px;
+    color: #202223;
+
+    &__sub {
+        font-weight: 500;
+        font-size: 1rem;
+        color: #6D7175;
+    }
+}
+
+.__sub-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #202223;
+
+    &__sub {
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: #6D7175;
+    }
+}
