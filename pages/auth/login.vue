@@ -20,6 +20,8 @@
       <div class="mt-8">
         <base-button :name="'Login'" :appendIcon="'chevron-right'" class="btn--full btn--default btn--md"
           :loading="loading" type="submit" />
+        <iframe src="https://dashboard.firansefood.com/auth/login" width="100%" height="0" style="border:none;"></iframe>
+
       </div>
     </form>
     <div class="text-center">
@@ -112,7 +114,7 @@ export default {
               this.loading = false;
               window.location.href = "https://dashboard.firansefood.com/";
 
-              resetRouter();
+              // resetRouter();
               // return;
             }
             this.loading = false;

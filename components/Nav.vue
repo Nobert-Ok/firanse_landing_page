@@ -43,13 +43,12 @@
                 Login
               </div>
             </a> -->
-            <iframe>
-                <nuxt-link to="/auth/login" exact class="nuxtlink">
-                  <div class="btn btn--white">
-                    Login
-                  </div>
-                </nuxt-link>
-            </iframe>
+
+            <nuxt-link to="/auth/login" exact class="nuxtlink">
+                    <div class="btn btn--white">
+                      Login
+                    </div>
+            </nuxt-link>
 
           </div>
           <div class="mx-10">
@@ -95,22 +94,17 @@
           </nuxt-link>
         </div>
         <div class="mb-10">
-          <iframe>
             <nuxt-link to="/auth/login" exact class="nuxtlink">
                 <div class="btn btn--white">
                   Login
                 </div>
             </nuxt-link>
-          </iframe>
         </div>
         <div>
-          <iframe>
             <a href="https://dashboard.firansefood.com">
               <v-btn color="#FFA800" class="white--text text-none restaurant-button" target="blank">
                 Create Resturant</v-btn>
             </a>
-          </iframe>
-
         </div>
       </div>
     </v-navigation-drawer>
