@@ -43,11 +43,13 @@
                 Login
               </div>
             </a> -->
-              <nuxt-link to="/auth/login" exact class="nuxtlink">
-                <div class="btn btn--white">
-                  Login
-                </div>
-              </nuxt-link>
+            <iframe>
+                <nuxt-link to="/auth/login" exact class="nuxtlink">
+                  <div class="btn btn--white">
+                    Login
+                  </div>
+                </nuxt-link>
+            </iframe>
 
           </div>
           <div class="mx-10">
@@ -93,11 +95,13 @@
           </nuxt-link>
         </div>
         <div class="mb-10">
+          <iframe>
             <nuxt-link to="/auth/login" exact class="nuxtlink">
                 <div class="btn btn--white">
                   Login
                 </div>
             </nuxt-link>
+          </iframe>
         </div>
         <div>
           <iframe>
@@ -106,7 +110,7 @@
                 Create Resturant</v-btn>
             </a>
           </iframe>
-          
+
         </div>
       </div>
     </v-navigation-drawer>
