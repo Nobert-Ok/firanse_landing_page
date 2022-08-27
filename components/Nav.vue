@@ -100,10 +100,12 @@
             </nuxt-link>
         </div>
         <div>
-          <a href="https://dashboard.firansefood.com">
-            <v-btn color="#FFA800" class="white--text text-none restaurant-button" target="blank">
-              Create Resturant</v-btn>
-          </a>
+          <iframe>
+            <a href="https://dashboard.firansefood.com">
+              <v-btn color="#FFA800" class="white--text text-none restaurant-button" target="blank">
+                Create Resturant</v-btn>
+            </a>
+          </iframe>
         </div>
       </div>
     </v-navigation-drawer>

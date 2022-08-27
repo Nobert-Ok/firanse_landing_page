@@ -111,7 +111,6 @@ export default {
               console.log('Logged in succesffuly')
               this.loading = false;
               window.location.href = "https://dashboard.firansefood.com/";
-              localStorage.setItem('firanse-token', response.data.data.token)
 
               resetRouter();
               // return;

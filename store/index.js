@@ -81,7 +81,7 @@ export const actions = {
                 vuexContext.commit('SET_USER_DTO', response.data.data.user)
                 vuexContext.commit('SET_TOKEN', response.data.data.token)
                 localStorage.setItem('firanse-token', response.data.data.token)
-
+                
                 const token = response.data.data.token
                 headers.Authorization = `Bearer ${token}`
                 const businesses = await this.$axios.get(`/user/businesses/mine?page=1&count=15`, { headers })
