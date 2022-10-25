@@ -20,7 +20,6 @@
       <div class="mt-8">
         <base-button :name="'Login'" :appendIcon="'chevron-right'" class="btn--full btn--default btn--md"
           :loading="loading" type="submit" />
-        <iframe src="https://dashboard.firansefood.com/auth/login" width="100%" height="0" style="border:none;"></iframe>
 
       </div>
     </form>
